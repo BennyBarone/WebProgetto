@@ -1,6 +1,6 @@
 body {
     background-color: rgb(255, 244, 229);
-    font-family: "Lucida Handwriting", cursive;
+
 }
 
 h1 {
@@ -43,9 +43,14 @@ header img:hover {
     transform: none !important;
 }
 section div img{
-    margin: 0.5%;
+    padding: 0.5%;   
     width: 40vw;
 }
+
+.card-img-overlay {
+    background: rgba(255, 255, 255, 0.5); /* Sfondo semi-trasparente */
+    border-radius: 5px; /* Angoli arrotondati */
+  }
 
 /* Media query per schermi più piccoli */
 @media (max-width: 768px) {
@@ -57,6 +62,10 @@ section div img{
     }
     #logo {
         width: 18vw;  /* Imposta una larghezza specifica per il logo sui dispositivi più piccoli */
+    }
+
+    #foto1{
+        width: auto;
     }
    
 }
@@ -71,6 +80,10 @@ section div img{
     }
     #logo {
         width: 13vw;  /* Imposta una larghezza specifica per il logo sui dispositivi più piccoli */
+    }
+
+    #foto1{
+        width:auto;    
     }
 }
 

@@ -25,7 +25,8 @@
     <main>
         <section>
             <div>
-                <img src="img/foto1.jpg" class="mx-auto d-block" alt="primafoto">
+                <img id="foto1" src="img/foto1.jpg" class="mx-auto d-block" alt="primafoto">
+
             </div>
         </section>
 
