@@ -27,6 +27,19 @@
             <div>
                 <img src="img/foto1.jpg" class="mx-auto d-block" alt="primafoto">
             </div>
+
+                <h2>Benvenuti nel mondo di Nuvole di Gelato</h2>
+                <p> 
+                    <span class="d-block">Dal 1943, Nuvole di Gelato rappresenta una storia di tradizione, passione e qualità. 
+                    Nata nel cuore di Fossombrone, una pittoresca cittadina in provincia di Pesaro Urbino, 
+                    la nostra gelateria è più di un semplice luogo dove gustare il gelato: è un punto d’incontro, 
+                    un’esperienza che abbraccia il sapore autentico di una tradizione che si tramanda di generazione in generazione.</span>
+                    <span class="d-block">Ogni ingrediente usato nella creazione del nostro gelato è scelto con cura dai migliori produttori locali, 
+                    per garantire freschezza, genuinità e un gusto inimitabile.</span>
+                    <span class="d-block">Il nostro obiettivo è quello di regalare un momento di felicità a chi sceglie i nostri gelati.</span>
+                    <span class="d-block">Venite a trovarci e lasciatevi conquistare dalla magia dei nostri gusti, dai classici intramontabili alle creazioni più innovative.
+                    E per chi desidera godersi i nostri gelati comodamente a casa, 
+                    offriamo anche la possibilità di acquistarli online: qualità artigianale direttamente alla vostra porta.</span>
         </section>
 
     </main>
