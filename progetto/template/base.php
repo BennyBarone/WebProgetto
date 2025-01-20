@@ -22,5 +22,13 @@
             <img src="img/menu.png" alt="menu">
         </div>
     </header>
+    <main>
+        <section>
+            <div>
+                <img src="img/foto1.jpg" class="mx-auto d-block" alt="primafoto">
+            </div>
+        </section>
+
+    </main>
 </body>
 </html>

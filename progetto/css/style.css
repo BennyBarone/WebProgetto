@@ -42,6 +42,10 @@ header img:hover {
 #logo:hover {
     transform: none !important;
 }
+section div img{
+    margin: 0.5%;
+    width: 40vw;
+}
 
 /* Media query per schermi più piccoli */
 @media (max-width: 768px) {
@@ -54,6 +58,7 @@ header img:hover {
     #logo {
         width: 18vw;  /* Imposta una larghezza specifica per il logo sui dispositivi più piccoli */
     }
+   
 }
 
 /* Media query per schermi molto piccoli */
@@ -69,6 +74,7 @@ header img:hover {
     }
 }
 
+
 .text-brown {
     color: #783f04;
 }
@@ -76,3 +82,4 @@ header img:hover {
 .border-brown {
     border-color: #783f04 !important;
 }
+
