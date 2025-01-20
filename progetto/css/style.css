@@ -1,6 +1,7 @@
 body {
     background-color: rgb(255, 244, 229);
 
+
 }
 
 h1 {
@@ -47,10 +48,22 @@ section div img{
     width: 40vw;
 }
 
-.card-img-overlay {
-    background: rgba(255, 255, 255, 0.5); /* Sfondo semi-trasparente */
-    border-radius: 5px; /* Angoli arrotondati */
-  }
+
+
+
+section h2{
+    padding:1.5%;
+    font-family: "Lucida Handwriting", cursive;
+}
+
+section p{
+    padding: 1.7%;
+    /*margin: 1%;*/
+    font-family: 'Garamond', serif;
+    font-size: 1.3vw;
+
+}
+
 
 /* Media query per schermi più piccoli */
 @media (max-width: 768px) {
@@ -95,4 +108,6 @@ section div img{
 .border-brown {
     border-color: #783f04 !important;
 }
+
+
 
