@@ -1,0 +1,78 @@
+body {
+    background-color: rgb(255, 244, 229);
+    font-family: "Lucida Handwriting", cursive;
+}
+
+h1 {
+    font-family: "Lucida Handwriting", cursive;
+    font-size: 3vw;  /* Usa 3vw per un font responsivo */
+   
+}
+
+/* Stile base per tutte le immagini */
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Stile generico per le immagini in header */
+header img {
+    margin-left: 1%;
+    margin-right: 1%;
+    width: 4vw;
+    border: 3px solid #783f04;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+/* Stile specifico per il logo */
+#logo {
+    border: none !important;
+    border-radius: 0 !important;
+    width: 8vw;
+}
+
+/* Effetto hover per le immagini in header */
+header img:hover {
+    transform: scale(1.1);
+}
+
+/* Disabilitare l'effetto hover sul logo */
+#logo:hover {
+    transform: none !important;
+}
+
+/* Media query per schermi più piccoli */
+@media (max-width: 768px) {
+    header img {
+        width: 13vw;
+    }
+    h1 {
+        font-size: 4vw;  /* Aumenta la dimensione del testo per schermi più piccoli */
+    }
+    #logo {
+        width: 18vw;  /* Imposta una larghezza specifica per il logo sui dispositivi più piccoli */
+    }
+}
+
+/* Media query per schermi molto piccoli */
+@media (max-width: 480px) {
+    header img {
+        width: 8vw;
+    }
+    h1 {
+        font-size: 5vw;  /* Aumenta ulteriormente la dimensione del testo per schermi molto piccoli */
+    }
+    #logo {
+        width: 13vw;  /* Imposta una larghezza specifica per il logo sui dispositivi più piccoli */
+    }
+}
+
+.text-brown {
+    color: #783f04;
+}
+
+.border-brown {
+    border-color: #783f04 !important;
+}
