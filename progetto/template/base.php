@@ -58,6 +58,7 @@
                     offriamo anche la possibilità di acquistarli online: qualità artigianale direttamente alla vostra porta.</span>
                 </p>
 
+                <div class="container-fluid">
             <section>
             <div class="row align-items-center">
                 <!-- Colonna Immagine -->
@@ -75,6 +76,7 @@
                 </div>
             </div>
             </section>
+</div>
         </section>
     </main>
    
