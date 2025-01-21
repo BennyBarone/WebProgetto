@@ -40,23 +40,12 @@ body {
     color: #783f04;
     font-size: 24px;
     cursor: pointer;
-<<<<<<< HEAD
 }
 
 header li{
     list-style: none;
 }
 
-=======
-  }
-  
-  /* Mostra l'overlay quando attivo */
-  .overlay.active {
-    display: flex;
-  }
-
- 
->>>>>>> ab743f47015f8ed7bc70006f6a3926878af85e42
 h1 {
     font-family: "Lucida Handwriting", cursive;
     font-size: 3vw;  /* Usa 3vw per un font responsivo */ 
@@ -114,89 +103,6 @@ section p{
 
 }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-#tessera{
-    width: 40vw !important; /* Riduci la dimensione dell'immagine */
-    border: #783f04 !important; /* Aggiungi margini per staccare l'immagine dai bordi */
-  /* Per centrare l'immagine all'interno della colonna */
-=======
-.custom-image {
-    width: 10vw !important;
-    border: brown;
-    margin: 10px auto;
->>>>>>> ab743f47015f8ed7bc70006f6a3926878af85e42
-}
-
-.col-sm-4 {
-    outline: 1px solid red; /* Controlla i confini del contenitore */
-}
-
-/* Media query per schermi più piccoli */
-@media (max-width: 768px) {
-    header img {
-        width: 13vw;
-    }
-    h1 {
-        font-size: 4vw;  /* Aumenta la dimensione del testo per schermi più piccoli */
-    }
-    #logo {
-        width: 18vw;  /* Imposta una larghezza specifica per il logo sui dispositivi più piccoli */
-    }
-
-    #foto1{
-        width: auto;
-    }
-
-    #bottProdotti{
-        font-size:10vw;
-    }
-
-    section p{
-        font-size:2.5vw;
-    }
-    .side-window {
-        width: 250px; /* Rimpicciolisce il menu per schermi più piccoli */
-    }
-    .close-button{
-        right: 15%;
-    }
-}
-
-/* Media query per schermi molto piccoli */
-@media (max-width: 480px) {
-    header img {
-        width: 8vw;
-    }
-    h1 {
-        font-size: 5vw;  /* Aumenta ulteriormente la dimensione del testo per schermi molto piccoli */
-    }
-    #logo {
-        width: 13vw;  /* Imposta una larghezza specifica per il logo sui dispositivi più piccoli */
-    }
-
-    #foto1{
-        width: auto;    
-    }
-
-    #bottProdotti{
-        font-size:6vw;
-    }
-
-    section p{
-        font-size:4.5vw;
-    }
-    .side-window {
-        width:250px; /* Rimpicciolisce il menu per schermi più piccoli */
-    }
-    .close-button{
-        right: 15%;
-    }
-}
-
-
->>>>>>> c2b8f77290a31714b1f1e9341ae74dc95723e0e4
 .text-brown {
     color: #783f04;
 }
