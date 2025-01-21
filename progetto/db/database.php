@@ -9,14 +9,14 @@ class DatabaseHelper{
         }        
     }
 
-    /*public function getRecensioni(){
-        $query = $this->db->("SELECT Voto, Suggerimenti FROM recensioni LIMIT 3");
+    public function getRecensioni(){
+        $query = "SELECT Voto, Suggerimenti FROM recensioni ORDER BY RAND() LIMIT 3";
         $stmt= $this->db->prepare($query);
         $stmt->execute();
         $result=$stmt->get_result();
 
         return $result->fetch_all(MYSQLI_ASSOC);
-    }*/
+    }
 }
 
 ?>
