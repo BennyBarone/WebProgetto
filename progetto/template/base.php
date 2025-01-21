@@ -60,11 +60,15 @@
 
             <section>
             <div class="row align-items-center">
-    <!-- Colonna Immagine -->
+                <!-- Colonna Immagine -->
                 <div class="col-sm-4 d-flex justify-content-center">
+<<<<<<< HEAD
                     <img id="tessera" src="img/tessera.jpeg" class="img-fluid p-3" alt="Tessera Fedeltà">
+=======
+                    <img id="tessera" src="img/tessera.jpeg" class="custom-image p-3" alt="Tessera Fedeltà">
+>>>>>>> ab743f47015f8ed7bc70006f6a3926878af85e42
                 </div>
-    <!-- Colonna Testo -->
+                <!-- Colonna Testo -->
                 <div class="col-sm-8 text-center">
                 <h2>La tua carta fedeltà: Gelato, Sorrisi e Premi</h2>
                 <p>

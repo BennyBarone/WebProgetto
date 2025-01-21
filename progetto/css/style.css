@@ -40,12 +40,23 @@ body {
     color: #783f04;
     font-size: 24px;
     cursor: pointer;
+<<<<<<< HEAD
 }
 
 header li{
     list-style: none;
 }
 
+=======
+  }
+  
+  /* Mostra l'overlay quando attivo */
+  .overlay.active {
+    display: flex;
+  }
+
+ 
+>>>>>>> ab743f47015f8ed7bc70006f6a3926878af85e42
 h1 {
     font-family: "Lucida Handwriting", cursive;
     font-size: 3vw;  /* Usa 3vw per un font responsivo */ 
@@ -103,12 +114,22 @@ section p{
 
 }
 
+<<<<<<< HEAD
 #tessera{
     width: 40vw !important; /* Riduci la dimensione dell'immagine */
     border: #783f04 !important; /* Aggiungi margini per staccare l'immagine dai bordi */
   /* Per centrare l'immagine all'interno della colonna */
+=======
+.custom-image {
+    width: 10vw !important;
+    border: brown;
+    margin: 10px auto;
+>>>>>>> ab743f47015f8ed7bc70006f6a3926878af85e42
 }
 
+.col-sm-4 {
+    outline: 1px solid red; /* Controlla i confini del contenitore */
+}
 
 /* Media query per schermi più piccoli */
 @media (max-width: 768px) {
