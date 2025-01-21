@@ -58,7 +58,7 @@
                     offriamo anche la possibilità di acquistarli online: qualità artigianale direttamente alla vostra porta.</span>
                 </p>
 
-                <div class="container-fluid">
+        <div class=" grid-layout container-fluid">
             <section>
             <div class="row align-items-center">
                 <!-- Colonna Immagine -->
@@ -74,9 +74,10 @@
                 </p>
                 <button id="scopriTessera" type="button" class="btn btn-primary">Scopri di più</button>
                 </div>
+                
             </div>
             </section>
-</div>
+        </div>
         </section>
     </main>
    

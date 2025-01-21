@@ -152,6 +152,10 @@ section div img {
     color: darkbrown;
 }
 
+.grid-layout{
+    border-bottom: 0.5vw solid #783f04;
+}
+
 /* Media query per schermi più piccoli */
 @media (max-width: 768px) {
     header img {
