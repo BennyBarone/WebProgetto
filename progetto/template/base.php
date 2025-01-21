@@ -24,10 +24,12 @@
     </header>
     <main>
         <section>
-            <div>
-                <img id="foto1" src="img/foto1.jpg" class="mx-auto d-block" alt="primafoto">
-
-            </div>
+        <div class="position-relative">
+            <img id="foto1" src="img/foto1.jpg" class="img-fluid mx-auto d-block" alt="primafoto">
+            <button id="bottProdotti" type="button" class="btn custom-btn position-absolute top-50 start-50 translate-middle">
+                    Scopri i nostri prodotti
+            </button>
+        </div>
 
                 <h2>Benvenuti nel mondo di Nuvole di Gelato</h2>
                 <p> 

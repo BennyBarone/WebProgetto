@@ -45,24 +45,28 @@ section div img{
     width: 40vw;
 }
 
-
-
-
 section h2{
     padding:0 1.1%;
+<<<<<<< HEAD
     padding-top: 0.8%;
+=======
+    padding-top:0.8%;
+>>>>>>> 251cb73ac4a4d3132fa79df80b1fdf296b532a97
     font-family: "Lucida Handwriting", cursive;
 }
 
 section p{
+<<<<<<< HEAD
   
     padding: 0 1.5%;
  
+=======
+    padding: 0 1.5%;
+>>>>>>> 251cb73ac4a4d3132fa79df80b1fdf296b532a97
     font-family: 'Garamond', serif;
     font-size: 1.3vw;
 
 }
-
 
 /* Media query per schermi più piccoli */
 @media (max-width: 768px) {
@@ -79,7 +83,15 @@ section p{
     #foto1{
         width: auto;
     }
-   
+
+    #bottProdotti{
+        font-size:10vw;
+    }
+
+    section p{
+        font-size:2.5vw;
+    }
+
 }
 
 /* Media query per schermi molto piccoli */
@@ -97,6 +109,14 @@ section p{
     #foto1{
         width: auto;    
     }
+
+    #bottProdotti{
+        font-size:6vw;
+    }
+
+    section p{
+        font-size:4.5vw;
+    }
 }
 
 
@@ -106,6 +126,31 @@ section p{
 
 .border-brown {
     border-color: #783f04 !important;
+}
+
+/* Mantieni le dimensioni dell'immagine */
+section div img {
+    padding: 0.5%;
+    width: 40vw; /* L'immagine occupa il 40% della larghezza della finestra */
+}
+
+/* Stile personalizzato per il bottone */
+.custom-btn {
+    font-size: 3vw; /* Imposta la dimensione del bottone in base alla larghezza della finestra */
+    color: #783f04; /* Colore del testo */
+    border: 2px solid #783f04; /* Bordo marrone */
+    background-color: transparent; /* Sfondo trasparente */
+    padding: 0.5rem 1.5rem; /* Margini interni */
+    transition: all 0.3s ease; /* Effetto al passaggio del mouse */
+    max-width: 80%; /* Limita la larghezza massima del bottone */
+    max-height: 15vh; /* Limita l'altezza massima */
+    text-align: center; /* Allinea il testo al centro */
+}
+
+/* Effetto hover */
+.custom-btn:hover {
+    background-color: rgba(165, 42, 42, 0.1); /* Sfondo marrone chiaro */
+    color: darkbrown; /* Colore testo più scuro */
 }
 
 
