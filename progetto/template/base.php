@@ -24,7 +24,7 @@
         <div class="overlay" id="overlay">
             <div class=" side-window">
             <button class="close-button" id="closeBtn">&times;</button>
-            <ul >
+            <ul class="text-center">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Cartà fedeltà</a></li>
                 <li><a href="#">I nostri prodotti</a></li>

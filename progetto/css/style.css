@@ -30,6 +30,26 @@ body {
     position: relative;
 }
 
+.side-window ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.side-window li {
+    border-bottom: 3px solid #8B4513; /* Linea marrone sotto ogni elemento */
+    margin-bottom: 10px;
+}
+
+.side-window li a {
+    text-decoration: none; /* Rimuove la sottolineatura */
+    color: #8B4513; /* Colore marrone */
+    font-size: 27px;
+
+    display: block;
+    padding: 13px 0;
+}
 /* Pulsante di chiusura */
 .close-button {
     position: absolute;
@@ -41,8 +61,12 @@ body {
     font-size: 24px;
     cursor: pointer;
 }
-header li{
-    list-style: none;
+
+
+
+
+ul li a:hover {
+    color: #1d201d; /* Colore al passaggio del mouse (hover) */
 }
 
 
