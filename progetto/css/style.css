@@ -119,7 +119,7 @@ section h2{
     font-family: "Lucida Handwriting", cursive;
 }
 
-section p{
+section p, section ul li{
   
     padding: 0 1.5%; 
     font-family: 'Garamond', serif;
@@ -182,6 +182,7 @@ section div img {
 }
 
 
+
 /* Media query per schermi più piccoli */
 @media (max-width: 768px) {
     header img {
@@ -202,13 +203,17 @@ section div img {
         font-size:10vw;
     }
 
-    section p{
+    section p, section ul li{
         font-size:2.5vw;
     }
 
     .custom-image {
         width: 70vw !important;
         
+    }
+    
+    #UtenteRecensione{
+        width: 9vw !important;
     }
 
     #scopriTessera{
@@ -250,7 +255,7 @@ section div img {
         font-size:6vw;
     }
 
-    section p{
+    section p, section ul li{
         font-size:4.5vw;
     }
 
@@ -275,6 +280,10 @@ section div img {
         padding: 10% 0;
         margin: 5%;
 
+    }
+    
+    #UtenteRecensione{
+        width: 9vw !important;
     }
 }
 
