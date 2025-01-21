@@ -37,10 +37,12 @@ body {
     width: 100%;
 }
 
-.side-window li, .grid-layout {
-    border-bottom: 3px solid #8B4513; /* Linea marrone sotto ogni elemento */
+.side-window li, .grid-layout{
+    border-bottom: 0.3vw solid #8B4513; /* Linea marrone sotto ogni elemento */
     margin-bottom: 10px;
 }
+
+
 
 .side-window li a {
     text-decoration: none; /* Rimuove la sottolineatura */
@@ -170,16 +172,15 @@ section div img {
 }
 
 #acquista{
-    margin: 0 190px;
+    margin:10% 38%;
+  
+
 }
 #scopriTessera:hover,#acquista:hover{
     background-color: rgba(165, 42, 42, 0.1);
     color: darkbrown;
 }
 
-.grid-layout{
-    border-bottom: 0.5vw solid #783f04;
-}
 
 /* Media query per schermi più piccoli */
 @media (max-width: 768px) {
@@ -207,8 +208,26 @@ section div img {
 
     .custom-image {
         width: 70vw !important;
+        
     }
 
+    #scopriTessera{
+        margin-bottom: 5%;
+        
+    }
+    
+    .grid-layout{
+        border-bottom: 0.5vw solid #8B4513;
+
+    }
+    .side-window {
+        width: 75%;
+        
+    }
+    .side-window li a{
+        padding: 10% 0;
+        margin: 5%;
+    }
 }
 
 /* Media query per schermi molto piccoli */
@@ -237,6 +256,25 @@ section div img {
 
     .custom-image {
         width: 70vw !important; 
+    }
+   
+    #scopriTessera{
+        margin-bottom: 5%;
+       
+    }
+    .grid-layout{
+    border-bottom: 0.5vw solid #8B4513;
+    }
+    
+    .side-window {
+        width: 75%;  
+        
+    }
+
+    .side-window li a{
+        padding: 10% 0;
+        margin: 5%;
+
     }
 }
 

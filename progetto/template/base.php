@@ -31,7 +31,7 @@
                 <li><a href="#">Contatti</a></li>
                 <li><a href="#">Cosa dicono di noi</a></li>  
             </ul>
-            <button id="acquista" type="button" class="btn btn-primary">Acquista</button>
+            <button id="acquista" type="button" class="btn btn-primary btn-lg">Acquista</button>
             </div>
         </div>
     </header>
