@@ -43,8 +43,25 @@
                     <span class="d-block">Venite a trovarci e lasciatevi conquistare dalla magia dei nostri gusti, dai classici intramontabili alle creazioni più innovative.
                     E per chi desidera godersi i nostri gelati comodamente a casa, 
                     offriamo anche la possibilità di acquistarli online: qualità artigianale direttamente alla vostra porta.</span>
-        </section>
+                </p>
 
+            <section>
+            <div class="row align-items-center">
+    <!-- Colonna Immagine -->
+                <div class="col-sm-4 d-flex justify-content-center">
+                    <img id="tessera" src="img/tessera.jpeg" class="img-fluid img-responsive p-3" alt="Tessera Fedeltà">
+                </div>
+    <!-- Colonna Testo -->
+                <div class="col-sm-8 text-center">
+                <h2>La tua carta fedeltà: Gelato, Sorrisi e Premi</h2>
+                <p>
+                    <span class="d-block">Registrati al nostro sito e scopri la dolcezza di premi esclusivi!</span>
+                    <span class="d-block">Ogni acquisto accumula punti che ti avvicinano a vantaggi unici e irresistibili. Perché ogni momento con il nostro gelato merita di essere speciale, con un pizzico di gratitudine in più.</span>
+                </p>
+                </div>
+            </div>
+            </section>
+        </section>
     </main>
 </body>
 </html>

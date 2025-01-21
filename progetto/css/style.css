@@ -1,7 +1,5 @@
 body {
     background-color: rgb(255, 244, 229);
-
-
 }
 
 h1 {
@@ -60,6 +58,13 @@ section p{
     font-size: 1.3vw;
 
 }
+
+#tessera{
+    width: 40vw !important; /* Riduci la dimensione dell'immagine */
+    border: #783f04 !important; /* Aggiungi margini per staccare l'immagine dai bordi */
+    display: block !important; /* Per centrare l'immagine all'interno della colonna */
+}
+
 
 /* Media query per schermi più piccoli */
 @media (max-width: 768px) {
