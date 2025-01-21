@@ -1,41 +1,53 @@
 body {
     background-color: rgb(255, 244, 229);
 }
-
-/* Overlay (di base nascosto) */
+/* Overlay */
 .overlay {
-    position: fixed; /* Posizionamento fisso sopra il contenuto principale */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Sfondo semitrasparente */
+    background-color: rgba(0, 0, 0, 0.5);
     display: none; /* Nascosto di default */
-    justify-content: flex-end; /* Allinea la finestra a destra */
+    justify-content: flex-end;
     align-items: center;
-    z-index: 1000; /* Sopra tutti gli altri elementi */
-  }
-  
-  /* Finestra laterale */
-  .side-window {
-    background-color: rgb(255, 244, 229); /* Sfondo bianco */
-    width: 500px; /* Larghezza della finestra */
-    height: 100%; /* Altezza della finestra */
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5); /* Ombra */
-    padding: 20px; /* Spazi interni */
-    position: relative; /* Per posizionare il pulsante di chiusura */
-    overflow-y: auto; /* Aggiunge lo scorrimento se il contenuto è troppo grande */
-  }
-  
-  /* Pulsante di chiusura */
-  .close-button {
+    z-index: 1000;
+}
+
+/* Mostra l'overlay quando è attivo */
+.overlay.active {
+    display: flex;
+}
+
+/* Finestra laterale */
+.side-window {
+    background-color:rgb(255, 244, 229) ;
+    width: 500px;
+    height: 100%;
+    padding: 20px;
+    box-shadow: -2px 0 5px #783f04;
+    position: relative;
+}
+
+/* Pulsante di chiusura */
+.close-button {
     position: absolute;
     top: 10px;
     right: 10px;
     background: none;
     border: none;
+    color: #783f04;
     font-size: 24px;
     cursor: pointer;
+<<<<<<< HEAD
+}
+
+header li{
+    list-style: none;
+}
+
+=======
   }
   
   /* Mostra l'overlay quando attivo */
@@ -44,6 +56,7 @@ body {
   }
 
  
+>>>>>>> ab743f47015f8ed7bc70006f6a3926878af85e42
 h1 {
     font-family: "Lucida Handwriting", cursive;
     font-size: 3vw;  /* Usa 3vw per un font responsivo */ 
@@ -101,6 +114,89 @@ section p{
 
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+#tessera{
+    width: 40vw !important; /* Riduci la dimensione dell'immagine */
+    border: #783f04 !important; /* Aggiungi margini per staccare l'immagine dai bordi */
+  /* Per centrare l'immagine all'interno della colonna */
+=======
+.custom-image {
+    width: 10vw !important;
+    border: brown;
+    margin: 10px auto;
+>>>>>>> ab743f47015f8ed7bc70006f6a3926878af85e42
+}
+
+.col-sm-4 {
+    outline: 1px solid red; /* Controlla i confini del contenitore */
+}
+
+/* Media query per schermi più piccoli */
+@media (max-width: 768px) {
+    header img {
+        width: 13vw;
+    }
+    h1 {
+        font-size: 4vw;  /* Aumenta la dimensione del testo per schermi più piccoli */
+    }
+    #logo {
+        width: 18vw;  /* Imposta una larghezza specifica per il logo sui dispositivi più piccoli */
+    }
+
+    #foto1{
+        width: auto;
+    }
+
+    #bottProdotti{
+        font-size:10vw;
+    }
+
+    section p{
+        font-size:2.5vw;
+    }
+    .side-window {
+        width: 250px; /* Rimpicciolisce il menu per schermi più piccoli */
+    }
+    .close-button{
+        right: 15%;
+    }
+}
+
+/* Media query per schermi molto piccoli */
+@media (max-width: 480px) {
+    header img {
+        width: 8vw;
+    }
+    h1 {
+        font-size: 5vw;  /* Aumenta ulteriormente la dimensione del testo per schermi molto piccoli */
+    }
+    #logo {
+        width: 13vw;  /* Imposta una larghezza specifica per il logo sui dispositivi più piccoli */
+    }
+
+    #foto1{
+        width: auto;    
+    }
+
+    #bottProdotti{
+        font-size:6vw;
+    }
+
+    section p{
+        font-size:4.5vw;
+    }
+    .side-window {
+        width:250px; /* Rimpicciolisce il menu per schermi più piccoli */
+    }
+    .close-button{
+        right: 15%;
+    }
+}
+
+
+>>>>>>> c2b8f77290a31714b1f1e9341ae74dc95723e0e4
 .text-brown {
     color: #783f04;
 }

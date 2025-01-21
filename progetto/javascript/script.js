@@ -1,14 +1,14 @@
-// Seleziona gli elementi necessari
-const menu = document.getElementById("menu");
+// Seleziona gli elementi
+const menuButton = document.getElementById("menu");
 const overlay = document.getElementById("overlay");
-const closeBtn = document.getElementById("closeBtn");
+const closeButton = document.getElementById("closeBtn");
 
-// Mostra l'overlay quando clicchi sull'immagine
-menu.addEventListener("click", () => {
-  overlay.classList.add("active"); // Aggiunge la classe "active" per mostrare l'overlay
+// Mostra l'overlay al clic del menu
+menuButton.addEventListener("click", () => {
+    overlay.classList.add("active");
 });
 
-// Nasconde l'overlay quando clicchi sul pulsante di chiusura
-closeBtn.addEventListener("click", () => {
-  overlay.classList.remove("active"); // Rimuove la classe "active" per nascondere l'overlay
+// Nascondi l'overlay al clic del pulsante di chiusura
+closeButton.addEventListener("click", () => {
+    overlay.classList.remove("active");
 });
