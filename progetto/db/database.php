@@ -11,6 +11,10 @@ class DatabaseHelper{
 
     public function getRecensioni(){
         $stmt = $this->db->("SELECT Voto, Suggerimenti FROM recensioni ORDER BY RAND() LIMIT 3")
+        $stmt->execute();
+        $result=$stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
     }
 }
 
