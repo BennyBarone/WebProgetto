@@ -37,8 +37,8 @@ body {
     width: 100%;
 }
 
-.side-window li {
-    border-bottom: 0.3vw solid #783f04; /* Linea marrone sotto ogni elemento */
+.side-window li, .grid-layout {
+    border-bottom: 3px solid #8B4513; /* Linea marrone sotto ogni elemento */
     margin-bottom: 10px;
 }
 
