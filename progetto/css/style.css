@@ -44,8 +44,6 @@ body {
   }
 
  
-
-
 h1 {
     font-family: "Lucida Handwriting", cursive;
     font-size: 3vw;  /* Usa 3vw per un font responsivo */ 
@@ -103,12 +101,15 @@ section p{
 
 }
 
-#tessera{
-    width: 40vw !important; /* Riduci la dimensione dell'immagine */
-    border: #783f04 !important; /* Aggiungi margini per staccare l'immagine dai bordi */
-    display: block !important; /* Per centrare l'immagine all'interno della colonna */
+.custom-image {
+    width: 10vw !important;
+    border: brown;
+    margin: 10px auto;
 }
 
+.col-sm-4 {
+    outline: 1px solid red; /* Controlla i confini del contenitore */
+}
 
 /* Media query per schermi più piccoli */
 @media (max-width: 768px) {
