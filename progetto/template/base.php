@@ -10,28 +10,18 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
-    <?php   include_once '.\utils\function.php'; // Include il file con la definizione della funzione?>
-
-
 </head>
 <body>
-    <header >
+    <header>
         <div class="container-fluid border p-2 border-3 border-brown text-brown d-flex align-items-center">
             <div class="logo-container">
                 <img id="logo" src="img/logo.png" alt="Gelato">
             </div>
             <h1 class="text-center flex-grow-1">Nuvole di Gelato</h1>
             <img src="img/profilo.png" alt="account">
-            <img src="img/menu.png"  alt="immagine" style="cursor: poniter" id="menu">    <!-- immagine per aprire menu -->
+            <img src="img/menu.png" alt="menu">
         </div>
     </header>
-    <div class="overlay" id="overlay">
-        <div class="side-window">
-            <button class="close-button" id="closeBtn">&times;</button>
-            <h2>Finestra Laterale</h2>
-        <p>Questo è il contenuto della finestra laterale.</p>
-        </div>
-    </div>
     <main>
         <section>
         <div class="position-relative">
@@ -55,7 +45,23 @@
                     offriamo anche la possibilità di acquistarli online: qualità artigianale direttamente alla vostra porta.</span>
                 </p>
 
+            <section>
+            <div class="row align-items-center">
+    <!-- Colonna Immagine -->
+                <div class="col-sm-4 d-flex justify-content-center">
+                    <img id="tessera" src="img/tessera.jpeg" class="img-fluid img-responsive p-3" alt="Tessera Fedeltà">
+                </div>
+    <!-- Colonna Testo -->
+                <div class="col-sm-8 text-center">
+                <h2>La tua carta fedeltà: Gelato, Sorrisi e Premi</h2>
+                <p>
+                    <span class="d-block">Registrati al nostro sito e scopri la dolcezza di premi esclusivi!</span>
+                    <span class="d-block">Ogni acquisto accumula punti che ti avvicinano a vantaggi unici e irresistibili. Perché ogni momento con il nostro gelato merita di essere speciale, con un pizzico di gratitudine in più.</span>
+                </p>
+                </div>
+            </div>
+            </section>
+        </section>
     </main>
-    <script src="javascript/script.js"></script>
 </body>
 </html>
