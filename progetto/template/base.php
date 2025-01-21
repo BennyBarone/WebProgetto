@@ -19,7 +19,20 @@
             </div>
             <h1 class="text-center flex-grow-1">Nuvole di Gelato</h1>
             <img src="img/profilo.png" alt="account">
-            <img src="img/menu.png" alt="menu">
+            <img src="img/menu.png" alt="immagine" class="clickable-image" id="menu">
+        </div>
+        <div class="overlay" id="overlay">
+            <div class=" side-window">
+            <button class="close-button" id="closeBtn">&times;</button>
+            <ul >
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Cartà fedeltà</a></li>
+                <li><a href="#">I nostri prodotti</a></li>
+                <li><a href="#">Contatti</a></li>
+                <li><a href="#">Cosa dicono di noi</a></li>
+                
+            </ul>
+            </div>
         </div>
     </header>
     <main>
@@ -49,7 +62,7 @@
             <div class="row align-items-center">
     <!-- Colonna Immagine -->
                 <div class="col-sm-4 d-flex justify-content-center">
-                    <img id="tessera" src="img/tessera.jpeg" class="img-fluid img-responsive p-3" alt="Tessera Fedeltà">
+                    <img id="tessera" src="img/tessera.jpeg" class="img-fluid p-3" alt="Tessera Fedeltà">
                 </div>
     <!-- Colonna Testo -->
                 <div class="col-sm-8 text-center">
@@ -63,5 +76,7 @@
             </section>
         </section>
     </main>
+   
+    <script src="javascript/script.js"></script>
 </body>
 </html>

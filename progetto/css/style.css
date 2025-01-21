@@ -1,50 +1,50 @@
 body {
     background-color: rgb(255, 244, 229);
 }
-
-/* Overlay (di base nascosto) */
+/* Overlay */
 .overlay {
-    position: fixed; /* Posizionamento fisso sopra il contenuto principale */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Sfondo semitrasparente */
+    background-color: rgba(0, 0, 0, 0.5);
     display: none; /* Nascosto di default */
-    justify-content: flex-end; /* Allinea la finestra a destra */
+    justify-content: flex-end;
     align-items: center;
-    z-index: 1000; /* Sopra tutti gli altri elementi */
-  }
-  
-  /* Finestra laterale */
-  .side-window {
-    background-color: rgb(255, 244, 229); /* Sfondo bianco */
-    width: 500px; /* Larghezza della finestra */
-    height: 100%; /* Altezza della finestra */
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5); /* Ombra */
-    padding: 20px; /* Spazi interni */
-    position: relative; /* Per posizionare il pulsante di chiusura */
-    overflow-y: auto; /* Aggiunge lo scorrimento se il contenuto è troppo grande */
-  }
-  
-  /* Pulsante di chiusura */
-  .close-button {
+    z-index: 1000;
+}
+
+/* Mostra l'overlay quando è attivo */
+.overlay.active {
+    display: flex;
+}
+
+/* Finestra laterale */
+.side-window {
+    background-color:rgb(255, 244, 229) ;
+    width: 500px;
+    height: 100%;
+    padding: 20px;
+    box-shadow: -2px 0 5px #783f04;
+    position: relative;
+}
+
+/* Pulsante di chiusura */
+.close-button {
     position: absolute;
     top: 10px;
     right: 10px;
     background: none;
     border: none;
+    color: #783f04;
     font-size: 24px;
     cursor: pointer;
-  }
-  
-  /* Mostra l'overlay quando attivo */
-  .overlay.active {
-    display: flex;
-  }
+}
 
- 
-
+header li{
+    list-style: none;
+}
 
 h1 {
     font-family: "Lucida Handwriting", cursive;
@@ -106,7 +106,7 @@ section p{
 #tessera{
     width: 40vw !important; /* Riduci la dimensione dell'immagine */
     border: #783f04 !important; /* Aggiungi margini per staccare l'immagine dai bordi */
-    display: block !important; /* Per centrare l'immagine all'interno della colonna */
+  /* Per centrare l'immagine all'interno della colonna */
 }
 
 
@@ -133,7 +133,12 @@ section p{
     section p{
         font-size:2.5vw;
     }
-
+    .side-window {
+        width: 250px; /* Rimpicciolisce il menu per schermi più piccoli */
+    }
+    .close-button{
+        right: 15%;
+    }
 }
 
 /* Media query per schermi molto piccoli */
@@ -158,6 +163,12 @@ section p{
 
     section p{
         font-size:4.5vw;
+    }
+    .side-window {
+        width:250px; /* Rimpicciolisce il menu per schermi più piccoli */
+    }
+    .close-button{
+        right: 15%;
     }
 }
 
