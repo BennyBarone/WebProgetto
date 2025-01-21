@@ -58,6 +58,7 @@
                     <span class="d-block">Registrati al nostro sito e scopri la dolcezza di premi esclusivi!</span>
                     <span class="d-block">Ogni acquisto accumula punti che ti avvicinano a vantaggi unici e irresistibili. Perché ogni momento con il nostro gelato merita di essere speciale, con un pizzico di gratitudine in più.</span>
                 </p>
+                <button id="scopriTessera" type="button" class="btn btn-primary">Scopri di più</button>
                 </div>
             </div>
             </section>
