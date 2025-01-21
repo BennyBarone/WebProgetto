@@ -22,7 +22,7 @@
             <img src="img/menu.png" alt="immagine" class="clickable-image" id="menu">
         </div>
         <div class="overlay" id="overlay">
-            <div class=" side-window">
+            <div class=" side-window ">
             <button class="close-button" id="closeBtn">&times;</button>
             <ul class="text-center">
                 <li><a href="#">Home</a></li>
@@ -74,13 +74,10 @@
                 </p>
                 <button id="scopriTessera" type="button" class="btn btn-primary">Scopri di più</button>
                 </div>
+                
             </div>
             </section>
         </div>
-
-        <section>
-            <h2>Cosa dicono di noi?</h2>
-        </section>
         </section>
     </main>
    
