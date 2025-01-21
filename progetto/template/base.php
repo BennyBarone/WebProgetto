@@ -29,9 +29,9 @@
                 <li><a href="#">Cartà fedeltà</a></li>
                 <li><a href="#">I nostri prodotti</a></li>
                 <li><a href="#">Contatti</a></li>
-                <li><a href="#">Cosa dicono di noi</a></li>
-                
+                <li><a href="#">Cosa dicono di noi</a></li>  
             </ul>
+            <button id="Acquista" type="button" class="btn btn-primary">Acquista</button>
             </div>
         </div>
     </header>
