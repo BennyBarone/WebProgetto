@@ -8,6 +8,10 @@ class DatabaseHelper{
             die("Connection failed: " . $db->connect_error);
         }        
     }
+
+    public function getRecensioni(){
+        $stmt = $this->db->("SELECT Voto, Suggerimenti FROM recensioni ORDER BY RAND() LIMIT 3")
+    }
 }
 
 ?>

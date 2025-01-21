@@ -37,7 +37,7 @@ body {
     width: 100%;
 }
 
-.side-window li {
+.side-window li, .grid-layout {
     border-bottom: 3px solid #8B4513; /* Linea marrone sotto ogni elemento */
     margin-bottom: 10px;
 }
@@ -175,11 +175,6 @@ section div img {
     background-color: rgba(165, 42, 42, 0.1);
     color: darkbrown;
 }
-
-.grid-layout{
-    border-bottom: 0.5vw solid #783f04;
-}
-
 
 /* Media query per schermi più piccoli */
 @media (max-width: 768px) {
