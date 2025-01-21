@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
+    <header >
         <div class="container-fluid border p-2 border-3 border-brown text-brown d-flex align-items-center">
             <div class="logo-container">
                 <img id="logo" src="img/logo.png" alt="Gelato">

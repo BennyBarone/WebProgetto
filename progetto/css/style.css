@@ -1,13 +1,10 @@
 body {
     background-color: rgb(255, 244, 229);
-
-
 }
 
 h1 {
     font-family: "Lucida Handwriting", cursive;
-    font-size: 3vw;  /* Usa 3vw per un font responsivo */
-   
+    font-size: 3vw;  /* Usa 3vw per un font responsivo */ 
 }
 
 /* Stile base per tutte le immagini */
@@ -52,13 +49,15 @@ section div img{
 
 
 section h2{
-    padding:1.5%;
+    padding:0 1.1%;
+    padding-top: 0.8%;
     font-family: "Lucida Handwriting", cursive;
 }
 
 section p{
-    padding: 1.7%;
-    /*margin: 1%;*/
+  
+    padding: 0 1.5%;
+ 
     font-family: 'Garamond', serif;
     font-size: 1.3vw;
 
@@ -96,7 +95,7 @@ section p{
     }
 
     #foto1{
-        width:auto;    
+        width: auto;    
     }
 }
 
