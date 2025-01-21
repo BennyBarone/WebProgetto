@@ -53,8 +53,7 @@
                     <span class="d-block">Venite a trovarci e lasciatevi conquistare dalla magia dei nostri gusti, dai classici intramontabili alle creazioni più innovative.
                     E per chi desidera godersi i nostri gelati comodamente a casa, 
                     offriamo anche la possibilità di acquistarli online: qualità artigianale direttamente alla vostra porta.</span>
-        </section>
-
+                </p>
 
     </main>
     <script src="javascript/script.js"></script>

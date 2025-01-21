@@ -103,6 +103,13 @@ section p{
 
 }
 
+#tessera{
+    width: 40vw !important; /* Riduci la dimensione dell'immagine */
+    border: #783f04 !important; /* Aggiungi margini per staccare l'immagine dai bordi */
+    display: block !important; /* Per centrare l'immagine all'interno della colonna */
+}
+
+
 /* Media query per schermi più piccoli */
 @media (max-width: 768px) {
     header img {
