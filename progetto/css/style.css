@@ -188,7 +188,7 @@ h5{
 
 .border-background{
     background-color: #cbad8d;
-    width: 30vw;
+    width: 15vw;
     margin:auto;
 }
 
@@ -276,7 +276,8 @@ h5{
     }
 
     .border-background{
-        width:50vw;
+        width:35vw;
+        height: 15vw;
     }
 
     h5{
@@ -340,7 +341,8 @@ h5{
     }
 
     .border-background{
-        width:50vw;
+        width:35vw;
+        height: 15vw;
     }
 
     h5{
