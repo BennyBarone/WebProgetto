@@ -26,7 +26,7 @@
             <ul class="text-center">
                 <li><a href="index.php">Home</a></li>
                 <li><a href="#">Cartà fedeltà</a></li>
-                <li><a href="#">I nostri prodotti</a></li>
+                <li><a href="prodotti.php">I nostri prodotti</a></li>
                 <li><a href="#">Contatti</a></li>
                 <li><a href="#">Cosa dicono di noi</a></li>  
             </ul>
