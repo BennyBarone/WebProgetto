@@ -1,5 +1,6 @@
 body {
-    background-color:rgb(255, 244, 229);
+   background-color:rgb(255, 244, 229);
+   /*background-color: red;*/
 }
 /* Overlay */
 .overlay {
@@ -113,7 +114,7 @@ section div img{
     width: 40vw;
 }
 
-section h2,article h2{
+section h2, article h2{
     padding:0 1.1%;
     padding-top: 0.8%;
     font-family: "Lucida Handwriting", cursive;
@@ -181,6 +182,44 @@ section div img {
     color: darkbrown;
 }
 
+h5{
+    font-family: 'Papyrus', fantasy;
+    font-size: 2.2vw;
+}
+
+.border-background{
+    background-color: #cbad8d;
+    width: 30vw;
+    margin:auto;
+}
+
+.link-black{
+    color: black;
+    font-size: 2.0vw;
+    font-family: 'Garamond', serif;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+/* Bottoni tondi con bordo nero */
+.bottone-prod{
+    border: 2px solid black;
+    border-radius: 80%;
+    background-color: rgb(255, 244, 229); /* Sfondo bianco di default */
+    color: black;
+    font-size: 1.5vw;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Bottone attivo con sfondo marrone */
+.bottone-prod.active {
+    background-color:#783f04;
+    color: white;
+}
 
 
 
@@ -236,6 +275,18 @@ section div img {
         padding: 10% 0;
         margin: 5%;
     }
+
+    .border-background{
+        width:50vw;
+    }
+
+    h5{
+        font-size:5vw;
+    }
+
+    .link-black{
+        font-size:6vw;
+    }
 }
 
 /* Media query per schermi molto piccoli */
@@ -287,6 +338,18 @@ section div img {
     
     #UtenteRecensione{
         width: 9vw !important;
+    }
+
+    .border-background{
+        width:50vw;
+    }
+
+    h5{
+        font-size:5vw;
+    }
+
+    .link-black{
+        font-size:6vw;
     }
 }
 
