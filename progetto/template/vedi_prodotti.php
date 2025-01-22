@@ -3,9 +3,9 @@
     <div class="container">
         <div class="row">
             <?php foreach($templateParams["gustiMigliori"] as $gustiMigliori): ?>
-                <div class="col-sm-6 mb-3 text-center">
+                <div class="col-sm-3 mb-3 text-center">
                     <div class="border border-4 p-2 border-brown border-background">
-                        <h5><?php echo $gustiMigliori["Nome_gusto"]; ?></h5>
+                        <h5 ><?php echo $gustiMigliori["Nome_gusto"]; ?></h5>
                     </div>
                 </div>
             <?php endforeach; ?>
