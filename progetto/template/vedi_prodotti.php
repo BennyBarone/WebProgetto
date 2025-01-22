@@ -33,14 +33,23 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-sm-4 mb-3 text-center">
-            <button type="button" class="bottone-prod border-4">Tutti</button>
+        <div class="col-4 col-sm-2 mb-3 text-center">
+            <button type="button" class="bottone-prod border-4 selected">Tutti</button>
         </div>
-        <div class="col-sm-4 mb-3 text-center">
+        <div class="col-4 col-sm-2 mb-3 text-center">
             <button type="button" class="bottone-prod border-4">Coni</button>
         </div>
-        <div class="col-sm-4 mb-3 text-center">
+        <div class="col-4 col-sm-2 mb-3 text-center">
             <button type="button" class="bottone-prod border-4">Coppette</button>
+        </div>
+        <div class="col-4 col-sm-2 mb-3 text-center">
+            <button type="button" class="bottone-prod border-4">Brioches</button>
+        </div>
+        <div class="col-4 col-sm-2 mb-3 text-center">
+            <button type="button" class="bottone-prod border-4">Vaschette</button>
+        </div>
+        <div class="col-4 col-sm-2 mb-3 text-center">
+            <button type="button" class="bottone-prod border-4">Torte</button>
         </div>
     </div>
 </div>

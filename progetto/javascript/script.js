@@ -17,5 +17,16 @@ closeButton.addEventListener("click", () => {
     overlay.classList.remove("active");
 });
 
+// Seleziona tutti i pulsanti con la classe 'bottone-prod'
+document.querySelectorAll('.bottone-prod').forEach(button => {
+    // Aggiunge un event listener 'click' a ciascun pulsante
+    button.addEventListener('click', function() {
+        // Rimuove la classe 'selected' da tutti i pulsanti
+        document.querySelectorAll('.bottone-prod').forEach(btn => btn.classList.remove('selected'));
+        // Aggiunge la classe 'selected' al pulsante cliccato
+        this.classList.add('selected');
+    });
+});
+
 
 
