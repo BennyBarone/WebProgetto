@@ -89,6 +89,7 @@
                         </li>
                     <?php endforeach; ?>
                 </ul>
+                <button id="scopriTessera" type="button" class="btn btn-primary">Scopri di più</button>
             </section>
         </section>
     </main>  
