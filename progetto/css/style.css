@@ -1,5 +1,6 @@
 body {
-   background-color:rgb(255, 244, 229);
+   /*background-color:rgb(255, 244, 229);*/
+   background-color: red;
 }
 /* Overlay */
 .overlay {
@@ -192,6 +193,11 @@ h5{
     margin:auto;
 }
 
+#prod{
+    border:#783f04;
+    background-color:rgb(211, 194, 171);
+}
+
 /* Media query per schermi più piccoli */
 @media (max-width: 768px) {
     header img {
@@ -241,6 +247,10 @@ h5{
     .side-window li a{
         padding: 10% 0;
         margin: 5%;
+    }
+
+    h5{
+        font-size:5vw;
     }
 }
 
@@ -293,6 +303,10 @@ h5{
     
     #UtenteRecensione{
         width: 9vw !important;
+    }
+
+    h5{
+        font-size:5vw;
     }
 }
 
