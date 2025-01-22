@@ -1,5 +1,5 @@
 body {
-   background-color:rgb(214, 125, 0);
+   background-color:rgb(255, 244, 229);
 }
 /* Overlay */
 .overlay {
@@ -43,7 +43,11 @@ body {
 }
 
 article img{
-    width: 7vw;;
+    width: 7vw;
+  
+}
+article p{
+    font-family:'Garamond', serif;
 }
 
 .side-window li a {
@@ -224,8 +228,6 @@ h5{
 
 
 
-
-
 /* Media query per schermi più piccoli */
 @media (max-width: 768px) {
     header img {
@@ -354,6 +356,7 @@ h5{
     .link-black{
         font-size:6vw;
     }
+    
 }
 
 

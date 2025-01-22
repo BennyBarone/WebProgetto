@@ -1,4 +1,4 @@
-<section>
+<section> 
         <div class="position-relative">
             <img id="foto1" src="img/foto1.jpg" class="img-fluid mx-auto d-block" alt="primafoto">
             <a href="prodotti.php" id="bottProdotti" role="button" class="btn custom-btn position-absolute top-50 start-50 translate-middle">
@@ -59,37 +59,56 @@
 
 </section>
 <article>
-    <h2 class="mb-2"> La nostra essenza</h2>
-    <div class="container mt-4">
+    <h2 class="mb-3"> La nostra essenza</h2>
+    <div class="container-fluid">
         <div class="row">
             <!-- Colonna 1 -->
             <div class="col-md-6">
-                <div class="image-container">
-                    <img src="img/latte.png" alt="Immagine 1" >
-                    <p>Testo Immagine 1</p>
+                <div class="image-container d-flex mb-3">
+                    <img src="img/latte.png" alt="Immagine 1" class="img-fluid ">
+                    <div>
+                        <p class="fw-bold ms-3 mb-1 mt-2">Latte fresco</p>
+                        <p class=" ms-3">Utilizziamo solo latte fresco di alta qualità per garantire un gelato cremoso e genuino.</p>
+                    </div>
                 </div>
-                <div class="image-container">
-                    <img src="img/glutenfree.png" alt="Immagine 2">
-                    <p>Testo Immagine 2</p>
+                <div class="image-container d-flex mb-3 ">
+                    <img src="img/glutenfree.png" alt="Immagine 2" class="img-fluid me-3">
+                    <div>
+                        <p class="fw-bold mb-1 mt-3">Gluten free</p>
+                        <p class="mb-0">Offriamo una vasta gamma di gelati e dolci senza glutine, adatti a tutti.</p>
+                    </div>
                 </div>
-                <div class="image-container">
-                    <img src="img/location.png" alt="Immagine 3">
-                    <p>Testo Immagine 3</p>
+                <div class="image-container d-flex mb-3">
+                    <img src="img/location.png" alt="Immagine 3" class="img-fluid me-3">
+                    <div>
+                        <p class="fw-bold mb-1 mt-4">Il nostro negozio</p>
+                        <p class="mb-0">Un ambiente accogliente dove il gusto incontra la qualità, pronto ad accoglierti.</p>
+                    </div>
                 </div>
             </div>
             <!-- Colonna 2 -->
             <div class="col-md-6">
-                <div class="image-container">
-                    <img src="img/consegna.png" alt="Immagine 4">
-                    <p>Testo Immagine 4</p>
+                <div class="image-container d-flex mb-3">
+                    <img src="img/consegna.png" alt="Immagine 4"  class="img-fluid me-3">
+                    <div>
+                        <p class="fw-bold ms-2 mb-1 mt-2">Consegna</p>
+                        <p class="mb-0 ms-2">Portiamo il nostro gelato direttamente a casa tua, sempre fresco e delizioso.</p>
+                    </div>
+                    
                 </div>
-                <div class="image-container">
-                    <img src="img/prodotti.png" alt="Immagine 5">
-                    <p>Testo Immagine 5</p>
+                <div class="image-container d-flex mb-3">
+                    <img src="img/prodotti.png" alt="Immagine 5" class="ms-2">
+                    <div>
+                        <p class="fw-bold ms-3 mb-1 mt-3">Prodotti freschi</p>
+                        <p class="mb-0 ms-3">Frutta di stagione e ingredienti naturali per un'esperienza unica di freschezza.</p>
+                    </div>
                 </div>
-                <div class="image-container">
-                    <img src="img/tantoaltro.png" alt="Immagine 6">
-                    <p>Testo Immagine 6</p>
+                <div class="image-container d-flex mb-3">
+                    <img src="img/tantoaltro.png" alt="Immagine 6" class="ms-2">
+                    <div>
+                        <p class="fw-bold ms-3 mb-1 mt-4">Molto altro da scoprire</p>
+                        <p class="mb-0 ms-3">Gelati, dolci, e sorprese tutte da scoprire: c'è sempre qualcosa di nuovo ad aspettarti!</p>
+                    </div>
                 </div>
             </div>
         </div>
