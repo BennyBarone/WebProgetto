@@ -24,7 +24,7 @@
             <div class=" side-window ">
             <button class="close-button" id="closeBtn">&times;</button>
             <ul class="text-center">
-                <li><a href="#">Home</a></li>
+                <li><a href="index.php">Home</a></li>
                 <li><a href="#">Cartà fedeltà</a></li>
                 <li><a href="#">I nostri prodotti</a></li>
                 <li><a href="#">Contatti</a></li>
