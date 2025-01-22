@@ -173,8 +173,6 @@ section div img {
 
 #acquista{
     margin:10% 38%;
-  
-
 }
 #scopriTessera:hover,#acquista:hover{
     background-color: rgba(165, 42, 42, 0.1);
@@ -218,7 +216,6 @@ section div img {
 
     #scopriTessera{
         margin-bottom: 5%;
-        
     }
     
     .grid-layout{
