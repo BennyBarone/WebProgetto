@@ -23,7 +23,6 @@ document.querySelectorAll('.bottone-prod').forEach(button => {
     button.addEventListener('click', function() {
         // Rimuove la classe 'selected' da tutti i pulsanti
         document.querySelectorAll('.bottone-prod').forEach(btn => btn.classList.remove('selected'));
-
         // Aggiunge la classe 'selected' al pulsante cliccato
         this.classList.add('selected');
     });

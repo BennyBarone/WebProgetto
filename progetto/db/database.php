@@ -28,7 +28,8 @@ class DatabaseHelper{
     }
 
     public function getGusti(){
-        $query="SELECT Nome_gusto FROM listino_gusti";
+        $query=" SELECT l.Nome_gusto FROM listino_gusti l LEFT JOIN (SELECT g.Nome_gusto FROM gusti_con_quantita g GROUP BY g.Nome_gusto ORDER BY SUM(g.Quantita) DESC LIMIT 4) AS top_gusti
+        ON l.Nome_gusto = top_gusti.Nome_gusto WHERE top_gusti.Nome_gusto IS NULL";
         $stmt= $this->db->prepare($query);
         $stmt->execute();
         $result=$stmt->get_result();
