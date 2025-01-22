@@ -113,7 +113,7 @@ section div img{
     width: 40vw;
 }
 
-section h2{
+section h2,article h2{
     padding:0 1.1%;
     padding-top: 0.8%;
     font-family: "Lucida Handwriting", cursive;
