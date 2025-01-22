@@ -1,5 +1,5 @@
 body {
-   background-color:rgb(255, 244, 229);
+   background-color:rgb(214, 125, 0);
 }
 /* Overlay */
 .overlay {
@@ -42,7 +42,9 @@ body {
     margin-bottom: 10px;
 }
 
-
+article img{
+    width: 7vw;;
+}
 
 .side-window li a {
     text-decoration: none; /* Rimuove la sottolineatura */

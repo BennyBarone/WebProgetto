@@ -60,17 +60,40 @@
 </section>
 <article>
     <h2 class="mb-2"> La nostra essenza</h2>
-    <div class="container-fluid">
+    <div class="container mt-4">
         <div class="row">
-            <div class="col-sm-2 d-flex">
-                <img id="latte" src="img/latte.png"  alt="Latte" classe="ms-3" style ="width: 7vw">
+            <!-- Colonna 1 -->
+            <div class="col-md-6">
+                <div class="image-container">
+                    <img src="img/latte.png" alt="Immagine 1" >
+                    <p>Testo Immagine 1</p>
+                </div>
+                <div class="image-container">
+                    <img src="img/glutenfree.png" alt="Immagine 2">
+                    <p>Testo Immagine 2</p>
+                </div>
+                <div class="image-container">
+                    <img src="img/location.png" alt="Immagine 3">
+                    <p>Testo Immagine 3</p>
+                </div>
             </div>
-        <div class="col-sm-4">
-            
-
+            <!-- Colonna 2 -->
+            <div class="col-md-6">
+                <div class="image-container">
+                    <img src="img/consegna.png" alt="Immagine 4">
+                    <p>Testo Immagine 4</p>
+                </div>
+                <div class="image-container">
+                    <img src="img/prodotti.png" alt="Immagine 5">
+                    <p>Testo Immagine 5</p>
+                </div>
+                <div class="image-container">
+                    <img src="img/tantoaltro.png" alt="Immagine 6">
+                    <p>Testo Immagine 6</p>
+                </div>
+            </div>
         </div>
     </div>
-
 
 
 
