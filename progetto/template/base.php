@@ -34,7 +34,7 @@
             <button id="acquista" type="button" class="btn btn-primary btn-lg">Acquista</button>
             </div>
         </div>
-        <script src="javascript/script.js"></script>
+        <script src="javascript/script.js" defer></script>
     </header>
     <main>
     <?php

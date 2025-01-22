@@ -183,12 +183,13 @@ section div img {
 
 h5{
     font-family: 'Papyrus', fantasy;
-    font-size: 2.2vw;
+    font-size: 2vw;
 }
 
 .border-background{
     background-color: #cbad8d;
     width: 15vw;
+    height: 4.5vw;
     margin:auto;
 }
 
@@ -203,24 +204,25 @@ h5{
 
 /* Bottoni tondi con bordo nero */
 .bottone-prod{
-    border: 2px solid black;
-    border-radius: 80%;
-    background-color: rgb(255, 244, 229); /* Sfondo bianco di default */
+    background-color: rgb(255, 244, 229); 
     color: black;
-    font-size: 1.5vw;
-    align-items: center;
-    justify-content: center;
+    border: 1vw solid black;
+    border-radius: 50%;
+    font-size: 1.3vw;
+    padding: 2vw 4vw;
     cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
+    outline: none;
 }
 
 /* Bottone attivo con sfondo marrone */
-.bottone-prod.active {
-    background-color:#783f04;
-    color: white;
+.bottone-prod:hover {
+    background-color:#f0f0f0;
 }
 
-
+.bottone-prod.selected{
+    background-color: #783f04;
+    color: rgb(255, 244, 229);
+}
 
 
 
@@ -351,6 +353,14 @@ h5{
 
     .link-black{
         font-size:6vw;
+    }
+
+    .bottone-prod{
+        border: 0.5vw solid black;
+        font-size: 4vw;
+        padding: 2.5vw 4.5vw;
+        cursor: pointer;
+        outline: none;
     }
 }
 
