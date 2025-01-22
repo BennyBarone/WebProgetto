@@ -13,7 +13,7 @@
     </div>
         <!--se clicco sopra scorpili tutti devono apparire tutti i gusti presenti in gelateria-->
     <div class="text-center">
-    <a href="#" data-bs-toggle="collapse" data-bs-target="#demo" class="text-decoration-underline" style="color: black; font-size: 1.3vw">
+    <a href="#" data-bs-toggle="collapse" data-bs-target="#demo" class="text-decoration-underline link-black">
         Scoprili tutti
     </a>
 </div>
@@ -34,16 +34,15 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-4 mb-3 text-center">
-            <button id="prod" type="button" class="btn btn-primary">Tutti</button>
+            <button type="button" class="bottone-prod border-4">Tutti</button>
         </div>
         <div class="col-sm-4 mb-3 text-center">
-            <button id="prod" type="button" class="btn btn-primary">Coni</button>
+            <button type="button" class="bottone-prod border-4">Coni</button>
         </div>
         <div class="col-sm-4 mb-3 text-center">
-            <button id="prod" type="button" class="btn btn-primary">Coppette</button>
+            <button type="button" class="bottone-prod border-4">Coppette</button>
         </div>
     </div>
 </div>
-
 
 </section>
