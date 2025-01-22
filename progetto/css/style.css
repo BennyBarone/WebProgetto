@@ -1,5 +1,5 @@
 body {
-    background-color:rgb(255, 244, 229);
+   background-color:rgb(255, 244, 229);
 }
 /* Overlay */
 .overlay {
@@ -113,7 +113,7 @@ section div img{
     width: 40vw;
 }
 
-section h2,article h2{
+section h2, article h2{
     padding:0 1.1%;
     padding-top: 0.8%;
     font-family: "Lucida Handwriting", cursive;
@@ -181,7 +181,16 @@ section div img {
     color: darkbrown;
 }
 
+h5{
+    font-family: 'Papyrus', fantasy;
+    font-size: 2.2vw;
+}
 
+.border-background{
+    background-color: #cbad8d;
+    width: 30vw;
+    margin:auto;
+}
 
 /* Media query per schermi più piccoli */
 @media (max-width: 768px) {
