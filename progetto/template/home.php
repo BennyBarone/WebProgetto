@@ -60,6 +60,17 @@
 </section>
 <article>
     <h2 class="mb-2"> La nostra essenza</h2>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-2 d-flex">
+                <img id="latte" src="img/latte.png"  alt="Latte" classe="ms-3" style ="width: 7vw">
+            </div>
+        <div class="col-sm-4">
+            
+
+        </div>
+    </div>
+
 
 
 
