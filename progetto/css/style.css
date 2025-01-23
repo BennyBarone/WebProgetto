@@ -1,5 +1,5 @@
 body {
-   background-color:rgb(255, 244, 229);
+   background-color:red;
 }
 /* Overlay */
 .overlay {
@@ -295,6 +295,11 @@ h5{
     .link-black{
         font-size:6vw;
     }
+
+
+    article img{
+        width: 3vw;
+    }
 }
 
 /* Media query per schermi molto piccoli */
@@ -368,6 +373,10 @@ h5{
         cursor: pointer;
         outline: none;
     }
+    article img{
+        width: 3vw;
+    }
+    
 }
 
 
