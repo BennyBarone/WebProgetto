@@ -53,10 +53,11 @@
         <?php foreach($templateParams["prodotti"] as $prodotti): ?>
             <div class="col-md-4 mb-4">
                 <div class="box border border-4 p-3 border-brown">
-                <img src="img/<?php echo strtolower($prodotti['Tipologia_prodotto']) . '_' . strtolower($prodotti['Grandezza']); ?>.jpg" class="box-img-top" alt="Immagine Prodotto" style="width:15vw;">
+                <img src="img/<?php echo strtolower($prodotti['Tipologia_prodotto']) . '_' . strtolower($prodotti['Grandezza']); ?>.jpg" class="box-img-top" alt="Immagine Prodotto">
                     <div class="box-body text-center">
-                        <p class="box-title">Prodotto: <?php echo $prodotti["Tipologia_prodotto"]; ?> <?php echo $prodotti["Grandezza"]; ?></p>
-                        <p class="box-text">Prezzo: €<?php echo $prodotti["Prezzo"]; ?></p>
+                        <p class="box-title"><strong><?php echo $prodotti["Tipologia_prodotto"]; ?> <?php echo $prodotti["Grandezza"]; ?></strong></p>
+                        <p class="box-text">Prezzo: <strong><?php echo $prodotti["Prezzo"]; ?>€</strong></p>
+                        
                         <button id="acquistaprod" class="btn btn-primary">Aggiungi al carrello</button>
                     </div>
                 </div>

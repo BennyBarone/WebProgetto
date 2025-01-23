@@ -260,6 +260,8 @@ article div{
 }
 
 .box-img-top{
+    width:15vw;
+    border: 0.2vw solid #783f04;
     display: block;
     margin: 0 auto;
 }
@@ -338,6 +340,9 @@ article div{
         width: 20vw;
      }
    
+     .box-img-top{
+        width: 40vw;
+     }
     
 }
 
@@ -424,10 +429,10 @@ article div{
        width: 20vw;
     }
 
-
-
+    .box-img-top{
+        width: 40vw;
+     }
     
-   
 }
 
 
