@@ -57,7 +57,7 @@
                     <div class="box-body text-center">
                         <p class="box-title">Prodotto: <?php echo $prodotti["Tipologia_prodotto"]; ?> <?php echo $prodotti["Grandezza"]; ?></p>
                         <p class="box-text">Prezzo: €<?php echo $prodotti["Prezzo"]; ?></p>
-                        <button class="btn btn-primary">Aggiungi al carrello</button>
+                        <button id="acquistaprod" class="btn btn-primary">Aggiungi al carrello</button>
                     </div>
                 </div>
         </div>
