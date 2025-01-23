@@ -1,5 +1,7 @@
 body {
-   background-color:rgb(255, 244, 229);
+   /*background-color:rgb(255, 244, 229);*/
+   background-color: red;
+
 }
 /* Overlay */
 .overlay {
