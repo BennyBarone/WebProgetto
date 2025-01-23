@@ -1,9 +1,9 @@
 <section>
     <h2 classe="pt-4 ps-4"> I nostri contatti</h2>
    
-    <p class="mb-0">Per richiedere informazioni inserite tutti i propri dati sottostante e premere il pulsante Invia messaggio.</p>
-    <p>Un nostro incaricato vi risponderà al più presto dandovi tutte le informazioni da voi richieste.
-        Per ulteriori informazioni contattateci: via mail o telefono.
+    <p class="mb-0">Per richiedere informazioni inserire tutti i dati negli spazi sottostanti e premere il pulsante <strong>Invia messaggio.</strong></p>
+    <p class="mb-0">Un nostro incaricato vi risponderà al più presto dandovi tutte le informazioni da voi richieste.</p>
+    <p class="mb-0">Per ulteriori informazioni contattateci: via mail o telefono.
     </p>
 
     <div class="container my-5">

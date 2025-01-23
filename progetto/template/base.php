@@ -53,7 +53,7 @@
                 <p  class="mb-1" >Aperti tutti i giorni dalle 10:00 alle 22:00</p>
                 <p  class="mb-1">
                     <a  href="prodotti.php">Menu</a> | 
-                    <a href="/contatti">Contatti</a>
+                    <a href="contatti.php">Contatti</a>
                 </p>
                 
                 <p class="mb-0 pb-4">&copy; 2025 Nuvole di gelato. Tutti i diritti riservati.</p>
