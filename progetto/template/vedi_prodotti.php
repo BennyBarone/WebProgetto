@@ -57,7 +57,10 @@
                     <div class="box-body text-center">
                         <p class="box-title"><strong><?php echo $prodotti["Tipologia_prodotto"]; ?> <?php echo $prodotti["Grandezza"]; ?></strong></p>
                         <p class="box-text">Prezzo: <strong><?php echo $prodotti["Prezzo"]; ?>€</strong></p>
-
+                        <div class="d-flex align-items-center justify-content-center mb-3">
+                            <p class="mb-0 me-2">Quantità:</p>
+                            <input type="number" name="quantita" id="quantita" min="1" max="10" value="1" class="form-control w-auto"/>
+                        </div>
                         <button id="acquistaprod" class="btn btn-primary">Aggiungi al carrello</button>
                     </div>
                 </div>
