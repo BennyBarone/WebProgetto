@@ -173,7 +173,7 @@ section div img {
     margin: 10px auto;
 }
 
-#scopri, #acquista, #acquistaprod{
+#scopri, #acquista, #acquistaprod, #invia{
     border:#783f04;
     background-color: #783f04;
     transition: all 0.3s ease;
@@ -184,7 +184,7 @@ section div img {
   
 
 }
-#scopri:hover,#acquista:hover, #acquistaprod:hover{
+#scopri:hover,#acquista:hover, #acquistaprod:hover, #invia:hover{
     background-color: rgba(165, 42, 42, 0.1);
     color: darkbrown;
 }
@@ -266,6 +266,18 @@ article div{
     margin: 0 auto;
 }
 
+.contact-form {
+    background-color: rgb(255, 244, 229);
+    border-color: 2px solid #8B4513;
+    padding: 2%;
+    font-family: 'Garamond', serif;
+}
+
+section h3{
+    font-family: 'Garamond',serif;
+    margin-top: 10vw;
+
+}
 /* Media query per schermi più piccoli */
 @media (max-width: 768px) {
     header img {
