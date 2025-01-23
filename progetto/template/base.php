@@ -28,7 +28,7 @@
                 <li><a href="index.php">Home</a></li>
                 <li><a href="#">Cartà fedeltà</a></li>
                 <li><a href="prodotti.php">I nostri prodotti</a></li>
-                <li><a href="#">Contatti</a></li>
+                <li><a href="contatti.php">Contatti</a></li>
                 <li><a href="#">Cosa dicono di noi</a></li>  
             </ul>
             <button id="acquista" type="button" class="btn btn-primary btn-lg">Acquista</button>
