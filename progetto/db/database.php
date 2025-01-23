@@ -36,6 +36,22 @@ class DatabaseHelper{
 
         return $result->fetch_all(MYSQLI_ASSOC);
     }
+
+    public function getProdotti(){
+        $query="SELECT Tipologia_prodotto, Grandezza, Prezzo FROM prodotti";
+        $stmt= $this->db->prepare($query);
+        $stmt->execute();
+        $result=$stmt->get_result();
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
+    public function getProdottiByTipo($filtro){
+        $query="SELECT Tipologia_prodotto, Grandezza, Prezzo FROM prodotti WHERE Tipologia_prodotto = ?";
+        $stmt= $this->db->prepare($query);
+        $stmt->execute([$filtro]);
+        $result=$stmt->get_result();
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
 }
 
 ?>

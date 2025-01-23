@@ -31,27 +31,37 @@
     </div>
 </div>
 
+
 <div class="container">
+    <!-- Form per i bottoni di filtro, faccio una mappa per i bottoni -->
+    <form method="GET" action="prodotti.php" class="d-flex flex-wrap">
+        <?php
+        $bottoni = ["Tutti"=> "Tutti", "Coni" =>"Cono", "Coppette"=>"Coppetta", "Brioches"=>"Brioches", "Vaschette"=>"Vaschetta", "Torte"=>"Torta"];
+        $filtro = isset($_GET['filtro']) ? $_GET['filtro'] : 'Tutti';
+
+        foreach ($bottoni as $nomeBottone => $valoreDB) {
+            $selectedClass = ($filtro === $valoreDB) ? 'selected' : '';
+            echo '<div class="col-4 col-sm-2 mb-3 text-center">
+                    <button type="submit" name="filtro" value="'.$valoreDB.'" class="bottone-prod border-4 '.$selectedClass.'">'.$nomeBottone.'</button>
+                  </div>';
+        }
+        ?>
+    </form>
+    </div>
+<div class="container mt-4">
     <div class="row">
-        <div class="col-4 col-sm-2 mb-3 text-center">
-            <button type="button" class="bottone-prod border-4 selected">Tutti</button>
+        <?php foreach($templateParams["prodotti"] as $prodotti): ?>
+            <div class="col-md-4 mb-4">
+                <div class="box">
+                    <img src="img/foto.png" class="box-img-top" alt="Immagine prodotto">
+                    <div class="box-body text-center">
+                        <p class="box-title">Prodotto: <?php echo $prodotti["Tipologia_prodotto"]; ?> <?php echo $prodotti["Grandezza"]; ?></p>
+                        <p class="box-text">Prezzo: €<?php echo $prodotti["Prezzo"]; ?></p>
+                        <button class="btn btn-primary">Aggiungi al carrello</button>
+                    </div>
+                </div>
         </div>
-        <div class="col-4 col-sm-2 mb-3 text-center">
-            <button type="button" class="bottone-prod border-4">Coni</button>
-        </div>
-        <div class="col-4 col-sm-2 mb-3 text-center">
-            <button type="button" class="bottone-prod border-4">Coppette</button>
-        </div>
-        <div class="col-4 col-sm-2 mb-3 text-center">
-            <button type="button" class="bottone-prod border-4">Brioches</button>
-        </div>
-        <div class="col-4 col-sm-2 mb-3 text-center">
-            <button type="button" class="bottone-prod border-4">Vaschette</button>
-        </div>
-        <div class="col-4 col-sm-2 mb-3 text-center">
-            <button type="button" class="bottone-prod border-4">Torte</button>
-        </div>
+        <?php endforeach; ?>
     </div>
 </div>
-
 </section>
