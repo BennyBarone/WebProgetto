@@ -1,7 +1,7 @@
 body {
    /*background-color:rgb(255, 244, 229);*/
    background-color: red;
-    border-bottom: 0;
+   border-bottom: 0;
 }
 /* Overlay */
 .overlay {
@@ -173,7 +173,7 @@ section div img {
     margin: 10px auto;
 }
 
-#scopri, #acquista, #acquistaprod{
+#scopri, #acquista{
     border:#783f04;
     background-color: #783f04;
     transition: all 0.3s ease;
@@ -184,7 +184,7 @@ section div img {
   
 
 }
-#scopri:hover,#acquista:hover, #acquistaprod:hover{
+#scopri:hover,#acquista:hover{
     background-color: rgba(165, 42, 42, 0.1);
     color: darkbrown;
 }
