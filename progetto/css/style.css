@@ -259,6 +259,10 @@ article div{
     padding: 0;
 }
 
+.box-img-top{
+    display: block;
+    margin: 0 auto;
+}
 
 /* Media query per schermi più piccoli */
 @media (max-width: 768px) {
