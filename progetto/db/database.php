@@ -52,6 +52,14 @@ class DatabaseHelper{
         $result=$stmt->get_result();
         return $result->fetch_all(MYSQLI_ASSOC);
     }
+
+    public function getListaGusti(){
+        $query="SELECT Nome_gusto FROM listino_gusti WHERE Scorte > 0";
+        $stmt=$this->db->prepare($query);
+        $stmt->execute();
+        $result=$stmt->get_result();
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
 }
 
 ?>

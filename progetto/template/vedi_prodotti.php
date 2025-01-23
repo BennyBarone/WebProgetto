@@ -48,6 +48,7 @@
         ?>
     </form>
     </div>
+    
 <div class="container mt-4">
     <div class="row">
         <?php foreach($templateParams["prodotti"] as $prodotti): ?>
@@ -57,6 +58,23 @@
                     <div class="box-body text-center">
                         <p class="box-title"><strong><?php echo $prodotti["Tipologia_prodotto"]; ?> <?php echo $prodotti["Grandezza"]; ?></strong></p>
                         <p class="box-text">Prezzo: <strong><?php echo $prodotti["Prezzo"]; ?>€</strong></p>
+
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                            Scegli Gusto
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-scrollable" aria-labelledby="dropdownMenuButton">
+                            <?php foreach($templateParams["listaGusti"] as $listaGusti): ?>
+                                <li>
+                                <a class="dropdown-item" href="#" data-gusto="<?php echo htmlspecialchars($listaGusti["Nome_gusto"], ENT_QUOTES); ?>">
+                                    <?php echo htmlspecialchars($listaGusti["Nome_gusto"]); ?>
+                                </a>
+                                </li>
+                                <?php endforeach; ?>
+                        </ul>
+                    </div>
+
+
                         <div class="d-flex align-items-center justify-content-center mb-3">
                             <p class="mb-0 me-2">Quantità:</p>
                             <input type="number" name="quantita" id="quantita" min="1" max="10" value="1" class="form-control w-auto"/>

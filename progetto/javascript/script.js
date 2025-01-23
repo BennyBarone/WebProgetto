@@ -28,5 +28,21 @@ document.querySelectorAll('.bottone-prod').forEach(button => {
     });
 });
 
+document.querySelectorAll('.dropdown-item').forEach(item => {
+    item.addEventListener('click', function (event) {
+        event.preventDefault();
+        const gusto = this.getAttribute('data-gusto');
+        selectGusto(gusto);
+    });
+});
+
+function selectGusto(gusto) {
+    const button = document.getElementById("dropdownMenuButton");
+    if (button) {
+        button.innerText = gusto;
+    }
+}
+
+
 
 
