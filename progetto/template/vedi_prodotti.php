@@ -52,7 +52,7 @@
     <div class="row">
         <?php foreach($templateParams["prodotti"] as $prodotti): ?>
             <div class="col-md-4 mb-4">
-                <div class="box">
+                <div class="box border border-4 p-3 border-brown">
                     <img src="img/foto.png" class="box-img-top" alt="Immagine prodotto">
                     <div class="box-body text-center">
                         <p class="box-title">Prodotto: <?php echo $prodotti["Tipologia_prodotto"]; ?> <?php echo $prodotti["Grandezza"]; ?></p>
