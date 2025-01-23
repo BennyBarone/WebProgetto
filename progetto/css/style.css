@@ -173,7 +173,7 @@ section div img {
     margin: 10px auto;
 }
 
-#scopri, #acquista{
+#scopri, #acquista, #acquistaprod{
     border:#783f04;
     background-color: #783f04;
     transition: all 0.3s ease;
@@ -184,7 +184,7 @@ section div img {
   
 
 }
-#scopri:hover,#acquista:hover{
+#scopri:hover,#acquista:hover, #acquistaprod:hover{
     background-color: rgba(165, 42, 42, 0.1);
     color: darkbrown;
 }
@@ -258,6 +258,7 @@ footer p, footer p a {
 article div{
     padding: 0;
 }
+
 
 /* Media query per schermi più piccoli */
 @media (max-width: 768px) {
