@@ -45,6 +45,19 @@
         echo "<p>Errore: nessun contenuto da mostrare.</p>";
     }
     ?>
-    </main> 
+    </main>
+    <footer>
+        <h2 >🍦Nuvole di gelato🍦</h2>
+            <p class="mt-3 mb-1">Via Corso Corso Giuseppe Garibaldi, 159, 61034 Fossombrone PU- Tel: 06 12345678</a></p>
+            <div >
+                <p  class="mb-1" >Aperti tutti i giorni dalle 10:00 alle 22:00</p>
+                <p  class="mb-1">
+                    <a  href="prodotti.php">Menu</a> | 
+                    <a href="/contatti">Contatti</a>
+                </p>
+                
+                <p class="mb-0 pb-4">&copy; 2025 Nuvole di gelato. Tutti i diritti riservati.</p>
+            </div>
+    </footer> 
 </body>
 </html>

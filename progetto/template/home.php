@@ -60,7 +60,7 @@
 </section>
 <article>
     <h2 class="mb-3"> La nostra essenza</h2>
-    <div class="container-fluid">
+    <div class="container-fluid ">
         <div class="row">
             <!-- Colonna 1 -->
             <div class="col-md-6">
@@ -113,8 +113,4 @@
             </div>
         </div>
     </div>
-
-
-
-
 </article>

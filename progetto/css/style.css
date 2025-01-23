@@ -1,7 +1,7 @@
 body {
    background-color:rgb(255, 244, 229);
    /*background-color: red;*/
-
+    border-bottom: 0;
 }
 /* Overlay */
 .overlay {
@@ -232,16 +232,43 @@ h5{
     color: rgb(255, 244, 229);
 }
 
+footer{
+    background-color: #8B4513;
+    font-family: 'Garamond', serif;  
+    position: relative;
+    width: 100%;
+    margin-top: 5%;
+   
+}
 
+footer h2{
+    font-family:Lucida Handwriting, cursive; 
+    font-size:2vw;
+    padding-top: 2%;
+    color:rgb(255, 244, 229);
+}
+
+footer p, footer p a {
+    padding-left: 2%; 
+    text-decoration: none;
+    color: rgb(255, 244, 229);
+}
+
+
+article div{
+    padding: 0;
+}
 
 /* Media query per schermi più piccoli */
 @media (max-width: 768px) {
     header img {
         width: 13vw;
     }
+
     h1 {
         font-size: 4vw;  /* Aumenta la dimensione del testo per schermi più piccoli */
     }
+
     #logo {
         width: 18vw;  /* Imposta una larghezza specifica per il logo sui dispositivi più piccoli */
     }
@@ -297,12 +324,19 @@ h5{
     .link-black{
         font-size:6vw;
     }
-
+    
+    footer h2{
+        font-size: 5vw !important;
+    }
 
     article img{
-        width: 3vw;
-    }
+        width: 20vw;
+     }
+   
+    
 }
+
+
 
 /* Media query per schermi molto piccoli */
 @media (max-width: 480px) {
@@ -375,11 +409,22 @@ h5{
         cursor: pointer;
         outline: none;
     }
-    article img{
-        width: 3vw;
+
+    footer h2{
+        font-size: 5vw !important;
     }
+   
+
+    article img{
+       width: 20vw;
+    }
+
+
+
     
+   
 }
+
 
 
 
