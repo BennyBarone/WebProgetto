@@ -2,7 +2,6 @@ body {
    background-color:rgb(255, 244, 229) ;
    /* background-color: red;*/
    border-bottom: 0;
-   /*uffa*/
 }
 /* Overlay */
 .overlay {
@@ -174,7 +173,7 @@ section div img {
     margin: 10px auto;
 }
 
-#scopri, #acquista, #acquistaprod, #invia, #tesserafed {
+#scopri, #acquista, #acquistaprod, #invia, #dropdownMenuButton{
     border:#783f04;
     background-color: #783f04;
     transition: all 0.3s ease;
@@ -280,6 +279,12 @@ section h3{
     margin-top: 10vw;
 
 }
+
+.dropdown-menu-scrollable {
+    max-height: 200px; /* Altezza massima del menu */
+    overflow-y: auto; /* Scroll verticale */
+}
+
 /* Media query per schermi più piccoli */
 @media (max-width: 768px) {
     header img {

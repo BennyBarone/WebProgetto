@@ -13,5 +13,7 @@ if ($filtro === 'Tutti') {
     $templateParams["prodotti"] = $dbh->getProdottiByTipo($filtro);
 }
 
+$templateParams["listaGusti"]=$dbh->getListaGusti();
+
 require 'template/base.php';
 ?>
