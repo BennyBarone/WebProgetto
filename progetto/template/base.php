@@ -26,7 +26,7 @@
             <button class="close-button" id="closeBtn">&times;</button>
             <ul class="text-center">
                 <li><a href="index.php">Home</a></li>
-                <li><a href="#">Cartà fedeltà</a></li>
+                <li><a href="tessera.php">Cartà fedeltà</a></li>
                 <li><a href="prodotti.php">I nostri prodotti</a></li>
                 <li><a href="contatti.php">Contatti</a></li>
                 <li><a href="#">Cosa dicono di noi</a></li>  

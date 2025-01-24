@@ -61,7 +61,7 @@
 <article>
     <h2 class="mb-3"> La nostra essenza</h2>
     <div class="container-fluid ">
-        <div class="rowq">
+        <div class="row">
             <!-- Colonna 1 -->
             <div class="col-md-6">
                 <div class="image-container d-flex mb-3">

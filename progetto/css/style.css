@@ -1,6 +1,6 @@
 body {
-    background-color:rgb(255, 244, 229) ;
-   /*background-color: red;*/
+   background-color:rgb(255, 244, 229) ;
+   /* background-color: red;*/
    border-bottom: 0;
    /*uffa*/
 }
@@ -174,7 +174,7 @@ section div img {
     margin: 10px auto;
 }
 
-#scopri, #acquista, #acquistaprod, #invia{
+#scopri, #acquista, #acquistaprod, #invia, #tesserafed {
     border:#783f04;
     background-color: #783f04;
     transition: all 0.3s ease;
@@ -185,7 +185,7 @@ section div img {
   
 
 }
-#scopri:hover,#acquista:hover, #acquistaprod:hover, #invia:hover{
+#scopri:hover,#acquista:hover, #acquistaprod:hover, #invia:hover, #tesserafed:hover{
     background-color: rgba(165, 42, 42, 0.1);
     color: darkbrown;
 }
@@ -201,6 +201,7 @@ h5{
     height: 4.5vw;
     margin:auto;
 }
+
 
 .link-black{
     color: black;
