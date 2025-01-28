@@ -1,390 +1,374 @@
 body {
-    background-color:rgb(255, 244, 229) ;
-   /* background-color: red;*/
-   border-bottom: 0;
-}
-/* Overlay */
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: none; /* Nascosto di default */
-    justify-content: flex-end;
-    align-items: center;
-    z-index: 1000;
-}
-
-/* Mostra l'overlay quando è attivo */
-.overlay.active {
-    display: flex;
-}
-
-/* Finestra laterale */
-.side-window {
-    background-color:rgb(255, 244, 229) ;
-    width: 75%;
-    height: 100%;
-    padding: 2%;
-    box-shadow: -2px 0 5px #783f04;
-    position: relative;
-}
-
-.side-window ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-}
-
-.side-window li{
-    border-bottom: 0.3vw solid #8B4513; /* Linea marrone sotto ogni elemento */
-    margin-bottom: 10px;
-}
-
-.grid-layout{
-    border-bottom:0.5vw solid #8B4513;
-    margin-bottom: 10px;
-}
-
-article img{
-    width: 20vw;
-  
-}
-
-article p{
-    font-family:'Garamond', serif;
-}
-
-.side-window li a {
-    text-decoration: none; /* Rimuove la sottolineatura */
-    color: #8B4513; /* Colore marrone */
-    font-size: 27px;
-    margin: 5%;
-    display: block;
-    padding: 10% 0;
-}
-/* Pulsante di chiusura */
-.close-button {
-    position: absolute;
-    top: 1%;
-    right:1.5%;
-    background: none;
-    border: none;
-    color: #783f04;
-    font-size: 24px;
-    cursor: pointer;
-}
-
-
-ul li a:hover {
-    color: #1d201d; /* Colore al passaggio del mouse (hover) */
-}
-
-
-h1 {
-    font-family: "Lucida Handwriting", cursive;
-    font-size: 5vw;  /* Usa 3vw per un font responsivo */ 
-}
-
-/* Stile base per tutte le immagini */
-img {
-    max-width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-/* Stile generico per le immagini in header */
-header img {
-    margin-left: 1%;
-    margin-right: 1%;
-    width: 8vw;
-    border: 3px solid #783f04;
-    border-radius: 50%;
-    transition: transform 0.3s ease;
-}
-
-/* Stile specifico per il logo */
-#logo {
-    border: none !important;
-    border-radius: 0 !important;
-    width: 13vw;
-}
-
-/* Effetto hover per le immagini in header */
-header img:hover {
-    transform: scale(1.1);
-}
-
-/* Disabilitare l'effetto hover sul logo */
-#logo:hover {
-    transform: none !important;
-}
-section div img{
-    padding: 0.5%;   
-    width: 40vw;
-}
-
-section h2, article h2{
-    padding:0 1.1%;
-    padding-top: 0.8%;
-    font-family: "Lucida Handwriting", cursive;
-}
-
-section p, section ul li{
-  
-    padding: 0 1.5%; 
-    font-family: 'Garamond', serif;
-    font-size: 4.5vw;
-
-}
-
-.text-brown {
-    color: #783f04;
-}
-
-.border-brown {
-    border-color: #783f04 !important;
-}
-
-/* Mantieni le dimensioni dell'immagine */
-section div img {
-    padding: 0.5%;
-    width: 40vw; /* L'immagine occupa il 40% della larghezza della finestra */
-}
-
-/* Stile personalizzato per il bottone */
-.custom-btn {
-    font-size: 3vw; /* Imposta la dimensione del bottone in base alla larghezza della finestra */
-    color: #783f04; /* Colore del testo */
-    border: 2px solid #783f04; /* Bordo marrone */
-    background-color: transparent; /* Sfondo trasparente */
-    padding: 0.5rem 1.5rem; /* Margini interni */
-    transition: all 0.3s ease; /* Effetto al passaggio del mouse */
-    max-width: 80%; /* Limita la larghezza massima del bottone */
-    max-height: 15vh; /* Limita l'altezza massima */
-    text-align: center; /* Allinea il testo al centro */
-}
-
-/* Effetto hover */
-.custom-btn:hover {
-    background-color: rgba(165, 42, 42, 0.1); /* Sfondo marrone chiaro */
-    color: darkbrown; /* Colore testo più scuro */
-}
-
-.custom-image {
-    width: 70vw !important;
-    margin: 10px auto;
-}
-
-#scopri, #acquista, #acquistaprod, #invia, #dropdownMenuButton{
-    border:#783f04;
-    background-color: #783f04;
-    transition: all 0.3s ease;
-}
-
-#scopri{
-    margin-bottom: 5%;
-}
-
-#acquista{
-    margin:10% 38%;
-}
-
-#bottPorodotti{
-    font-size:6vw;
-}
-
-#scopri:hover,#acquista:hover, #acquistaprod:hover, #invia:hover, #tesserafed:hover{
-    background-color: rgba(165, 42, 42, 0.1);
-    color: darkbrown;
-}
-
-h5{
-    font-family: 'Papyrus', fantasy;
-    font-size: 5vw;
-}
-
-.border-background{
-    background-color: #cbad8d;
-    width: 35vw;
-    height: 15vw;
-    margin:auto;
-}
-
-
-.link-black{
-    color: black;
-    font-size: 6.0vw;
-    font-family: 'Garamond', serif;
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-
-/* Bottoni tondi con bordo nero */
-.bottone-prod{
-    background-color: rgb(255, 244, 229); 
-    color: black;
-    border: 0.5vw solid black;
-    border-radius: 50%;
-    font-size: 4vw;
-    padding: 2.5vw 4.5vw;
-    cursor: pointer;
-    outline: none;
-}
-
-/* Bottone attivo con sfondo marrone */
-.bottone-prod:hover {
-    background-color:#f0f0f0;
-}
-
-.bottone-prod.selected{
-    background-color: #783f04;
-    color: rgb(255, 244, 229);
-}
-
-footer{
-    background-color: #8B4513;
-    font-family: 'Garamond', serif;  
-    position: relative;
-    width: 100%;
-    margin-top: 5%;
+    /background-color:rgb(255, 244, 229) ;/
+     background-color: red;
+    border-bottom: 0;
+ }
+ /* Overlay */
+ .overlay {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background-color: rgba(0, 0, 0, 0.5);
+     display: none; /* Nascosto di default */
+     justify-content: flex-end;
+     align-items: center;
+     z-index: 1000;
+ }
+ 
+ /* Mostra l'overlay quando è attivo */
+ .overlay.active {
+     display: flex;
+ }
+ 
+ /* Finestra laterale */
+ .side-window {
+     background-color:rgb(255, 244, 229) ;
+     width: 75%;
+     height: 100%;
+     padding: 2%;
+     box-shadow: -2px 0 5px #783f04;
+     position: relative;
+ }
+ 
+ .side-window ul {
+     list-style: none;
+     padding: 0;
+     margin: 0;
+     width: 100%;
+ }
+ 
+ .side-window li{
+     border-bottom: 0.3vw solid #8B4513; /* Linea marrone sotto ogni elemento */
+     margin-bottom: 10px;
+ }
+ 
+ .grid-layout{
+     border-bottom:0.5vw solid #8B4513;
+     margin-bottom: 10px;
+ }
+ 
+ article img{
+     width: 20vw;
    
-}
-
-footer h2{
-    font-family:Lucida Handwriting, cursive; 
-    font-size:5vw;
-    padding-top: 2%;
-    color:rgb(255, 244, 229);
-}
-
-footer p, footer p a {
-    padding-left: 2%; 
-    text-decoration: none;
-    color: rgb(255, 244, 229);
-}
-
-
-article div{
-    padding: 0;
-}
-
-.box-img-top{
-    width:40vw;
-    border: 0.2vw solid #783f04;
-    display: block;
-    margin: 0 auto;
-}
-
-.contact-form {
-    background-color: rgb(255, 244, 229);
-    border-color: 2px solid #8B4513;
-    padding: 2%;
-    font-family: 'Garamond', serif;
-}
-
-section h3{
-    font-family: 'Garamond',serif;
-    margin-top: 10vw;
-
-}
-
-.dropdown-menu-scrollable {
-    max-height: 200px; /* Altezza massima del menu */
-    overflow-y: auto; /* Scroll verticale */
-}
-
-
-/* Media query per schermi molto piccoli */
-@media screen and (min-width: 1024px) {
-    header img {
-        width: 4vw;
-    }
-
-    h1 {
-        font-size: 3vw;  /* Aumenta ulteriormente la dimensione del testo per schermi molto piccoli */
-    }
-
-    #logo {
-        width: 8vw;  /* Imposta una larghezza specifica per il logo sui dispositivi più piccoli */
-    }
-
-    #foto1{
-        width: auto;    
-    }
-
-    #bottProdotti{
-        font-size: 6vw;
-    }
-
-    section p, section ul li{
-        font-size: 1.3vw;
-    }
-
-    .custom-image {
-        width: 30vw !important; 
-    }
+ }
+ 
+ article p{
+     font-family:'Garamond', serif;
+ }
+ 
+ .side-window li a {
+     text-decoration: none; /* Rimuove la sottolineatura */
+     color: #8B4513; /* Colore marrone */
+     font-size: 27px;
+     margin: 5%;
+     display: block;
+     padding: 10% 0;
+ }
+ /* Pulsante di chiusura */
+ .close-button {
+     position: absolute;
+     top: 1%;
+     right:1.5%;
+     background: none;
+     border: none;
+     color: #783f04;
+     font-size: 24px;
+     cursor: pointer;
+ }
+ 
+ 
+ ul li a:hover {
+     color: #1d201d; /* Colore al passaggio del mouse (hover) */
+ }
+ 
+ 
+ h1 {
+     font-family: "Lucida Handwriting", cursive;
+     font-size: 5vw;  /* Usa 3vw per un font responsivo */ 
+ }
+ 
+ /* Stile base per tutte le immagini */
+ img {
+     max-width: 100%;
+     height: auto;
+     object-fit: cover;
+ }
+ 
+ /* Stile generico per le immagini in header */
+ header img {
+     margin-left: 1%;
+     margin-right: 1%;
+     width: 8vw;
+     border: 3px solid #783f04;
+     border-radius: 50%;
+     transition: transform 0.3s ease;
+ }
+ 
+ /* Stile specifico per il logo */
+ #logo {
+     border: none !important;
+     border-radius: 0 !important;
+     width: 13vw;
+ }
+ 
+ /* Effetto hover per le immagini in header */
+ header img:hover {
+     transform: scale(1.1);
+ }
+ 
+ /* Disabilitare l'effetto hover sul logo */
+ #logo:hover {
+     transform: none !important;
+ }
+ section div img{
+     padding: 0.5%;   
+     width: 40vw;
+ }
+ 
+ section h2, article h2{
+     padding:0 1.1%;
+     padding-top: 0.8%;
+     font-family: "Lucida Handwriting", cursive;
+ }
+ 
+ section p, section ul li{
    
-   
-    .grid-layout{
-    border-bottom: 0.5vw solid #8B4513;
-    }
+     padding: 0 1.5%; 
+     font-family: 'Garamond', serif;
+     font-size: 4.5vw;
+ 
+ }
+ 
+ .text-brown {
+     color: #783f04;
+ }
+ 
+ .border-brown {
+     border-color: #783f04 !important;
+ }
+ 
+ /* Mantieni le dimensioni dell'immagine */
+ section div img {
+     padding: 0.5%;
+     width: 40vw; /* L'immagine occupa il 40% della larghezza della finestra */
+ }
+ 
+ /* Stile personalizzato per il bottone */
+ .custom-btn {
+     font-size: 3vw; /* Imposta la dimensione del bottone in base alla larghezza della finestra */
+     color: #783f04; /* Colore del testo */
+     border: 2px solid #783f04; /* Bordo marrone */
+     background-color: transparent; /* Sfondo trasparente */
+     padding: 0.5rem 1.5rem; /* Margini interni */
+     transition: all 0.3s ease; /* Effetto al passaggio del mouse */
+     max-width: 80%; /* Limita la larghezza massima del bottone */
+     max-height: 15vh; /* Limita l'altezza massima */
+     text-align: center; /* Allinea il testo al centro */
+ }
+ 
+ /* Effetto hover */
+ .custom-btn:hover {
+     background-color: rgba(165, 42, 42, 0.1); /* Sfondo marrone chiaro */
+     color: darkbrown; /* Colore testo più scuro */
+ }
+ 
+ .custom-image {
+     width: 70vw !important;
+     margin: 10px auto;
+ }
+ 
+ #scopri, #acquista, #acquistaprod, #invia, #dropdownMenuButton{
+     border:#783f04;
+     background-color: #783f04;
+     transition: all 0.3s ease;
+ }
+ 
+ #scopri{
+     margin-bottom: 5%;
+ }
+ 
+ #acquista{
+     margin:10% 38%;
+ }
+ 
+ #bottPorodotti{
+     font-size:6vw;
+ }
+ 
+ #scopri:hover,#acquista:hover, #acquistaprod:hover, #invia:hover, #tesserafed:hover{
+     background-color: rgba(165, 42, 42, 0.1);
+     color: darkbrown;
+ }
+ 
+ h5{
+     font-family: 'Papyrus', fantasy;
+     font-size: 5vw;
+ }
+ 
+ .border-background{
+     background-color: #cbad8d;
+     width: 35vw;
+     height: 15vw;
+     margin:auto;
+ }
+ 
+ 
+ .link-black{
+     color: black;
+     font-size: 6.0vw;
+     font-family: 'Garamond', serif;
+     text-decoration: underline;
+     cursor: pointer;
+ }
+ 
+ 
+ /* Bottoni tondi con bordo nero */
+ .bottone-prod{
+     background-color: rgb(255, 244, 229); 
+     color: black;
+     border: 0.5vw solid black;
+     border-radius: 50%;
+     font-size: 4vw;
+     padding: 2.5vw 4.5vw;
+     cursor: pointer;
+     outline: none;
+ }
+ 
+ /* Bottone attivo con sfondo marrone */
+ .bottone-prod:hover {
+     background-color:#f0f0f0;
+ }
+ 
+ .bottone-prod.selected{
+     background-color: #783f04;
+     color: rgb(255, 244, 229);
+ }
+ 
+ footer{
+     background-color: #8B4513;
+     font-family: 'Garamond', serif;  
+     position: relative;
+     width: 100%;
+     margin-top: 5%;
     
-    .side-window {
-        width: 75%;  
-        
-    }
-
-    .side-window li a{
-        padding: 10% 0;
-        margin: 5%;
-
-    }
-    
-    #UtenteRecensione{
-        width: 9vw !important;
-    }
-
-    .border-background{
-        width:35vw;
-        height: 15vw;
-    }
-
-    h5{
-        font-size:5vw;
-    }
-
-    .link-black{
-        font-size:6vw;
-    }
-
-    .bottone-prod{
-        border: 0.5vw solid black;
-        font-size: 4vw;
-        padding: 2.5vw 4.5vw;
-        cursor: pointer;
-        outline: none;
-    }
-
-    footer h2{
-        font-size: 5vw !important;
-    }
-   
-
-    article img{
-       width: 20vw;
-    }
-
-    .box-img-top{
-        width: 40vw;
+ }
+ 
+ footer h2{
+     font-family:Lucida Handwriting, cursive; 
+     font-size:5vw;
+     padding-top: 2%;
+     color:rgb(255, 244, 229);
+ }
+ 
+ footer p, footer p a {
+     padding-left: 2%; 
+     text-decoration: none;
+     color: rgb(255, 244, 229);
+ }
+ 
+ 
+ article div{
+     padding: 0;
+ }
+ 
+ .box-img-top{
+     width:40vw;
+     border: 0.2vw solid #783f04;
+     display: block;
+     margin: 0 auto;
+ }
+ 
+ .contact-form {
+     background-color: rgb(255, 244, 229);
+     border-color: 2px solid #8B4513;
+     padding: 2%;
+     font-family: 'Garamond', serif;
+ }
+ 
+ section h3{
+     font-family: 'Garamond',serif;
+     margin-top: 10vw;
+ 
+ }
+ 
+ .dropdown-menu-scrollable {
+     max-height: 200px; /* Altezza massima del menu */
+     overflow-y: auto; /* Scroll verticale */
+ }
+ 
+ 
+ /* Media query per schermi molto piccoli */
+ @media screen and (min-width: 1024px) {
+     header img {
+         width: 4vw;
+     }
+ 
+     h1 {
+         font-size: 3vw;  /* Aumenta ulteriormente la dimensione del testo per schermi molto piccoli */
+     }
+ 
+     #logo {
+         width: 8vw;  /* Imposta una larghezza specifica per il logo sui dispositivi più piccoli */
+     }
+ 
+     #foto1{
+         width: auto;    
+     }
+ 
+     #bottProdotti{
+         font-size: 6vw;
+     }
+ 
+     section p, section ul li{
+         font-size: 1.3vw;
+     }
+ 
+     .custom-image {
+         width: 30vw !important; 
      }
     
-}
-
-
-
-
+    
+     .grid-layout{
+     border-bottom: 0.3vw solid #8B4513;
+     }
+ 
+     .side-window li a{
+         padding: 2% 0;
+     }
+     
+     .border-background{
+         width: 15vw;
+         height: 4.5vw;
+     }
+ 
+     h5{
+         font-size:2vw;
+     }
+ 
+     .link-black{
+         font-size:2vw;
+     }
+ 
+     .bottone-prod{
+         border: 1vw solid black;
+         font-size: 1.3vw;
+         padding: 2vw 4vw;
+         cursor: pointer;
+         outline: none;
+     }
+ 
+     footer h2{
+         font-size: 2vw !important;
+     }
+    
+     article img{
+        width: 7vw;
+     }
+ 
+     .box-img-top{
+         width: 15vw;
+      }
+     
+ }
