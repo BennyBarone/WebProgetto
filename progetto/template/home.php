@@ -62,8 +62,8 @@
     <h2 class="mb-3"> La nostra essenza</h2>
     <div class="container-fluid ">
         <div class="row">
-            <!-- Colonna 1 -->
-            <div class="col-md-6">
+            <!-- Colonna 1 --> 
+            <div class="col-md-6 ">
                 <div class="image-container d-flex mb-3">
                     <img src="img/latte.png" alt="Immagine 1" class="img-fluid ">
                     <div>
@@ -76,6 +76,7 @@
                     <div>
                         <p class="fw-bold mb-1 mt-3">Gluten free</p>
                         <p class="mb-0">Offriamo una vasta gamma di gelati e dolci senza glutine, adatti a tutti.</p>
+                        
                     </div>
                 </div>
                 <div class="image-container d-flex mb-3">
@@ -99,7 +100,7 @@
                 <div class="image-container d-flex mb-3">
                     <img src="img/prodotti.png" alt="Immagine 5" class="ms-2">
                     <div>
-                        <p class="fw-bold ms-3 mb-1 mt-3">Prodotti freschi</p>
+                        <p class="fw-bold ms-3 mb-1 mt-4">Prodotti freschi</p>
                         <p class="mb-0 ms-3">Frutta di stagione e ingredienti naturali per un'esperienza unica di freschezza.</p>
                     </div>
                 </div>
