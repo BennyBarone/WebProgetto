@@ -45,7 +45,7 @@
                 <ul class="list-unstyled">
                     <?php foreach($templateParams["recensioni"] as $recensioni): ?>
                         <li class="d-flex align-items-center mb-2">
-                            <img id="UtenteRecensione" src="img/profilo.png" alt="account" class="me-2">
+                            <img id="UtenteRecensione" src="img/profilo.png" alt="account" class="me-2" >
                             <?php echo $recensioni["Voto"];?>
                             <?php echo $recensioni["Suggerimenti"]; ?>
                         </li>
