@@ -1,10 +1,6 @@
 body {
     background-color:rgb(255, 244, 229) ;
-<<<<<<< HEAD
-     /*background-color: red;*/
-=======
    /*  background-color: red;*/
->>>>>>> b96953d339ccd915d56c68503a550d960fdba674
     border-bottom: 0;
  }
  /* Overlay */
@@ -62,6 +58,7 @@ body {
  
  article p{
      font-family:'Garamond', serif;
+     font-size:4vw;
  }
  
  .side-window li a {
@@ -313,32 +310,46 @@ body {
     min-height: 33vh;
  }
  
- article h3{
+article h3{
     font-family: "Lucida Handwriting", cursive;
- }
+}
 
 
- .step-container{
+.step-container {
     background-color: #cbad8d;
-    border-radius: 10px;
-    padding:20px;
-    
+    border-radius: 2vw;
+    padding: 2vw;
+    margin:2vw;
 
- }
- 
- .step-number{
+}
+
+.step-header {
+    display: flex; /* Disposizione orizzontale */
+    align-items: center; /* Allinea verticalmente al centro */
+    margin-bottom: 1vw; /* Spazio tra il titolo e il contenuto sotto */
+}
+
+.step-number {
     background: #783f04;
     color: #f0f0f0;
     border-radius: 50%;
-    width: 30px; /* Larghezza fissa */
-    height: 30px; /* Altezza fissa */
-    display: flex; /* Allinea testo al centro */
-    align-items: center; /* Allineamento verticale */
-    justify-content: center; /* Allineamento orizzontale */
-    font-size: 18px; /* Dimensione del numero */
-    margin-right: 15px; /* Spazio tra il numero e il testo */
- }
- /* Media query per schermi molto piccoli */
+    width: 5vw; /* Larghezza fissa */
+    height: 5vw; /* Altezza fissa */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Allineamento centrale */
+    font-size: 4vw; /* Dimensione del numero */
+    margin-right: 1vw; /* Spazio tra il numero e il titolo */
+}
+
+.step-title {
+    font-size: 4.5w; /* Dimensione del titolo */
+    color: #000; /* Colore del testo */
+    margin: 0; /* Rimuovi margini*/
+
+}
+
+ 
  @media screen and (min-width: 1024px) {
      header img {
          width: 4vw;
@@ -421,5 +432,26 @@ body {
 
     .section-tessera{
         min-height: 50vh;
-     }
+     } 
+
+
+    .step-container{
+        padding: 1vw;
+    }
+
+    .step-number {
+        width: 2.5vw; /* Riduci la dimensione del numero su desktop */
+        height: 2.5vw;
+        font-size: 1.5vw; /* Testo più piccolo */
+    }
+
+    .step-title {
+        font-size: 1.3vw; /* Dimensione più piccola per desktop */
+    }
+
+    .text{
+        font-size:1.3vw;
+    }
+
+
  }
