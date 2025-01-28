@@ -39,13 +39,13 @@
             </section>
         </div>
         <div class="grid-layout">
-            <section class="mb-4">
+            <section>
                 <h2 class="mb-2">Cosa dicono di noi?</h2>
                 <!--si prendono in maniera random i commenti effettuati dai clienti-->
                 <ul class="list-unstyled">
                     <?php foreach($templateParams["recensioni"] as $recensioni): ?>
                         <li class="d-flex align-items-center mb-2">
-                            <img id="UtenteRecensione" src="img/profilo.png" alt="account" class="me-2" style="width: 4vw">
+                            <img id="UtenteRecensione" src="img/profilo.png" alt="account" class="me-2">
                             <?php echo $recensioni["Voto"];?>
                             <?php echo $recensioni["Suggerimenti"]; ?>
                         </li>

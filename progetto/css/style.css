@@ -1,6 +1,10 @@
 body {
     background-color:rgb(255, 244, 229) ;
+<<<<<<< HEAD
      /*background-color: red;*/
+=======
+   /*  background-color: red;*/
+>>>>>>> b96953d339ccd915d56c68503a550d960fdba674
     border-bottom: 0;
  }
  /* Overlay */
@@ -49,9 +53,11 @@ body {
      margin-bottom: 10px;
  }
  
+#foto1{
+    width:75vw;
+}
  article img{
      width: 20vw;
-   
  }
  
  article p{
@@ -179,7 +185,7 @@ body {
      margin: 10px auto;
  }
  
- #scopri, #acquista, #acquistaprod, #invia, #dropdownMenuButton{
+ #scopri, #acquista, #acquistaprod, #invia, #dropdownMenuButton, #tesserafed{
      border:#783f04;
      background-color: #783f04;
      transition: all 0.3s ease;
@@ -200,6 +206,10 @@ body {
  #scopri:hover,#acquista:hover, #acquistaprod:hover, #invia:hover, #tesserafed:hover{
      background-color: rgba(165, 42, 42, 0.1);
      color: darkbrown;
+ }
+
+ #UtenteRecensione{
+    width: 10vw;
  }
  
  h5{
@@ -289,7 +299,7 @@ body {
  
  section h3{
      font-family: 'Garamond',serif;
-     margin-top: 10vw;
+     margin-top: 5vw;
  
  }
  
@@ -297,8 +307,37 @@ body {
      max-height: 200px; /* Altezza massima del menu */
      overflow-y: auto; /* Scroll verticale */
  }
+
+ .section-tessera{
+    background-color: #cbad8d; 
+    min-height: 33vh;
+ }
  
+ article h3{
+    font-family: "Lucida Handwriting", cursive;
+ }
+
+
+ .step-container{
+    background-color: #cbad8d;
+    border-radius: 10px;
+    padding:20px;
+    
+
+ }
  
+ .step-number{
+    background: #783f04;
+    color: #f0f0f0;
+    border-radius: 50%;
+    width: 30px; /* Larghezza fissa */
+    height: 30px; /* Altezza fissa */
+    display: flex; /* Allinea testo al centro */
+    align-items: center; /* Allineamento verticale */
+    justify-content: center; /* Allineamento orizzontale */
+    font-size: 18px; /* Dimensione del numero */
+    margin-right: 15px; /* Spazio tra il numero e il testo */
+ }
  /* Media query per schermi molto piccoli */
  @media screen and (min-width: 1024px) {
      header img {
@@ -314,11 +353,11 @@ body {
      }
  
      #foto1{
-         width: auto;    
+         width: 43vw;    
      }
  
      #bottProdotti{
-         font-size: 6vw;
+         font-size: 2vw;
      }
  
      section p, section ul li{
@@ -336,39 +375,51 @@ body {
  
      .side-window li a{
          padding: 2% 0;
+         margin:0%;
      }
-     
-     .border-background{
+     .side-window {
+        width: 35%;  
+        
+    }
+
+    .border-background{
          width: 15vw;
          height: 4.5vw;
-     }
+    }
  
-     h5{
+    h5{
          font-size:2vw;
-     }
+    }
  
-     .link-black{
+    .link-black{
          font-size:2vw;
-     }
+    }
  
-     .bottone-prod{
+    .bottone-prod{
          border: 1vw solid black;
          font-size: 1.3vw;
          padding: 2vw 4vw;
          cursor: pointer;
          outline: none;
-     }
+    }
  
-     footer h2{
+    footer h2{
          font-size: 2vw !important;
-     }
+    }
     
-     article img{
+    article img{
         width: 7vw;
-     }
+    }
  
-     .box-img-top{
-         width: 15vw;
-      }
+    .box-img-top{
+        width: 15vw;
+    }
      
+    #UtenteRecensione{
+        width: 5vw;
+    }
+
+    .section-tessera{
+        min-height: 50vh;
+     }
  }
