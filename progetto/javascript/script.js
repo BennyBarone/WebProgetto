@@ -32,17 +32,13 @@ document.querySelectorAll('.dropdown-item').forEach(item => {
     item.addEventListener('click', function (event) {
         event.preventDefault();
         const gusto = this.getAttribute('data-gusto');
-        selectGusto(gusto);
+        const button = this.closest('.dropdown').querySelector('button');
+        selectGusto(gusto, button);
     });
 });
 
-function selectGusto(gusto) {
-    const button = document.getElementById("dropdownMenuButton");
+function selectGusto(gusto, button) {
     if (button) {
         button.innerText = gusto;
     }
 }
-
-
-
-

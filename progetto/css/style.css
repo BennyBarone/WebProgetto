@@ -182,7 +182,7 @@ body {
      margin: 10px auto;
  }
  
- #scopri, #acquista, #acquistaprod, #invia, #dropdownMenuButton, #tesserafed{
+ #scopri, #acquista, #acquistaprod, #invia, #tesserafed, .scegliGusto{
      border:#783f04;
      background-color: #783f04;
      transition: all 0.3s ease;

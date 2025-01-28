@@ -49,29 +49,35 @@
     </form>
     </div>
 
-<div class="container mt-4">
+    <div class="container mt-4">
     <div class="row">
         <?php foreach($templateParams["prodotti"] as $prodotti): ?>
             <div class="col-md-4 mb-4">
                 <div class="box border border-4 p-3 border-brown">
-                <img src="img/<?php echo strtolower($prodotti['Tipologia_prodotto']) . '_' . strtolower($prodotti['Grandezza']); ?>.png" class="box-img-top" alt="Immagine Prodotto">
+                    <img src="img/<?php echo strtolower($prodotti['Tipologia_prodotto']) . '_' . strtolower($prodotti['Grandezza']); ?>.png" class="box-img-top" alt="Immagine Prodotto">
                     <div class="box-body text-center">
                         <p class="box-title"><strong><?php echo $prodotti["Tipologia_prodotto"]; ?> <?php echo $prodotti["Grandezza"]; ?></strong></p>
                         <p class="box-text">Prezzo: <strong><?php echo $prodotti["Prezzo"]; ?>€</strong></p>
 
-                    <div class="dropdown">
-                        <button class="btn btn-primary dropdown-toggle border-2" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                            Scegli Gusto
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu-scrollable" aria-labelledby="dropdownMenuButton">
-                            <?php foreach($templateParams["listaGusti"] as $listaGusti): ?>
-                                <li>
-                                <a class="dropdown-item" href="#" data-gusto="<?php echo htmlspecialchars($listaGusti["Nome_gusto"], ENT_QUOTES); ?>">
-                                    <?php echo htmlspecialchars($listaGusti["Nome_gusto"]); ?>
-                                </a>
-                                </li>
+                    <div class="d-flex justify-content-center gap-2 mb-3">
+                        <?php 
+                        $numDropdown=($prodotti["Grandezza"]=== "Piccolo" || $prodotti["Grandezza"] === "Piccola") ? 2 : 3;
+                        for($i=1; $i <= $numDropdown; $i++): ?>
+                        <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle border-2 scegliGusto" type="button" id="dropdownMenuButton_<?php echo $prodotti['Tipologia_prodotto'] . '_' . $prodotti['Grandezza']. '_' . $i; ?>" data-bs-toggle="dropdown" aria-expanded="false">
+                                Gusto <?php echo $i; ?>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-scrollable" aria-labelledby="dropdownMenuButton_<?php echo $prodotti['Tipologia_prodotto'] . '_' . $prodotti['Grandezza'] . '_' . $i; ?>">
+                                <?php foreach($templateParams["listaGusti"] as $listaGusti): ?>
+                                    <li>
+                                        <a class="dropdown-item" href="#" data-gusto="<?php echo htmlspecialchars($listaGusti["Nome_gusto"], ENT_QUOTES); ?>" onclick="selectGusto('<?php echo $listaGusti['Nome_gusto']; ?>', 'dropdownMenuButton_<?php echo $prodotti['Tipologia_prodotto'] . '_' . $prodotti['Grandezza'] . '_' . $i; ?>')">
+                                            <?php echo htmlspecialchars($listaGusti["Nome_gusto"]); ?>
+                                        </a>
+                                    </li>
                                 <?php endforeach; ?>
-                        </ul>
+                            </ul>
+                        </div>
+                    <?php endfor; ?>
                     </div>
 
                         <div class="d-flex align-items-center justify-content-center mb-3">
@@ -81,8 +87,9 @@
                         <button id="acquistaprod" class="btn btn-primary">Aggiungi al carrello</button>
                     </div>
                 </div>
-        </div>
+            </div>
         <?php endforeach; ?>
     </div>
 </div>
+
 </section>
