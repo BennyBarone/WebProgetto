@@ -32,7 +32,7 @@
 </div>
 
 
-<div class="container">
+<div class="container"> 
     <!-- Form per i bottoni di filtro, faccio una mappa per i bottoni -->
     <form method="GET" action="prodotti.php" class="d-flex flex-wrap">
         <?php
