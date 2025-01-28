@@ -1,11 +1,6 @@
 body {
-<<<<<<< HEAD
     background-color:rgb(255, 244, 229) ;
    /* background-color: red;*/
-=======
-   /*background-color:rgb(255, 244, 229) ;*/
-    background-color: red;
->>>>>>> 72703f64c72e7fdc9e6ac8231714acc40e520c44
    border-bottom: 0;
 }
 /* Overlay */
@@ -336,44 +331,56 @@ section h3{
    
    
     .grid-layout{
-    border-bottom: 0.3vw solid #8B4513;
+    border-bottom: 0.5vw solid #8B4513;
+    }
+    
+    .side-window {
+        width: 75%;  
+        
     }
 
     .side-window li a{
-        padding: 2% 0;
+        padding: 10% 0;
+        margin: 5%;
+
     }
     
+    #UtenteRecensione{
+        width: 9vw !important;
+    }
+
     .border-background{
-        width: 15vw;
-        height: 4.5vw;
+        width:35vw;
+        height: 15vw;
     }
 
     h5{
-        font-size:2vw;
+        font-size:5vw;
     }
 
     .link-black{
-        font-size:2vw;
+        font-size:6vw;
     }
 
     .bottone-prod{
-        border: 1vw solid black;
-        font-size: 1.3vw;
-        padding: 2vw 4vw;
+        border: 0.5vw solid black;
+        font-size: 4vw;
+        padding: 2.5vw 4.5vw;
         cursor: pointer;
         outline: none;
     }
 
     footer h2{
-        font-size: 2vw !important;
+        font-size: 5vw !important;
     }
    
+
     article img{
-       width: 7vw;
+       width: 20vw;
     }
 
     .box-img-top{
-        width: 15vw;
+        width: 40vw;
      }
     
 }
