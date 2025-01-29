@@ -61,6 +61,16 @@ class DatabaseHelper{
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
+    public function registrazione($nome, $cognome, $citta, $indirizzo, $numero_cell, $email, $password){
+        $punti=0;
+        $query="INSERT INTO clienti (Nome, Cognome, Città, Indirizzo, Numero_cell, E _mail, Password, Punti_accumulati) VALUES (?,?,?,?,?,?,?,?)";
+        $stmt=$this->db->prepare($query);
+        $stmt->bind_param('sssssssi',$nome, $cognome, $citta, $indirizzo, $numero_cell, $email, $password, $punti);
+        return $stmt->execute();
+    }
+
+
+    //da sistemare con i bind_param
     public function insert_dettaglio_ordine($grandezza, $tipologia, $gusto1, $pallina1, $gusto2, $pallina2, $gusto3, $pallina3, $quantita) {
         try {
             // Avvia una transazione
@@ -89,7 +99,8 @@ class DatabaseHelper{
                 // Inserisci il prodotto ordinato
                 $query2 = "INSERT INTO prodotti_ordinati (Id_prodotto) VALUES (?)";
                 $stmt2 = $this->db->prepare($query2);
-                $isInserted2 = $stmt2->execute([$idProdotto]);
+                $stmt2->bind_param('i', $idProdotto);
+                $isInserted2 = $stmt2->execute();
     
                 if ($isInserted2) {
                     // Recupera l'id del prodotto ordinato
@@ -110,7 +121,7 @@ class DatabaseHelper{
                     // Inserisci il dettaglio acquisti solo se tutte le opzioni sono state inserite correttamente
                     if ($success1 && $success2 && $success3) {
                         $prezzoTotale = $quantita * $prezzoUnitario;
-                        $query4 = "INSERT INTO DETTAGLIO_ACQUISTI (Id_ordine, Id_prodotto_ordinato, Quantita, PrezzoUnitario, PrezzoTotale) VALUES (?,?,?,?,?)";
+                        $query4 = "INSERT INTO dettaglio_acquisti(Id_ordine, Id_prodotto_ordinato, Quantita, PrezzoUnitario, PrezzoTotale) VALUES (?,?,?,?,?)";
                         $stmt4 = $this->db->prepare($query4);    
                         // Id_ordine è impostato a NULL perché sarà aggiornato al pagamento
                         $stmt4->execute([null, $idProdottoOrdinato, $quantita, $prezzoUnitario, $prezzoTotale]);

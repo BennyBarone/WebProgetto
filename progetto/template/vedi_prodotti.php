@@ -85,8 +85,9 @@
                             <input type="number" name="quantita" id="quantita" min="1" max="10" value="1" class="form-control w-auto"/>
                         </div>
                         <button id="acquistaprod_<?php echo $prodotti['Tipologia_prodotto'] . '_' . $prodotti['Grandezza']; ?>" class="btn btn-primary acquistaprod" 
-                                data-tipologia="<?php echo $prodotti['Tipologia_prodotto']; ?>" data-grandezza="<?php echo $prodotti['Grandezza']; ?>">
-                                Aggiungi al carrello
+                            data-tipologia="<?php echo $prodotti['Tipologia_prodotto']; ?>" data-grandezza="<?php echo $prodotti['Grandezza']; ?>" data-num-dropdown="<?php echo $numDropdown; ?>">
+                                <!--Aggiungo data-num-dropdown per sapere quanti gusti deve gestire, mentre data-tipologia e data-grandezza servono a recuperare i dati sul prodotto-->
+                            Aggiungi al carrello
                         </button>
                     </div>
                 </div>
