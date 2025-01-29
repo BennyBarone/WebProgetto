@@ -30,7 +30,7 @@
                
                 <li><hr class="dropdown-divider"></li> <!-- Linea divisoria -->
               
-                <li><a href="#" class="dropdown-item">Il mio profilo</a></li> <!-- Link alla pagina profilo -->
+                <li><a href="mioprofilo.php" class="dropdown-item" onclick="window.location.href='mioprofilo.php'">Il mio profilo</a></li> <!-- Link alla pagina profilo -->
                 
                 <li><a href="#" class="dropdown-item">I miei ordini</a></li> <!-- Link agli ordini -->
             

@@ -1,7 +1,7 @@
 html,body {
     background-color:rgb(255, 244, 229) ;
     /*background-color: red;*/
-    height: 100%;
+    min-height: 100vh;
     border-bottom: 0;
  }
 
@@ -259,7 +259,8 @@ html,body {
  footer{
      background-color: #8B4513;
      font-family: 'Garamond', serif;  
-     position: relative;
+     position: absolute;
+    bottom: 0;
      width: 100%;
      margin-top: 5%;
     
@@ -298,9 +299,7 @@ html,body {
  }
 
  
- .iscrizione-form{
-    margin-bottom:25.7%;
- }
+
 
 
 
