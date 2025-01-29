@@ -61,9 +61,11 @@ class DatabaseHelper{
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
-    public function registrazione($nome, $cognome, $citta, $indirizzo, $numero_cell, $email, $password){
+    public function registrazione($nome, $cognome, $numero_cell, $email, $password){
         $punti=0;
-        $query="INSERT INTO clienti (Nome, Cognome, Città, Indirizzo, Numero_cell, E _mail, Password, Punti_accumulati) VALUES (?,?,?,?,?,?,?,?)";
+        $citta=null;
+        $indirizzo=null;
+        $query="INSERT INTO clienti (Nome, Cognome, Citta, Indirizzo, Numero_cell, E_mail, Password, Punti_accumulati) VALUES (?,?,?,?,?,?,?,?)";
         $stmt=$this->db->prepare($query);
         $stmt->bind_param('sssssssi',$nome, $cognome, $citta, $indirizzo, $numero_cell, $email, $password, $punti);
         return $stmt->execute();

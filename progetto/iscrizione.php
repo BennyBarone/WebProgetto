@@ -4,34 +4,34 @@ require_once 'bootstrap.php';
 $templateParams["titolo"] = "Nuvole di gelato - Iscrizione";
 $templateParams["nome"]="vedi_iscrizione.php";
 
-require 'template/base.php';
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    try {
+        $nome = $_POST["nome"];
+        $cognome = $_POST["cognome"];
+        $numero_cell = $_POST["telefono"];
+        $email = $_POST["email"];
+        $password = $_POST["password"];
+        $confermaPassword = $_POST["conferma_password"];
 
+        // Verifica che le password coincidano
+        if ($password !== $confermaPassword) {
+            echo "Le password non coincidono";
+            exit;
+        }
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Recupera i dati dal modulo
-    $password = $_POST['Password'];
-    $conferma_password = $_POST['Conferma_password'];
+        // Chiama la funzione di registrazione del database
+        $result = $dbh->registrazione($nome, $cognome, $numero_cell, $email, $password);
 
-    // Controlla se le password corrispondono
-    if ($password !== $conferma_password) {
-        // Reindirizza indietro con errore
-        header('Location: iscrizione.php?errore=passwords_non_corrispondono');
-        exit;
+        if ($result) {
+            echo "Registrazione avvenuta con successo!";
+        } else {
+            echo "Errore durante la registrazione";
+        }
+    } catch (Exception $e) {
+        echo "Errore: " . $e->getMessage();
     }
-
-    // Qui puoi inserire il codice per salvare i dati nel database o altre operazioni
-    // Esempio: salva nel database, invia email di conferma, ecc.
-
-    // Se il processo è andato a buon fine, puoi reindirizzare su una pagina di successo
-    header('Location: success.php');
-    exit;
+} else {
+    echo "Dati non validi";
 }
-?>
-
-
-
-
-
-
-
+require 'template/base.php';
 ?>
