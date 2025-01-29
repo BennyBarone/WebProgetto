@@ -71,7 +71,15 @@ class DatabaseHelper{
         return $stmt->execute();
     }
 
-
+    public function check_email($email){
+        $query = "SELECT E_mail FROM clienti WHERE E_mail = ?";
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('s', $email);
+        $stmt->execute();
+        $stmt->store_result(); // Memorizzo il risultato
+        return $stmt->num_rows > 0; // Restituisco true se esiste almeno una riga
+    }
+    
     //da sistemare con i bind_param
     public function insert_dettaglio_ordine($grandezza, $tipologia, $gusto1, $pallina1, $gusto2, $pallina2, $gusto3, $pallina3, $quantita) {
         try {

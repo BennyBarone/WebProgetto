@@ -25,7 +25,12 @@
            
                 <li><a href="#" class="dropdown-item">Accedi</a></li> <!-- Link alla pagina di login -->
                 
+<<<<<<< HEAD
                 <li><a href="iscrizione.php" class="dropdown-item">Registrati - in un attimo</a></li> <!-- Link alla pagina di registrazione -->
+=======
+            <li><a href="iscrizione.php" class="dropdown-item" onclick="window.location.href='iscrizione.php'">Registrati - in un attimo</a></li>
+            <!-- Link alla pagina di registrazione -->
+>>>>>>> 1c901811cf4d40f2c74ae3201a9544e0d5c49595
                
                 <li><hr class="dropdown-divider"></li> <!-- Linea divisoria -->
               
