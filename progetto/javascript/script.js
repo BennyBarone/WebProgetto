@@ -44,15 +44,3 @@ function selectGusto(gusto, button) {
 }
 
 
-function validaPassword() {
-    var password = document.getElementById('Password').value;
-    var confermaPassword = document.getElementById('Conferma_password').value;
-    
-    if (password !== confermaPassword) {
-        document.getElementById('errore-password').style.display = 'block';
-        return false; // Impedisce l'invio del modulo
-    } else {
-        document.getElementById('errore-password').style.display = 'none';
-        return true; // Permette l'invio del modulo
-    }
-}
