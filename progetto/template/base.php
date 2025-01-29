@@ -1,3 +1,8 @@
+<?php
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+?>
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -19,27 +24,25 @@
             </div>
             <h1 class="text-center flex-grow-1">Nuvole di Gelato</h1>
               <!-- Menu a discesa -->
-            <div class="dropdown">
-            <img src="img/profilo.png" alt="account" id="profileDropdown" class="clickable-image dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <ul class="dropdown-menu dropdown-menu-end text-center">
-           
-            <li><a href="login.php" class="dropdown-item" onclick="window.location.href='login.php'">Accedi</a></li> <!-- Link alla pagina di login -->
-                
-            <li><a href="iscrizione.php" class="dropdown-item" onclick="window.location.href='iscrizione.php'">Registrati - in un attimo</a></li>
-            <!-- Link alla pagina di registrazione -->
-               
-                <li><hr class="dropdown-divider"></li> <!-- Linea divisoria -->
-              
-                <li><a href="#" class="dropdown-item">Il mio profilo</a></li> <!-- Link alla pagina profilo -->
-                
-                <li><a href="#" class="dropdown-item">I miei ordini</a></li> <!-- Link agli ordini -->
-            
-                <li><a href="#" class="dropdown-item">Saldo punti</a></li> <!-- Link alla lista desideri -->
-            </ul>
-             </div>
-
-
-
+              <div class="dropdown">
+                <img src="img/profilo.png" alt="account" id="profileDropdown" class="clickable-image dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <ul class="dropdown-menu dropdown-menu-end text-center">
+                 <?php if(isUserLoggedIn()): ?>
+                    <li><a href="logout.php" class="dropdown-item" onclick="window.location.href='logout.php'">Logout</a></li> <!-- Link per il logout -->
+                    <li><hr class="dropdown-divider"></li> <!-- Linea divisoria -->
+                    <li><a href="#" class="dropdown-item">Il mio profilo</a></li> <!-- Link alla pagina profilo -->
+                    <li><a href="#" class="dropdown-item">I miei ordini</a></li> <!-- Link agli ordini -->
+                    <li><a href="#" class="dropdown-item">Saldo punti</a></li> <!-- Link al saldo punti -->
+                <?php else: ?>
+                    <li><a href="login.php" class="dropdown-item" onclick="window.location.href='login.php'">Accedi</a></li> <!-- Link alla pagina di login -->
+                    <li><a href="iscrizione.php" class="dropdown-item" onclick="window.location.href='iscrizione.php'">Registrati - in un attimo</a></li> <!-- Link alla pagina di registrazione -->
+                    <li><hr class="dropdown-divider"></li> <!-- Linea divisoria -->
+                    <li><a href="#" class="dropdown-item">Il mio profilo</a></li> <!-- Link alla pagina profilo -->
+                    <li><a href="#" class="dropdown-item">I miei ordini</a></li> <!-- Link agli ordini -->
+                    <li><a href="#" class="dropdown-item">Saldo punti</a></li> <!-- Link al saldo punti -->
+                <?php endif; ?>
+                </ul>
+            </div>
 
 
             <img src="img/menu.png" alt="immagine" class="clickable-image" id="menu">

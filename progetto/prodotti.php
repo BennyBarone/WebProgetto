@@ -1,6 +1,8 @@
 <?php
 require_once 'bootstrap.php';
 
+//session_start();
+
 $templateParams["titolo"] = "Nuvole di gelato - Vedi Prodotti";
 $templateParams["nome"] = "vedi_prodotti.php";
 $templateParams["gustiMigliori"] = $dbh->getBestGusti();
