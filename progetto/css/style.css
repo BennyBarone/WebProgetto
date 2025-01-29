@@ -1,9 +1,23 @@
-html,body {
+body {
     background-color:rgb(255, 244, 229) ;
     /*background-color: red;*/
-    min-height: 100vh;
-    border-bottom: 0;
+    
+   
  }
+ html,body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+ footer{
+    background-color: #8B4513;
+    font-family: 'Garamond', serif;  
+    width: 100%;
+    margin-top: auto;
+   
+}
 
 
  /* Overlay */
@@ -256,15 +270,6 @@ html,body {
      color: rgb(255, 244, 229);
  }
  
- footer{
-     background-color: #8B4513;
-     font-family: 'Garamond', serif;  
-     position: relative;
-    bottom: 0;
-     width: 100%;
-     margin-top: 5%;
-    
- }
  
  footer h2{
      font-family:Lucida Handwriting, cursive; 
@@ -299,8 +304,6 @@ html,body {
  }
 
  
-
-
 
 
  section h3{
@@ -508,7 +511,7 @@ article h3{
         width: 50%; 
         
     }
-    .title-iscrizione, .title-login{
+    .title-iscrizione,.title-login{
         text-align: center;
     }
 

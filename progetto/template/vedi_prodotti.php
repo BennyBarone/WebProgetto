@@ -83,6 +83,10 @@
                                 <p class="mb-0 me-2 p-3">Quantità:</p>
                                 <input type="number" name="quantita" id="quantita" min="1" max="10" value="1" class="form-control w-auto"/>
                             </div>
+                            <!-- Messaggio di avviso -->
+                            <div id="loginAlert" class="alert alert-warning" style="display: none;" role="alert">
+                                Per acquistare i nostri prodotti devi aver effettuato l'accesso.
+                            </div>
                             <button id="acquistaprod_<?php echo $prodotti['Tipologia_prodotto'] . '_' . $prodotti['Grandezza']; ?>" class="btn btn-primary acquistaprod" 
                                 data-tipologia="<?php echo $prodotti['Tipologia_prodotto']; ?>" data-grandezza="<?php echo $prodotti['Grandezza']; ?>" data-num-dropdown="<?php echo $numDropdown; ?>">
                                 <!--Aggiungo data-num-dropdown per sapere quanti gusti deve gestire, mentre data-tipologia e data-grandezza servono a recuperare i dati sul prodotto-->

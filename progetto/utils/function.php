@@ -5,7 +5,6 @@ function isActive($pagename){
     }
 }
 
-
 //La funzione isUserLoggedIn() verifica se l'utente è loggato controllando 
 //se la variabile di sessione $_SESSION['idautore'] è impostata e non vuota. 
 //Se la variabile di sessione contiene un valore, significa che l'utente è loggato, e la funzione restituisce true.

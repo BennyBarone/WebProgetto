@@ -1,6 +1,6 @@
 <section>
     <form class=" contact-form  login-form custom-input" action="#" method="POST">
-        <h2 class="mt-2">Accedi a Nuvole di Gelato</h2>
+        <h2 class="mt-2 title-login">Accedi a Nuvole di Gelato</h2>
             <?php if(isset($templateParams["errorelogin"])): ?>
             <p class=" ms-2 text-brown text-center"><?php echo $templateParams["errorelogin"]; ?></p>
             <?php endif; ?>
@@ -19,7 +19,7 @@
         </form>
     <div class="text-center">
         <p class="mt-3 text-brown" >Non hai un accout? Registrati!</p>
-        <a href="iscrizione.php" class="btn btn-primary mt-4 " id="registrazione"> Registrati</a>
+        <a href="iscrizione.php" class="btn btn-primary mt-4 mb-4" id="registrazione"> Registrati</a>
     </div>
            
     

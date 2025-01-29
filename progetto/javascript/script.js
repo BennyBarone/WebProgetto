@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // Verifica se l'utente è loggato
             if (!isUserLoggedIn()) {
                 event.preventDefault(); // Previene l'azione predefinita del pulsante
-                alert("Per acquistare i nostri prodotti devi aver effettuato l'accesso.");
+                document.getElementById("loginAlert").style.display = "block"; // Mostra il messaggio di avviso
                 return;
             }
 
@@ -115,4 +115,3 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
-

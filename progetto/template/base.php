@@ -35,7 +35,7 @@ if (session_status() == PHP_SESSION_NONE) {
                     <li><a href="#" class="dropdown-item">Saldo punti</a></li> <!-- Link al saldo punti -->
                 <?php else: ?>
                     <li><a href="login.php" class="dropdown-item" onclick="window.location.href='login.php'">Accedi</a></li> <!-- Link alla pagina di login -->
-                    <li><a href="#" class="dropdown-item">Registrati - in un attimo</a></li> <!-- Link alla pagina di registrazione -->
+                    <li><a href="iscrizione" class="dropdown-item" onclick="window.location.href='iscrizione.php'">Registrati - in un attimo</a></li> <!-- Link alla pagina di registrazione -->
                     <li><hr class="dropdown-divider"></li> <!-- Linea divisoria -->
                     <li<a href="#" class="dropdown-item">Il mio profilo</a></li> <!-- Link alla pagina profilo -->
                     <li><a href="#" class="dropdown-item">I miei ordini</a></li> <!-- Link agli ordini -->

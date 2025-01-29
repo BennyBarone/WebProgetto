@@ -3,7 +3,7 @@
     <?php if(isset($templateParams["erroreRegister"])): ?>
         <p class="text-brown"><?php echo $templateParams["erroreRegister"]; ?></p>
     <?php endif; ?>
-    <form class="contact-form  custom-input " action="iscrizione.php" method="POST">
+    <form class="contact-form iscrizione-form custom-input " action="iscrizione.php" method="POST">
         <div class="mx-2 mb-2">
             <label for="name" class="form-label">Nome</label>
             <input type="text" class="form-control" id="Nome" name="nome" placeholder="Nome" required>

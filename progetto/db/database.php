@@ -98,13 +98,16 @@ class DatabaseHelper{
             // Aggiorna le scorte per i gusti
             $query = "UPDATE listino_gusti SET Scorte = Scorte - ? WHERE Nome_gusto = ?";
             $stmt = $this->db->prepare($query);
-            $stmt->execute([$quantita, $gusto1]);
-            $stmt->execute([$quantita, $gusto2]);
+            $stmt->bind_param('is', $quantita, $gusto1);
+            $stmt->execute;
+            $stmt->bind_param('is', $quantita, $gusto2);
+            $stmt->execute();
     
             if (!empty($gusto3)) {
-                $stmt->execute([$quantita, $gusto3]);
+                $stmt->bind_param('is', $quantita, $gusto3);
+                $stmt->execute();
             }
-    
+            
             // Recupera l'id e il prezzo del prodotto
             $query1 = "SELECT Id_prodotto, Prezzo FROM prodotti WHERE Tipologia_prodotto = ? AND Grandezza = ?";
             $stmt1 = $this->db->prepare($query1);
