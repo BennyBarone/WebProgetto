@@ -20,10 +20,10 @@
             <h1 class="text-center flex-grow-1">Nuvole di Gelato</h1>
               <!-- Menu a discesa -->
             <div class="dropdown">
-            <img src="img/profilo.png" alt="account" id="profileDropdown" class="clickable-image dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="img/profilo.png" alt="account"  class="clickable-image dropdown-toggle"  data-bs-toggle="dropdown" >
             <ul class="dropdown-menu dropdown-menu-end text-center">
            
-            <li><a href="#" class="dropdown-item">Accedi</a></li> <!-- Link alla pagina di login -->
+                <li><a href="#" class="dropdown-item">Accedi</a></li> <!-- Link alla pagina di login -->
                 
                 <li><a href="iscrizione.php" class="dropdown-item">Registrati - in un attimo</a></li> <!-- Link alla pagina di registrazione -->
                

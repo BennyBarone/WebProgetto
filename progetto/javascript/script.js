@@ -42,8 +42,3 @@ function selectGusto(gusto, button) {
         button.innerText = gusto;
     }
 }
-<<<<<<< HEAD
-
-
-=======
->>>>>>> aab927a0b32737cabe27948e7edf0cf1be34d349
