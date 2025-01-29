@@ -79,6 +79,15 @@ class DatabaseHelper{
         $stmt->store_result(); // Memorizzo il risultato
         return $stmt->num_rows > 0; // Restituisco true se esiste almeno una riga
     }
+
+    public function checkLogin($email, $password){
+        $query = "SELECT Id_cliente, E_mail, Nome FROM clienti WHERE E_mail = ? AND Password = ?";
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('ss',$email, $password);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        return $result->fetch_all(MYSQLI_ASSOC);
+    } 
     
     //da sistemare con i bind_param
     public function insert_dettaglio_ordine($grandezza, $tipologia, $gusto1, $pallina1, $gusto2, $pallina2, $gusto3, $pallina3, $quantita) {

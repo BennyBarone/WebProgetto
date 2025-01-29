@@ -23,7 +23,7 @@
             <img src="img/profilo.png" alt="account" id="profileDropdown" class="clickable-image dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             <ul class="dropdown-menu dropdown-menu-end text-center">
            
-            <li><a href="#" class="dropdown-item">Accedi</a></li> <!-- Link alla pagina di login -->
+            <li><a href="login.php" class="dropdown-item" onclick="window.location.href='login.php'">Accedi</a></li> <!-- Link alla pagina di login -->
                 
             <li><a href="iscrizione.php" class="dropdown-item" onclick="window.location.href='iscrizione.php'">Registrati - in un attimo</a></li>
             <!-- Link alla pagina di registrazione -->
