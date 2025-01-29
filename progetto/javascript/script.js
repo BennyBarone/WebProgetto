@@ -42,3 +42,77 @@ function selectGusto(gusto, button) {
         button.innerText = gusto;
     }
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".acquistaprod").forEach(button => {
+        button.addEventListener("click", function (event) {
+            // Verifica se l'utente è loggato
+            if (!isUserLoggedIn()) {
+                event.preventDefault(); // Previene l'azione predefinita del pulsante
+                alert("Per acquistare i nostri prodotti devi aver effettuato l'accesso.");
+                return;
+            }
+
+            // Recupero i dati dal bottone stesso
+            let tipologia = this.getAttribute("data-tipologia");
+            let grandezza = this.getAttribute("data-grandezza");
+            let numDropdown = parseInt(this.getAttribute("data-num-dropdown")); // Numero di gusti
+
+            // Recupero la quantità
+            let quantitaInput = this.closest(".box-body").querySelector("input[name='quantita']");
+            let quantita = quantitaInput ? quantitaInput.value : 1;
+
+            // Recupero i gusti selezionati
+            let gusti = [];
+            for (let i = 1; i <= numDropdown; i++) {
+                let buttonGusto = this.closest(".box-body").querySelector(`#dropdownMenuButton_${tipologia}_${grandezza}_${i}`);
+                if (buttonGusto) {
+                    let selectedGusto = buttonGusto.getAttribute("data-selected-gusto") || "Nessun gusto"; // Recupero gusto selezionato
+                    gusti.push(selectedGusto);
+                } else {
+                    gusti.push(""); // Se non esiste, lascio vuoto
+                }
+            }
+
+            // Creazione dei dati da inviare
+            let data = {
+                tipologia: tipologia,
+                grandezza: grandezza,
+                gusto1: gusti[0] || "",
+                pallina1: 1, // Personalizza se servono più palline
+                gusto2: gusti[1] || "",
+                pallina2: 1,
+                gusto3: gusti[2] || "",
+                pallina3: 1,
+                quantita: quantita
+            };
+
+            // Invia i dati al server con AJAX
+            fetch("ordine.php", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(data) // Assicurati che `data` contenga i dati corretti
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Errore nella risposta del server");
+                }
+                return response.json();
+            })
+            .then(result => {
+                if (result.success) {
+                    alert("Prodotto aggiunto con successo!");
+                } else {
+                    alert("Errore: " + result.message);
+                }
+            })
+            .catch(error => {
+                console.error("Errore:", error);
+                alert("Si è verificato un errore: " + error.message);
+            });
+        });
+    });
+});
+
