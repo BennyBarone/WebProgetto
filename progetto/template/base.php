@@ -8,7 +8,11 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<<<<<<< HEAD
     <link rel="stylesheet" type="text/css" href="./css/style.css?v=124">
+=======
+    <link rel="stylesheet" type="text/css" href="./css/style.css?v=123">
+>>>>>>> 9ad9a26e5e61bcefdcdebd814d42e93108c06ecb
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
@@ -18,7 +22,29 @@
                 <img id="logo" src="img/logo.png" alt="Gelato">
             </div>
             <h1 class="text-center flex-grow-1">Nuvole di Gelato</h1>
-            <img src="img/profilo.png" alt="account">
+              <!-- Menu a discesa -->
+            <div class="dropdown">
+            <img src="img/profilo.png" alt="account" id="profileDropdown" class="clickable-image dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <ul class="dropdown-menu dropdown-menu-end text-center">
+           
+            <li><a href="#" class="dropdown-item">Accedi</a></li> <!-- Link alla pagina di login -->
+                
+                <li><a href="./iscrizione.php" class="dropdown-item">Registrati - in un attimo</a></li> <!-- Link alla pagina di registrazione -->
+               
+                <li><hr class="dropdown-divider"></li> <!-- Linea divisoria -->
+              
+                <li><a href="#" class="dropdown-item">Il mio profilo</a></li> <!-- Link alla pagina profilo -->
+                
+                <li><a href="#" class="dropdown-item">I miei ordini</a></li> <!-- Link agli ordini -->
+            
+                <li><a href="#" class="dropdown-item">Saldo punti</a></li> <!-- Link alla lista desideri -->
+            </ul>
+             </div>
+
+
+
+
+
             <img src="img/menu.png" alt="immagine" class="clickable-image" id="menu">
         </div>
         <div class="overlay" id="overlay">
