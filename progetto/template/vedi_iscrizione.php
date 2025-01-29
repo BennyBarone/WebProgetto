@@ -1,7 +1,7 @@
 <section>
-    <h2 class="px-0 mt-2 title-iscrizione">🍦Registrati in pochi passi🍦</h2>
+    <h2 class="ms-2 mt-2 title-iscrizione">Registrati in pochi passi</h2>
     <?php if(isset($templateParams["erroreRegister"])): ?>
-        <p class="text-brown text-center"><?php echo $templateParams["erroreRegister"]; ?></p>
+        <p class="text-brown"><?php echo $templateParams["erroreRegister"]; ?></p>
     <?php endif; ?>
     <form class="contact-form iscrizione-form custom-input " action="iscrizione.php" method="POST">
         <div class="mx-2 mb-2">
@@ -29,6 +29,6 @@
             <input type="password" class="form-control" id="Conferma_password" name="conferma_password" placeholder="Conferma password" required>
         </div>
 
-        <button type="submit" class="btn btn-primary float-end me-2 mt-4 " id="registrazione">Registrati</button>
+        <button type="submit" class="btn btn-primary float-end me-2 mt-4 mb-4" id="registrazione">Registrati</button>
     </form>
 </section>
