@@ -1,11 +1,14 @@
 <?php
 require_once 'bootstrap.php';
 
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+
 $templateParams["titolo"] = "Nuvole di gelato - Iscrizione";
 $templateParams["nome"]="vedi_iscrizione.php";
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    
+if ($_SERVER["REQUEST_METHOD"] == "POST") {    
         $nome = $_POST["nome"];
         $cognome = $_POST["cognome"];
         $numero_cell = $_POST["telefono"];
@@ -25,11 +28,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $templateParams["erroreRegister"] = "Email esistente, effettua il login";
         }
         // Chiama la funzione di registrazione del database
-        if(!$errore){
+        if (!$errore) {
             $dbh->registrazione($nome, $cognome, $numero_cell, $email, $password);
             
+            // Recupera i dati dell'utente appena registrato
+            $login_result = $dbh->checkLogin($email, $password);
+            
+            // Effettua il login automatico
+            if (count($login_result) > 0) {
+                registerLoggedUser($login_result[0]);
+                header("Location: index.php"); // Reindirizza alla homepage
+                exit();
+            }
         }
-    }
-
+}
 require 'template/base.php';
 ?>
