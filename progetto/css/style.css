@@ -1,8 +1,16 @@
 body {
+<<<<<<< HEAD
     background-color:rgb(255, 244, 229) ;
     /*background-color: red;*/
+=======
+    background-color:rgba(255, 244, 229, 0.823) ;
+   /*  background-color: red;*/
+>>>>>>> a33e640e81176fb8522242dd785c4cef14b921b7
     border-bottom: 0;
+    
  }
+
+
  /* Overlay */
  .overlay {
      position: fixed;
@@ -41,19 +49,19 @@ body {
  
  .side-window li{
      border-bottom: 0.3vw solid #8B4513; /* Linea marrone sotto ogni elemento */
-     margin-bottom: 10px;
+     margin-bottom: 1.5%;
  }
  
  .grid-layout{
      border-bottom:0.5vw solid #8B4513;
-     margin-bottom: 10px;
+     margin-bottom: 1%;
  }
  
 #foto1{
     width:75vw;
 }
  article img{
-     width: 20vw;
+     width: 27vw;
  }
  
  article p{
@@ -197,7 +205,7 @@ body {
  }
  
  #bottPorodotti{
-     font-size:6vw;
+     font-size:24vw;
  }
  
  #scopri:hover,#acquista:hover, #acquistaprod:hover, #invia:hover, #tesserafed:hover{
@@ -206,7 +214,7 @@ body {
  }
 
  #UtenteRecensione{
-    width: 10vw;
+    width: 17vw;
  }
  
  h5{
@@ -318,7 +326,7 @@ article h3{
 .step-container {
     background-color: #cbad8d;
     border-radius: 2vw;
-    padding: 2vw;
+    padding: 1vw;
     margin:2vw;
 
 }
@@ -349,6 +357,11 @@ article h3{
 
 }
 
+.row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
  
  @media screen and (min-width: 1024px) {
      header img {
@@ -368,7 +381,7 @@ article h3{
      }
  
      #bottProdotti{
-         font-size: 2vw;
+         font-size: 3vw;
      }
  
      section p, section ul li{
@@ -379,6 +392,9 @@ article h3{
          width: 30vw !important; 
      }
     
+    #scopri{
+        margin-bottom: 2%;
+    }
     
      .grid-layout{
      border-bottom: 0.3vw solid #8B4513;
@@ -418,8 +434,16 @@ article h3{
          font-size: 2vw !important;
     }
     
+   
     article img{
         width: 7vw;
+        margin-left: 0.5vw;
+        
+    }
+
+    article div p{
+        font-size: 1.3vw;
+        
     }
  
     .box-img-top{
@@ -427,7 +451,7 @@ article h3{
     }
      
     #UtenteRecensione{
-        width: 5vw;
+        width: 6vw;
     }
 
     .section-tessera{
@@ -437,21 +461,21 @@ article h3{
 
     .step-container{
         padding: 1vw;
+        height: 25vh;;
     }
 
     .step-number {
         width: 2.5vw; /* Riduci la dimensione del numero su desktop */
         height: 2.5vw;
-        font-size: 1.5vw; /* Testo più piccolo */
+        font-size: 1.5vw;
     }
 
     .step-title {
         font-size: 1.3vw; /* Dimensione più piccola per desktop */
     }
 
-    .text{
-        font-size:1.3vw;
-    }
-
-
  }
+
+
+
+ 
