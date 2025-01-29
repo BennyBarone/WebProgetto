@@ -295,7 +295,10 @@ body {
      padding: 2%;
      font-family: 'Garamond', serif;
  }
- 
+ .iscrizione-form{
+    margin-bottom:25.7%;
+ }
+
  section h3{
      font-family: 'Garamond',serif;
      margin-top: 5vw;
@@ -359,6 +362,8 @@ article h3{
   #bottProdotti{
     font-size: 3.5vw;
 }
+
+
 
 
 
@@ -492,6 +497,19 @@ article h3{
     }
     .dropdown-item {
        font-size: 1.5vw;
+    }
+
+    .iscrizione-form{
+        margin-bottom: 0;
+        margin: 0 25%;
+    
+    }
+    .custom-input{
+        width: 50%; 
+        
+    }
+    .title-iscrizione{
+        text-align: center;
     }
 
  }
