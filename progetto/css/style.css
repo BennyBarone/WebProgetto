@@ -1,11 +1,6 @@
 body {
-<<<<<<< HEAD
-    background-color:rgb(255, 244, 229) ;
+    background-color:#fff4e5 ;
     /*background-color: red;*/
-=======
-    background-color:rgba(255, 244, 229, 0.823) ;
-   /*  background-color: red;*/
->>>>>>> a33e640e81176fb8522242dd785c4cef14b921b7
     border-bottom: 0;
     
  }
@@ -190,7 +185,7 @@ body {
      margin: 10px auto;
  }
  
- #scopri, #acquista, .acquistaprod, #invia, #tesserafed, .scegliGusto{
+ #scopri, #acquista, .acquistaprod, #invia, #tesserafed, .scegliGusto, #registrazione{
      border:#783f04;
      background-color: #783f04;
      transition: all 0.3s ease;
@@ -362,6 +357,29 @@ article h3{
     margin-right: 0;
   }
 
+  #bottProdotti{
+    font-size: 3.5vw;
+}
+
+
+
+ /* Personalizza lo stile del dropdown */
+ .dropdown-menu {
+    background-color: rgb(255, 244, 229); /* Sfondo bianco */
+    border: 2px solid #8B4513; /* Bordo marrone */
+}
+.dropdown-item {
+    color: #8B4513; /* Colore marrone per gli elementi */
+    font-family:  'Garamond', serif ;
+    font-size: 4vw;
+}
+
+.dropdown-item:hover {
+    background-color: rgba(165, 42, 42, 0.1);
+}
+.dropdown-divider{
+    border: 1px solid #8B4513;
+}
  
  @media screen and (min-width: 1024px) {
      header img {
@@ -473,9 +491,9 @@ article h3{
     .step-title {
         font-size: 1.3vw; /* Dimensione più piccola per desktop */
     }
+    .dropdown-item {
+       font-size: 1.5vw;
+    }
 
  }
 
-
-
- 
