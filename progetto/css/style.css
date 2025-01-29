@@ -1,6 +1,7 @@
-body {
+html,body {
     background-color:rgb(255, 244, 229) ;
     /*background-color: red;*/
+    height: 100%;
     border-bottom: 0;
  }
 
@@ -184,7 +185,7 @@ body {
      margin: 10px auto;
  }
  
- #scopri, #acquista, .acquistaprod, #invia, #tesserafed, .scegliGusto, #registrazione{
+ #scopri, #acquista, .acquistaprod, #invia, #tesserafed, .scegliGusto, #registrazione, #invia_login{
      border:#783f04;
      background-color: #783f04;
      transition: all 0.3s ease;
@@ -295,9 +296,13 @@ body {
      padding: 2%;
      font-family: 'Garamond', serif;
  }
+
+ 
  .iscrizione-form{
     margin-bottom:25.7%;
  }
+
+
 
  section h3{
      font-family: 'Garamond',serif;
@@ -362,10 +367,6 @@ article h3{
   #bottProdotti{
     font-size: 3.5vw;
 }
-
-
-
-
 
  /* Personalizza lo stile del dropdown */
  .dropdown-menu {
@@ -499,7 +500,7 @@ article h3{
        font-size: 1.5vw;
     }
 
-    .iscrizione-form{
+    .iscrizione-form, .login-form{
         margin-bottom: 0;
         margin: 0 25%;
     
@@ -508,9 +509,12 @@ article h3{
         width: 50%; 
         
     }
-    .title-iscrizione{
+    .title-iscrizione, .title-login{
         text-align: center;
     }
+
+ 
+
 
  }
 
