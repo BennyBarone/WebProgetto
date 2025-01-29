@@ -15,5 +15,7 @@ if ($filtro === 'Tutti') {
 
 $templateParams["listaGusti"]=$dbh->getListaGusti();
 
+//$templateParams["dettaglioOrdine"]= $dbh->insert_dettaglio_ordine();
+
 require 'template/base.php';
 ?>

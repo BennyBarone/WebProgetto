@@ -84,12 +84,14 @@
                             <p class="mb-0 me-2 p-3">Quantità:</p>
                             <input type="number" name="quantita" id="quantita" min="1" max="10" value="1" class="form-control w-auto"/>
                         </div>
-                        <button id="acquistaprod" class="btn btn-primary">Aggiungi al carrello</button>
+                        <button id="acquistaprod_<?php echo $prodotti['Tipologia_prodotto'] . '_' . $prodotti['Grandezza']; ?>" class="btn btn-primary acquistaprod" 
+                                data-tipologia="<?php echo $prodotti['Tipologia_prodotto']; ?>" data-grandezza="<?php echo $prodotti['Grandezza']; ?>">
+                                Aggiungi al carrello
+                        </button>
                     </div>
                 </div>
             </div>
         <?php endforeach; ?>
     </div>
 </div>
-
 </section>
