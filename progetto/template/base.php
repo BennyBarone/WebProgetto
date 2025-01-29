@@ -25,7 +25,8 @@
            
             <li><a href="#" class="dropdown-item">Accedi</a></li> <!-- Link alla pagina di login -->
                 
-                <li><a href="./iscrizione.php" class="dropdown-item">Registrati - in un attimo</a></li> <!-- Link alla pagina di registrazione -->
+            <li><a href="iscrizione.php" class="dropdown-item" onclick="window.location.href='iscrizione.php'">Registrati - in un attimo</a></li>
+            <!-- Link alla pagina di registrazione -->
                
                 <li><hr class="dropdown-divider"></li> <!-- Linea divisoria -->
               
