@@ -387,7 +387,14 @@ article h3{
 .dropdown-divider{
     border: 1px solid #8B4513;
 }
- 
+
+.carousel-inner{
+    background-color: #cbad8d; 
+    margin-top: 10%;
+}
+
+
+
  @media screen and (min-width: 1024px) {
      header img {
          width: 4vw;
@@ -514,8 +521,13 @@ article h3{
     .title-iscrizione,.title-login{
         text-align: center;
     }
-
- 
+  
+    .carousel-inner{
+        margin-top:4%;
+        padding: 6% 0 !important; 
+    }
+    
+    
 
 
  }

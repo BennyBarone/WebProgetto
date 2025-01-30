@@ -33,7 +33,7 @@
                     <span class="d-block">Registrati al nostro sito e scopri la dolcezza di premi esclusivi!</span>
                     <span class="d-block">Ogni acquisto accumula punti che ti avvicinano a vantaggi unici e irresistibili. Perché ogni momento con il nostro gelato merita di essere speciale, con un pizzico di gratitudine in più.</span>
                 </p>
-                <button id="scopri" type="button" class="btn btn-primary">Scopri di più</button>
+                <a href="tessera.php" class="btn btn-primary" id="scopri"> Scopri di più</a>
                 </div>
             </div>
             </section>
@@ -52,7 +52,7 @@
                     <?php endforeach; ?>
                 </ul>
                 <div class="text-center">
-                    <button id="scopri" type="button" class="btn btn-primary">Scopri di più</button>
+                    <a href="recensioni.php" class="btn btn-primary" id="scopri"> Scopri di più</a>
                 </div>
             </section>
         </div>
