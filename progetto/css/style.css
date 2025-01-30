@@ -207,6 +207,10 @@ body {
      background-color: #783f04;
      transition: all 0.3s ease;
  }
+
+ .scegliGusto{
+    color:rgb(255, 244, 229);
+ }
  
  #scopri,#lascia_recensione{
      margin-bottom: 5%;
@@ -305,8 +309,6 @@ body {
      padding: 2%;
      font-family: 'Garamond', serif;
  }
-
- 
 
 
  section h3{

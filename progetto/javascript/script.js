@@ -43,6 +43,8 @@ function selectGusto(gusto, button) {
     }
 }
 
+
+//verifica se l'utente è loggato, in particolare per fare l'ordine, quindi per aggiungere i prodotti al carrello
 document.addEventListener("DOMContentLoaded", function () {
     // Aggiunge l'evento click a tutti i pulsanti con classe "acquistaprod"
     document.querySelectorAll(".acquistaprod").forEach(button => {
@@ -55,6 +57,34 @@ document.addEventListener("DOMContentLoaded", function () {
                     alertBox.style.display = "block"; // Mostra il messaggio di avviso
                 }
                 return;
+            }
+        });
+    });
+});
+
+
+//manda un messaggio di alert se tutti i campi di un prodotto non sono stati selezionati
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll("form").forEach(form => {
+        form.addEventListener("submit", function (event) {
+            let numDropdown = parseInt(form.querySelector(".acquistaprod").getAttribute("data-num-dropdown"));
+            let allSelected = true;
+
+            for (let i = 1; i <= numDropdown; i++) {
+                let select = form.querySelector(`select[name="gusto${i}"]`);
+                if (!select || select.value.trim() === "") {
+                    allSelected = false;
+                    break;
+                }
+            }
+
+            let campoAlert = form.querySelector("#campoAlert");
+
+            if (!allSelected) {
+                event.preventDefault(); // Blocca l'invio del form
+                campoAlert.style.display = "block"; // Mostra l'alert
+            } else {
+                campoAlert.style.display = "none"; // Nasconde l'alert
             }
         });
     });
