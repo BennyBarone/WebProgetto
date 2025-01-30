@@ -22,20 +22,34 @@ try {
         throw new Exception("Dati mancanti nel form.");
     }
 
-    // Chiama la funzione del database
-    $result = $dbh->insert_dettaglio_ordine($id_cliente, $grandezza, $tipologia, $gusto1, 1, $gusto2, 2, $gusto3, 3, $quantita);
+    // Verifico se esiste un ordine attivo nella sessione
+    if (!isset($_SESSION['Id_ordine'])) {
+        // Se non esiste un ordine, crea un nuovo ordine
+        $id_ordine = $dbh->inizio_ordine($id_cliente);
+        if (!$id_ordine) {
+            throw new Exception("Errore nella creazione dell'ordine.");
+        }
+
+        // Salva l'ID dell'ordine nella sessione, una volta che si termina l'ordine bisogna che la sessione dell'id_ordine scada
+        //altrimenti si continua a comprare con lo stesso id_ordine e non va bene.
+        $_SESSION['Id_ordine'] = $id_ordine;
+    } else {
+        $id_ordine = $_SESSION['Id_ordine'];
+    }
+    
+    $result = $dbh->insert_dettaglio_ordine($id_ordine, $grandezza, $tipologia, $gusto1, 1, $gusto2, 2, $gusto3, 3, $quantita);
 
     if ($result) {
         // Reindirizza a una pagina di successo o mostra un messaggio
         header("Location: prodotti.php");
+        exit;
     } else {
-        throw new Exception("Errore durante l'inserimento dell'ordine.");
+        throw new Exception("Errore durante l'inserimento del prodotto nell'ordine.");
     }
 } catch (Exception $e) {
     // Mostra l'errore o reindirizza a una pagina di errore
     echo "Errore: " . $e->getMessage();
 }
 
-    require 'template/base.php';
-
+require 'template/base.php';
 ?>

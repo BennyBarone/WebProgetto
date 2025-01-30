@@ -97,25 +97,28 @@ class DatabaseHelper{
         $result = $stmt->get_result();
         return $result->fetch_all(MYSQLI_ASSOC);
     } 
+
+    public function inizio_ordine($id_cliente) {
+        $query0 = "INSERT INTO ordini (Id_cliente, Id_fattura, Id_spedizione, Data_effettuazione, Stato_ordine, Prezzo_finale) VALUES (?,?,?,?,?,?)";
+        $id_fattura = null;
+        $id_spedizione = null;
+        $data = date('Y-m-d'); // Formato: 2025-01-30
+        $stato = "in corso";
+        $prezzo_finale = 0;
+        $stmt0 = $this->db->prepare($query0);
+        $stmt0->bind_param('iiissd', $id_cliente, $id_fattura, $id_spedizione, $data, $stato, $prezzo_finale);
+        if ($stmt0->execute()) {
+            // Restituisci l'ID dell'ordine appena creato
+            return $this->db->insert_id;
+        }
+        return false;
+    }
     
-    public function insert_dettaglio_ordine($id_cliente, $grandezza, $tipologia, $gusto1, $pallina1, $gusto2, $pallina2, $gusto3, $pallina3, $quantita) {
+    
+    public function insert_dettaglio_ordine($id_ordine, $grandezza, $tipologia, $gusto1, $pallina1, $gusto2, $pallina2, $gusto3, $pallina3, $quantita) {
         try {
             // Disabilita l'autocommit
             $this->db->autocommit(false);
-    
-            $query0 = "INSERT INTO ordini (Id_cliente, Id_fattura, Id_spedizione, Data_effettuazione, Stato_ordine, Prezzo_finale) VALUES (?,?,?,?,?,?)";
-            $id_fattura = null;
-            $id_spedizione = null;
-            $data = date('Y-m-d'); // Formato: 2025-01-30
-            $stato = "in corso";
-            $prezzo_finale = 0;
-            $stmt0 = $this->db->prepare($query0);
-            $stmt0->bind_param('iiissd', $id_cliente, $id_fattura, $id_spedizione, $data, $stato, $prezzo_finale);
-            $isInserted0 = $stmt0->execute();
-    
-            if ($isInserted0) {
-                // Recupero l'id dell'ordine
-                $id_ordine = $this->db->insert_id;
     
                 // Aggiorno le scorte dei gusti
                 $query = "UPDATE listino_gusti SET Scorte = Scorte - ? WHERE Nome_gusto = ?";
@@ -182,7 +185,6 @@ class DatabaseHelper{
                         }
                     }
                 }
-            }
     
             // In caso di errore, effettua il rollback della transazione
             $this->db->rollback();
@@ -195,6 +197,15 @@ class DatabaseHelper{
             // Riabilita l'autocommit
             $this->db->autocommit(true);
         }
+    }
+
+    public function riepilogo_ordine($id_ordine){
+        $query="SELECT Tipologia_prodotto, Grandezza, Gusto, Quantità, PrezzoUnitario, PrezzoTotale FROM prodotti_ordinati_estesi WHERE Id_ordine = ?";
+        $stmt= $this->db->prepare($query);
+        $stmt->bind_param('i', $id_ordine);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        return $result->fetch_all(MYSQLI_ASSOC);
     }
 }    
 ?>

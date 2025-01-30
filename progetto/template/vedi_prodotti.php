@@ -88,6 +88,11 @@
     <div id="loginAlert" class="alert alert-warning" style="display: none;" role="alert">
         Per acquistare i nostri prodotti devi aver effettuato l'accesso.
     </div>
+    <!-- Messaggio di avviso per campi non selezionati -->
+    <div id="campoAlert" class="alert alert-warning" style="display: none;" role="alert">
+        Seleziona tutti i gusti prima di aggiungere al carrello.
+    </div>
+
 
     <button type="submit" class="btn btn-primary acquistaprod" 
         data-tipologia="<?php echo $prodotti['Tipologia_prodotto']; ?>" 
