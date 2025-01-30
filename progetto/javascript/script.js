@@ -47,9 +47,9 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".acquistaprod").forEach(button => {
         button.addEventListener("click", function (event) {
             // Verifica se l'utente è loggato
-            if (!isUserLoggedIn()) {
+            if (!isUserLoggedIn) { // Modifica qui: usa la variabile invece di chiamarla come funzione
                 event.preventDefault(); // Previene l'azione predefinita del pulsante
-                document.getElementById("loginAlert").style.display = "block"; // Mostra il messaggio di avviso
+                this.closest(".box-body").querySelector("#loginAlert").style.display = "block"; // Mostra il messaggio di avviso nel contenitore giusto
                 return;
             }
 

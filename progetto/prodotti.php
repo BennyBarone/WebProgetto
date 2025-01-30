@@ -1,7 +1,9 @@
 <?php
 require_once 'bootstrap.php';
 
-//session_start();
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 
 $templateParams["titolo"] = "Nuvole di gelato - Vedi Prodotti";
 $templateParams["nome"] = "vedi_prodotti.php";

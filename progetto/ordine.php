@@ -1,12 +1,15 @@
 <?php
 require_once 'bootstrap.php';
 
-//session_start();
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 
 $data = json_decode(file_get_contents("php://input"), true);
 
 if ($data) {
     try {
+        $id_cliente = $_SESSION['Id_cliente'];
         $tipologia = $data["tipologia"];
         $grandezza = $data["grandezza"];
         $gusto1 = $data["gusto1"];
@@ -15,7 +18,7 @@ if ($data) {
         $quantita = $data["quantita"];
 
         // Chiama la funzione del database
-        $result = $dbh->insert_dettaglio_ordine($grandezza, $tipologia, $gusto1, 1, $gusto2, 2, $gusto3, 3, $quantita);
+        $result = $dbh->insert_dettaglio_ordine($id_cliente, $grandezza, $tipologia, $gusto1, 1, $gusto2, 2, $gusto3, 3, $quantita);
 
         if ($result) {
             echo json_encode(["success" => true, "message" => "Ordine inserito con successo!"]);

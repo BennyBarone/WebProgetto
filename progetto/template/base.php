@@ -57,11 +57,14 @@ if (session_status() == PHP_SESSION_NONE) {
             <button id="acquista" type="button" class="btn btn-primary btn-lg">Acquista</button>
             </div>
         </div>
+        <script>
+            var isUserLoggedIn = <?php echo json_encode(isUserLoggedIn()); ?>;
+        </script>
         <script src="javascript/script.js" defer></script>
     </header>
     <main>
     <?php
-    // Controlla se è stato definito il template da caricare
+    // Controllo se è stato definito il template da caricare
     if (isset($templateParams["nome"])) {
         require $templateParams["nome"];
     } else {

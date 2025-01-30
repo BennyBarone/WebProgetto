@@ -89,81 +89,99 @@ class DatabaseHelper{
         return $result->fetch_all(MYSQLI_ASSOC);
     } 
     
-    //da sistemare con i bind_param
-    public function insert_dettaglio_ordine($grandezza, $tipologia, $gusto1, $pallina1, $gusto2, $pallina2, $gusto3, $pallina3, $quantita) {
+    public function insert_dettaglio_ordine($id_cliente, $grandezza, $tipologia, $gusto1, $pallina1, $gusto2, $pallina2, $gusto3, $pallina3, $quantita) {
         try {
             // Avvia una transazione
             $this->db->beginTransaction();
+            $query0 = "INSERT INTO ordini (Id_cliente, Id_fattura, Id_spedizione, Data_effettuazione, Stato_ordine, Prezzo_finale) VALUES (?,?,?,?,?,?)";
+            $id_fattura = null;
+            $id_spedizione = null;
+            $data = date('Y-m-d'); // Formato: 2025-01-30
+            $stato = "in corso";
+            $prezzo_finale = 0;
+            $stmt0 = $this->db->prepare($query0);
+            $stmt0->bind_param('iiissd', $id_cliente, $id_fattura, $id_spedizione, $data, $stato, $prezzo_finale);
+            $isInserted0 = $stmt0->execute();
     
-            // Aggiorna le scorte per i gusti
-            $query = "UPDATE listino_gusti SET Scorte = Scorte - ? WHERE Nome_gusto = ?";
-            $stmt = $this->db->prepare($query);
-            $stmt->bind_param('is', $quantita, $gusto1);
-            $stmt->execute;
-            $stmt->bind_param('is', $quantita, $gusto2);
-            $stmt->execute();
+            if ($isInserted0) {
+                // Recupero l'id dell'ordine
+                $id_ordine = $this->db->lastInsertId();
     
-            if (!empty($gusto3)) {
-                $stmt->bind_param('is', $quantita, $gusto3);
-                $stmt->execute();
-            }
-            
-            // Recupera l'id e il prezzo del prodotto
-            $query1 = "SELECT Id_prodotto, Prezzo FROM prodotti WHERE Tipologia_prodotto = ? AND Grandezza = ?";
-            $stmt1 = $this->db->prepare($query1);
-            $stmt1->execute([$tipologia, $grandezza]);
-            $result1 = $stmt1->fetch(PDO::FETCH_ASSOC);
+                // Aggiorno le scorte dei gusti
+                $query = "UPDATE listino_gusti SET Scorte = Scorte - ? WHERE Nome_gusto = ?";
+                $stmt = $this->db->prepare($query);
+                $stmt->bind_param('is', $quantita, $gusto1);
+                $succ1 = $stmt->execute();
+                $stmt->bind_param('is', $quantita, $gusto2);
+                $succ2 = $stmt->execute();
+                $succ3 = true;
     
-            if ($result1) {
-                $idProdotto = $result1['Id_prodotto'];
-                $prezzoUnitario = $result1['Prezzo'];
-    
-                // Inserisci il prodotto ordinato
-                $query2 = "INSERT INTO prodotti_ordinati (Id_prodotto) VALUES (?)";
-                $stmt2 = $this->db->prepare($query2);
-                $stmt2->bind_param('i', $idProdotto);
-                $isInserted2 = $stmt2->execute();
-    
-                if ($isInserted2) {
-                    // Recupera l'id del prodotto ordinato
-                    $idProdottoOrdinato = $this->db->lastInsertId();
-    
-                    // Inserisci le opzioni per i gusti
-                    $query3 = "INSERT INTO opzioni (Nome_gusto, Id_prodotto_ordinato, Numero_pallina) VALUES (?,?,?)";
-                    $stmt3 = $this->db->prepare($query3);
-    
-                    $success1 = $stmt3->execute([$gusto1, $idProdottoOrdinato, $pallina1]);
-                    $success2 = $stmt3->execute([$gusto2, $idProdottoOrdinato, $pallina2]);
-                    $success3 = true; // Di default è true, se gusto3 non è presente
-    
-                    if (!empty($gusto3)) {
-                        $success3 = $stmt3->execute([$gusto3, $idProdottoOrdinato, $pallina3]);
-                    }
-    
-                    // Inserisci il dettaglio acquisti solo se tutte le opzioni sono state inserite correttamente
-                    if ($success1 && $success2 && $success3) {
-                        $prezzoTotale = $quantita * $prezzoUnitario;
-                        $query4 = "INSERT INTO dettaglio_acquisti(Id_ordine, Id_prodotto_ordinato, Quantita, PrezzoUnitario, PrezzoTotale) VALUES (?,?,?,?,?)";
-                        $stmt4 = $this->db->prepare($query4);    
-                        // Id_ordine è impostato a NULL perché sarà aggiornato al pagamento
-                        $stmt4->execute([null, $idProdottoOrdinato, $quantita, $prezzoUnitario, $prezzoTotale]);
-                        // Conferma la transazione e restituisci true
-                        $this->db->commit();
-                        return true;
-                    } else {
-                        throw new Exception("Errore nell'inserimento delle opzioni.");
-                    }
-                } else {
-                    throw new Exception("Errore nell'inserimento del prodotto ordinato.");
+                if (!empty($gusto3)) {
+                    $stmt->bind_param('is', $quantita, $gusto3);
+                    $succ3 = $stmt->execute();
                 }
-            } else {
-                throw new Exception("Prodotto non trovato.");
+    
+                if ($succ1 && $succ2 && $succ3) {
+                    // Recupero id del prodotto e prezzo
+                    $query1 = "SELECT Id_prodotto, Prezzo FROM prodotti WHERE Tipologia_prodotto = ? AND Grandezza = ?";
+                    $stmt1 = $this->db->prepare($query1);
+                    $stmt1->bind_param('ss', $tipologia, $grandezza);
+                    $stmt1->execute();
+                    $result1 = $stmt1->get_result()->fetch_assoc();
+    
+                    if ($result1) {
+                        $idProdotto = $result1['Id_prodotto'];
+                        $prezzoUnitario = $result1['Prezzo'];
+    
+                        $query2 = "INSERT INTO prodotti_ordinati (Id_prodotto) VALUES (?)";
+                        $stmt2 = $this->db->prepare($query2);
+                        $stmt2->bind_param('i', $idProdotto);
+                        $isInserted2 = $stmt2->execute();
+    
+                        if ($isInserted2) {
+                            // Recupera l'id del prodotto ordinato
+                            $idProdottoOrdinato = $this->db->lastInsertId();
+    
+                            // Inserisci le opzioni per i gusti
+                            $query3 = "INSERT INTO opzioni (Nome_gusto, Id_prodotto_ordinato, Numero_pallina) VALUES (?,?,?)";
+                            $stmt3 = $this->db->prepare($query3);
+                            $stmt3->bind_param('sii', $gusto1, $idProdottoOrdinato, $pallina1);
+                            $success1 = $stmt3->execute();
+                            $stmt3->bind_param('sii', $gusto2, $idProdottoOrdinato, $pallina2);
+                            $success2 = $stmt3->execute();
+                            $success3 = true; // Di default è true, se gusto3 non è presente
+    
+                            if (!empty($gusto3)) {
+                                $stmt3->bind_param('sii', $gusto3, $idProdottoOrdinato, $pallina3);
+                                $success3 = $stmt3->execute();
+                            }
+    
+                            if ($success1 && $success2 && $success3) {
+                                $prezzoTotale = $quantita * $prezzoUnitario;
+                                $query4 = "INSERT INTO dettaglio_acquisti(Id_ordine, Id_prodotto_ordinato, Quantita, PrezzoUnitario, PrezzoTotale) VALUES (?,?,?,?,?)";
+                                $stmt4 = $this->db->prepare($query4);
+                                $stmt4->bind_param('iiidd', $id_ordine, $idProdottoOrdinato, $quantita, $prezzoUnitario, $prezzoTotale);
+                                $isInserted4 = $stmt4->execute();
+    
+                                if ($isInserted4) {
+                                    // Commit della transazione
+                                    $this->db->commit();
+                                    return true;
+                                }
+                            }
+                        }
+                    }
+                }
             }
+    
+            // In caso di errore, effettua il rollback della transazione
+            $this->db->rollBack();
+            return false;
         } catch (Exception $e) {
             // In caso di errore, effettua il rollback della transazione
             $this->db->rollBack();
             throw $e;
         }
-    }    
-}
+    }     
+}  
 ?>
