@@ -67,18 +67,19 @@
                         <?php
                         $numDropdown = ($prodotti["Grandezza"] === "Piccolo" || $prodotti["Grandezza"] === "Piccola") ? 2 : 3;
                         for ($i = 1; $i <= $numDropdown; $i++): ?>
-                        <div class="dropdown">
-                        <select name="gusto<?php echo $i; ?>" class="form-select scegliGusto">
-                        <option value="">Gusto <?php echo $i; ?></option>
-                            <?php foreach ($templateParams["listaGusti"] as $listaGusti): ?>
-                        <option value="<?php echo htmlspecialchars($listaGusti["Nome_gusto"], ENT_QUOTES); ?>">
-                            <?php echo htmlspecialchars($listaGusti["Nome_gusto"]); ?>
-                        </option>
-                    <?php endforeach; ?>
-                </select>
-                </div>
-            <?php endfor; ?>
-        </div>
+                        <div class=" dropdown">
+                                 <select name="gusto<?php echo $i; ?>" class="form-select form-select-sm scegliGusto">
+
+                                <option value="">Gusto <?php echo $i; ?></option>
+                                    <?php foreach ($templateParams["listaGusti"] as $listaGusti): ?>
+                                <option value="<?php echo htmlspecialchars($listaGusti["Nome_gusto"], ENT_QUOTES); ?>">
+                             <?php echo htmlspecialchars($listaGusti["Nome_gusto"]); ?>
+                                </option>
+                            <?php endforeach; ?>
+                            </select>
+                        </div>
+                         <?php endfor; ?>
+                        </div>
     <div class="d-flex align-items-center justify-content-center mb-3">
         <label for="quantita_<?php echo $prodotti['Tipologia_prodotto'] . '_' . $prodotti['Grandezza']; ?>" class="me-2">Quantità:</label>
         <input type="number" name="quantita" id="quantita_<?php echo $prodotti['Tipologia_prodotto'] . '_' . $prodotti['Grandezza']; ?>" min="1" max="10" value="1" class="form-control w-auto">

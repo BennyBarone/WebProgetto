@@ -1,27 +1,24 @@
 body {
     background-color:rgb(255, 244, 229) ;
     /*background-color: red;*/
-    
-   
- }
- html,body {
+}
+
+html,body {
     height: 100%;
     margin: 0;
     display: flex;
     flex-direction: column;
 }
 
- footer{
+footer{
     background-color: #8B4513;
     font-family: 'Garamond', serif;  
     width: 100%;
-    margin-top: auto;
-   
+    margin-top: auto;   
 }
 
-
- /* Overlay */
- .overlay {
+/* Overlay */
+.overlay {
      position: fixed;
      top: 0;
      left: 0;
@@ -32,15 +29,15 @@ body {
      justify-content: flex-end;
      align-items: center;
      z-index: 1000;
- }
+}
  
  /* Mostra l'overlay quando è attivo */
- .overlay.active {
+.overlay.active {
      display: flex;
  }
  
  /* Finestra laterale */
- .side-window {
+.side-window {
      background-color:rgb(255, 244, 229) ;
      width: 75%;
      height: 100%;
@@ -49,14 +46,14 @@ body {
      position: relative;
  }
  
- .side-window ul {
+.side-window ul {
      list-style: none;
      padding: 0;
      margin: 0;
      width: 100%;
- }
+}
  
- .side-window li{
+.side-window li{
      border-bottom: 0.3vw solid #8B4513; /* Linea marrone sotto ogni elemento */
      margin-bottom: 1.5%;
  }
@@ -69,16 +66,17 @@ body {
 #foto1{
     width:75vw;
 }
- article img{
+
+article img{
      width: 27vw;
- }
+}
  
- article p{
+article p{
      font-family:'Garamond', serif;
      font-size:4vw;
- }
+}
  
- .side-window li a {
+.side-window li a {
      text-decoration: none; /* Rimuove la sottolineatura */
      color: #8B4513; /* Colore marrone */
      font-size: 27px;
@@ -87,7 +85,7 @@ body {
      padding: 10% 0;
  }
  /* Pulsante di chiusura */
- .close-button {
+.close-button {
      position: absolute;
      top: 1%;
      right:1.5%;
@@ -98,29 +96,28 @@ body {
      cursor: pointer;
  }
  
+ul li a:hover {
+    color: #1d201d; /* Colore al passaggio del mouse (hover) */
+}
  
- ul li a:hover {
-     color: #1d201d; /* Colore al passaggio del mouse (hover) */
- }
  
- 
- h1 a {
+h1 a {
      font-family: "Lucida Handwriting", cursive;
      font-size: 5vw;  /* Usa 3vw per un font responsivo */ 
      text-decoration: none;
      color: #783f04;
      
- }
+}
  
  /* Stile base per tutte le immagini */
- img {
+img {
      max-width: 100%;
      height: auto;
      object-fit: cover;
- }
+}
  
  /* Stile generico per le immagini in header */
- header img {
+header img {
      margin-left: 1%;
      margin-right: 1%;
      width: 8vw;
@@ -130,53 +127,52 @@ body {
  }
  
  /* Stile specifico per il logo */
- #logo {
+#logo {
      border: none !important;
      border-radius: 0 !important;
      width: 13vw;
  }
  
  /* Effetto hover per le immagini in header */
- header img:hover {
+header img:hover {
      transform: scale(1.1);
- }
+}
  
  /* Disabilitare l'effetto hover sul logo */
- #logo:hover {
+#logo:hover {
      transform: none !important;
- }
- section div img{
+}
+section div img{
      padding: 0.5%;   
      width: 40vw;
- }
+}
  
- section h2, article h2{
+section h2, article h2{
      padding:0 1.1%;
      padding-top: 0.8%;
      font-family: "Lucida Handwriting", cursive;
- }
+}
  
- section p, section ul li{
+section p, section ul li{
    
      padding: 0 1.5%; 
      font-family: 'Garamond', serif;
      font-size: 4.5vw;
+}
+
+.text-brown {
+    color: #783f04;
+}
  
- }
- 
- .text-brown {
-     color: #783f04;
- }
- 
- .border-brown {
+.border-brown {
      border-color: #783f04 !important;
- }
+}
  
  /* Mantieni le dimensioni dell'immagine */
- section div img {
+section div img {
      padding: 0.5%;
      width: 40vw; /* L'immagine occupa il 40% della larghezza della finestra */
- }
+}
  
  /* Stile personalizzato per il bottone */
  .custom-btn {
@@ -202,12 +198,13 @@ body {
      margin: 10px auto;
  }
  
- #scopri, #acquista, .acquistaprod, #invia, #tesserafed, .scegliGusto, #registrazione, #invia_login,#lascia_recensione{
+ #scopri, #acquista, .acquistaprod, #invia, #tesserafed, #registrazione, #invia_login,#lascia_recensione{
      border:#783f04;
      background-color: #783f04;
      transition: all 0.3s ease;
  }
  
+
  #scopri,#lascia_recensione{
      margin-bottom: 5%;
  }
@@ -220,7 +217,7 @@ body {
      font-size:24vw;
  }
  
- #scopri:hover,#acquista:hover, #acquistaprod:hover, #invia:hover, #tesserafed:hover,#lascia_recensione:hover{
+ #scopri:hover,#acquista:hover, .acquistaprod:hover, #invia:hover, #tesserafed:hover, #lascia_recensione:hover{
      background-color: rgba(165, 42, 42, 0.1);
      color: darkbrown;
  }
@@ -287,18 +284,17 @@ body {
      color: rgb(255, 244, 229);
  }
  
- 
  article div{
      padding: 0;
  }
- 
+
  .box-img-top{
      width:40vw;
      border: 0.2vw solid #783f04;
      display: block;
      margin: 0 auto;
  }
- 
+
  .contact-form {
      background-color: rgb(255, 244, 229);
      border-color: 2px solid #8B4513;
@@ -306,36 +302,27 @@ body {
      font-family: 'Garamond', serif;
  }
 
- 
-
-
  section h3{
      font-family: 'Garamond',serif;
      margin-top: 5vw;
- 
  }
  
- .dropdown-menu-scrollable {
-     max-height: 200px; /* Altezza massima del menu */
-     overflow-y: auto; /* Scroll verticale */
- }
 
- .section-tessera{
-    background-color: #cbad8d; 
+.section-tessera{
+   background-color: #cbad8d;
+     /*background: url('img/foto_tessera.jpeg') center center;*/
     min-height: 33vh;
- }
+}
  
 article h3{
     font-family: "Lucida Handwriting", cursive;
 }
-
 
 .step-container {
     background-color: #cbad8d;
     border-radius: 2vw;
     padding: 1vw;
     margin:2vw;
-
 }
 
 .step-header {
@@ -369,12 +356,23 @@ article h3{
     margin-right: 0;
   }
 
-  #bottProdotti{
+#bottProdotti{
     font-size: 3.5vw;
 }
 
- /* Personalizza lo stile del dropdown */
- .dropdown-menu {
+.scegliGusto {
+    background-color: rgb(255, 244, 229); /* Sfondo */
+    border: 2px solid #8B4513; /* Bordo */
+    color: #8B4513; /* Testo */
+    font-family: 'Garamond', serif;
+    font-size: 4vw;  /* ⬅ Riduci il font */
+   
+    height: auto; /* Permetti di adattarsi */
+}
+
+
+
+ .dropdown-menu{
     background-color: rgb(255, 244, 229); /* Sfondo bianco */
     border: 2px solid #8B4513; /* Bordo marrone */
 }
@@ -391,7 +389,7 @@ article h3{
     border: 1px solid #8B4513;
 }
 
-.carousel-inner{
+.carousel-inner {
     background-color: #cbad8d; 
     margin-top: 10%;
 }
@@ -512,7 +510,9 @@ article h3{
     .dropdown-item {
        font-size: 1.5vw;
     }
-
+    .scegliGusto{
+        font-size: 1.4vw;
+    }
     .iscrizione-form, .login-form{
         margin-bottom: 0;
         margin: 0 25%;
