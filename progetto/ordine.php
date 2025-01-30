@@ -5,30 +5,37 @@ if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 
-$data = json_decode(file_get_contents("php://input"), true);
-
-if ($data) {
-    try {
-        $id_cliente = $_SESSION['Id_cliente'];
-        $tipologia = $data["tipologia"];
-        $grandezza = $data["grandezza"];
-        $gusto1 = $data["gusto1"];
-        $gusto2 = $data["gusto2"];
-        $gusto3 = isset($data["gusto3"]) ? $data["gusto3"] : null;
-        $quantita = $data["quantita"];
-
-        // Chiama la funzione del database
-        $result = $dbh->insert_dettaglio_ordine($id_cliente, $grandezza, $tipologia, $gusto1, 1, $gusto2, 2, $gusto3, 3, $quantita);
-
-        if ($result) {
-            echo json_encode(["success" => true, "message" => "Ordine inserito con successo!"]);
-        } else {
-            echo json_encode(["success" => false, "message" => "Errore durante l'inserimento dell'ordine."]);
-        }
-    } catch (Exception $e) {
-        echo json_encode(["success" => false, "message" => $e->getMessage()]);
+try {
+    if (!isset($_SESSION['Id_cliente'])) {
+        throw new Exception("Sessione non attiva! Assicurati di essere loggato.");
     }
-} else {
-    echo json_encode(["success" => false, "message" => "Dati non validi"]);
+
+    $id_cliente = $_SESSION['Id_cliente'];
+    $tipologia = $_POST['tipologia'] ?? null;
+    $grandezza = $_POST['grandezza'] ?? null;
+    $gusto1 = $_POST['gusto1'] ?? null;
+    $gusto2 = $_POST['gusto2'] ?? null;
+    $gusto3 = $_POST['gusto3'] ?? null;
+    $quantita = $_POST['quantita'] ?? 1;
+
+    if (is_null($tipologia) || is_null($grandezza) || is_null($gusto1) || is_null($gusto2)) {
+        throw new Exception("Dati mancanti nel form.");
+    }
+
+    // Chiama la funzione del database
+    $result = $dbh->insert_dettaglio_ordine($id_cliente, $grandezza, $tipologia, $gusto1, 1, $gusto2, 2, $gusto3, 3, $quantita);
+
+    if ($result) {
+        // Reindirizza a una pagina di successo o mostra un messaggio
+        header("Location: prodotti.php");
+    } else {
+        throw new Exception("Errore durante l'inserimento dell'ordine.");
+    }
+} catch (Exception $e) {
+    // Mostra l'errore o reindirizza a una pagina di errore
+    echo "Errore: " . $e->getMessage();
 }
+
+    require 'template/base.php';
+
 ?>
