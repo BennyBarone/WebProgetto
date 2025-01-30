@@ -198,5 +198,14 @@ class DatabaseHelper{
             $this->db->autocommit(true);
         }
     }
+
+    public function riepilogo_ordine($id_ordine){
+        $query="SELECT Tipologia_prodotto, Grandezza, Gusto, Quantità, PrezzoUnitario, PrezzoTotale FROM prodotti_ordinati_estesi WHERE Id_ordine = ?";
+        $stmt= $this->db->prepare($query);
+        $stmt->bind_param('i', $id_ordine);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
 }    
 ?>
