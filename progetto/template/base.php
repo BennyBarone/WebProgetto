@@ -13,7 +13,7 @@ if (session_status() == PHP_SESSION_NONE) {
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="./css/style.css?v=133">
+    <link rel="stylesheet" type="text/css" href="./css/style.css?v=123">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
@@ -22,7 +22,7 @@ if (session_status() == PHP_SESSION_NONE) {
             <div class="logo-container">
                 <img id="logo" src="img/logo.png" alt="Gelato">
             </div>
-            <h1 class="text-center flex-grow-1">Nuvole di Gelato</h1>
+            <h1 class="text-center flex-grow-1" ><a href="index.php">Nuvole di gelato</a></h1>
               <!-- Menu a discesa -->
               <div class="dropdown">
                 <img src="img/profilo.png" alt="account" id="profileDropdown" class="clickable-image dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">

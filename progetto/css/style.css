@@ -104,9 +104,12 @@ body {
  }
  
  
- h1 {
+ h1 a {
      font-family: "Lucida Handwriting", cursive;
      font-size: 5vw;  /* Usa 3vw per un font responsivo */ 
+     text-decoration: none;
+     color: #783f04;
+     
  }
  
  /* Stile base per tutte le immagini */
@@ -199,13 +202,13 @@ body {
      margin: 10px auto;
  }
  
- #scopri, #acquista, .acquistaprod, #invia, #tesserafed, .scegliGusto, #registrazione, #invia_login{
+ #scopri, #acquista, .acquistaprod, #invia, #tesserafed, .scegliGusto, #registrazione, #invia_login,#lascia_recensione{
      border:#783f04;
      background-color: #783f04;
      transition: all 0.3s ease;
  }
  
- #scopri{
+ #scopri,#lascia_recensione{
      margin-bottom: 5%;
  }
  
@@ -217,7 +220,7 @@ body {
      font-size:24vw;
  }
  
- #scopri:hover,#acquista:hover, #acquistaprod:hover, #invia:hover, #tesserafed:hover{
+ #scopri:hover,#acquista:hover, #acquistaprod:hover, #invia:hover, #tesserafed:hover,#lascia_recensione:hover{
      background-color: rgba(165, 42, 42, 0.1);
      color: darkbrown;
  }
@@ -226,7 +229,7 @@ body {
     width: 17vw;
  }
  
- h5{
+ section h5{
      font-family: 'Papyrus', fantasy;
      font-size: 5vw;
  }
@@ -395,12 +398,13 @@ article h3{
 
 
 
+
  @media screen and (min-width: 1024px) {
      header img {
          width: 4vw;
      }
  
-     h1 {
+     h1 a {
          font-size: 3vw;  /* Aumenta ulteriormente la dimensione del testo per schermi molto piccoli */
      }
  
@@ -446,7 +450,7 @@ article h3{
          height: 4.5vw;
     }
  
-    h5{
+    section h5{
          font-size:2vw;
     }
  
@@ -526,9 +530,10 @@ article h3{
         margin-top:4%;
         padding: 6% 0 !important; 
     }
-    
-    
 
+    #lascia_recensione{
+        margin-bottom: 10%;
+    }
 
  }
 

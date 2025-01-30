@@ -21,9 +21,9 @@
 </section>
 
 <article class="mt-4 ms-2">
-    <p class="fs-5">Vuoi lasciarci anche tu una recensione?<p>
+    <p class="fs-4 ms-2">Vuoi lasciarci anche tu una recensione?<p>
     <div class="text-center">
-      <a href="mioprofilo.php" class="btn btn-primary" id="scopri">Lascia una recensione</a>
+      <a href="mioprofilo.php" class="btn btn-primary " id="lascia_recensione">Lascia una recensione</a>
     </div>
    
 
