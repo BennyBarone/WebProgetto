@@ -100,8 +100,9 @@ class DatabaseHelper{
     
     public function insert_dettaglio_ordine($id_cliente, $grandezza, $tipologia, $gusto1, $pallina1, $gusto2, $pallina2, $gusto3, $pallina3, $quantita) {
         try {
-            // Avvia una transazione
-            $this->db->beginTransaction();
+            // Disabilita l'autocommit
+            $this->db->autocommit(false);
+    
             $query0 = "INSERT INTO ordini (Id_cliente, Id_fattura, Id_spedizione, Data_effettuazione, Stato_ordine, Prezzo_finale) VALUES (?,?,?,?,?,?)";
             $id_fattura = null;
             $id_spedizione = null;
@@ -114,7 +115,7 @@ class DatabaseHelper{
     
             if ($isInserted0) {
                 // Recupero l'id dell'ordine
-                $id_ordine = $this->db->lastInsertId();
+                $id_ordine = $this->db->insert_id;
     
                 // Aggiorno le scorte dei gusti
                 $query = "UPDATE listino_gusti SET Scorte = Scorte - ? WHERE Nome_gusto = ?";
@@ -149,7 +150,7 @@ class DatabaseHelper{
     
                         if ($isInserted2) {
                             // Recupera l'id del prodotto ordinato
-                            $idProdottoOrdinato = $this->db->lastInsertId();
+                            $idProdottoOrdinato = $this->db->insert_id;
     
                             // Inserisci le opzioni per i gusti
                             $query3 = "INSERT INTO opzioni (Nome_gusto, Id_prodotto_ordinato, Numero_pallina) VALUES (?,?,?)";
@@ -184,13 +185,16 @@ class DatabaseHelper{
             }
     
             // In caso di errore, effettua il rollback della transazione
-            $this->db->rollBack();
+            $this->db->rollback();
             return false;
         } catch (Exception $e) {
             // In caso di errore, effettua il rollback della transazione
-            $this->db->rollBack();
+            $this->db->rollback();
             throw $e;
+        } finally {
+            // Riabilita l'autocommit
+            $this->db->autocommit(true);
         }
-    }     
-}  
+    }
+}    
 ?>
