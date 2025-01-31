@@ -43,7 +43,6 @@ function selectGusto(gusto, button) {
     }
 }
 
-
 //verifica se l'utente è loggato, in particolare per fare l'ordine, quindi per aggiungere i prodotti al carrello
 document.addEventListener("DOMContentLoaded", function () {
     // Aggiunge l'evento click a tutti i pulsanti con classe "acquistaprod"
@@ -77,7 +76,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     break;
                 }
             }
-
             let campoAlert = form.querySelector("#campoAlert");
 
             if (!allSelected) {

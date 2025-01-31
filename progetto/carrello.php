@@ -7,7 +7,9 @@ if (session_status() == PHP_SESSION_NONE) {
 
 $templateParams["titolo"] = "Nuvole di gelato - Carrello";
 $templateParams["nome"]="vedi_carrello.php";
-//$templateParams["riepilogo_ordine"]=$dbh->riepilogo_ordine();
+
+$id_ordine = $_SESSION['Id_ordine'];
+$templateParams["riepilogo_ordine"]=$dbh->riepilogo_ordine($id_ordine);
 
 require 'template/base.php';
 ?>
