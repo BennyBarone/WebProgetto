@@ -13,7 +13,7 @@ if (session_status() == PHP_SESSION_NONE) {
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="./css/style.css?v=143">
+    <link rel="stylesheet" type="text/css" href="./css/style.css?v=123">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
@@ -71,11 +71,6 @@ if (session_status() == PHP_SESSION_NONE) {
         echo "<p>Errore: nessun contenuto da mostrare.</p>";
     }
     ?>
-<<<<<<< HEAD
-    <div class="cart-icon" id="cart-icon">
-        <span id="cart-count">0</span>
-        <img src="img/okk.png" alt="Carrello">
-=======
 
 <?php if (isUserLoggedIn()): ?>
      <div class="cart-icon" id="cart-icon">
@@ -85,8 +80,8 @@ if (session_status() == PHP_SESSION_NONE) {
         <a href="carrello.php">
             <img src="img/okk.png" alt="Carrello">
         </a>
->>>>>>> 8dbc5b8ef7cdc9df9b72883ec3f3af76b4c62cc4
     </div>
+    <?php endif; ?>
 
     </main>
     <footer>

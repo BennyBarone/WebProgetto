@@ -85,7 +85,7 @@ class DatabaseHelper{
         $stmt = $this->db->prepare($query);
         $stmt->bind_param('s', $email);
         $stmt->execute();
-        $stmt->store_result(); // Memorizzo il risultato
+        $stmt->store_result(); 
         return $stmt->num_rows > 0; // Restituisco true se esiste almeno una riga
     }
 
@@ -209,7 +209,7 @@ class DatabaseHelper{
     }
 
     public function mio_profilo($id_cliente) { 
-        $query = "SELECT Nome, Cognome, Numero_cell, E_mail FROM clienti WHERE Id_cliente = ?"; 
+        $query = "SELECT Nome, Cognome, Numero_cell, E_mail, Punti_accumulati FROM clienti WHERE Id_cliente = ?"; 
         $stmt = $this->db->prepare($query); 
         $stmt->bind_param("i", $id_cliente); 
         $stmt->execute(); 
@@ -239,5 +239,14 @@ class DatabaseHelper{
             return $stmt->execute;
         }
     }
+
+    public function nuova_password($password, $id_cliente) {
+        $query = "UPDATE clienti SET Password=? WHERE Id_cliente=?";
+        $stmt = $this->db->prepare($query); 
+        $stmt->bind_param('si', $password, $id_cliente); 
+        return $stmt->execute(); // Ritorna true se l'aggiornamento ha successo
+    }
+    
+
 }    
 ?>
