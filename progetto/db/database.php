@@ -207,5 +207,21 @@ class DatabaseHelper{
         $result = $stmt->get_result();
         return $result->fetch_all(MYSQLI_ASSOC);
     }
+
+    public function mio_profilo($id_cliente) { 
+        $query = "SELECT Nome, Cognome FROM clienti WHERE Id_cliente = ?"; 
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param("i", $id_cliente); 
+        $stmt->execute(); // CORRETTO: esegui() -> execute()
+        $result = $stmt->get_result(); 
+    
+        return $result->fetch_all(MYSQLI_ASSOC); 
+    }
+    
+    
+
+
+
+
 }    
 ?>
