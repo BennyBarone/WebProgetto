@@ -29,7 +29,6 @@ try {
         if (!$id_ordine) {
             throw new Exception("Errore nella creazione dell'ordine.");
         }
-
         // Salva l'ID dell'ordine nella sessione, una volta che si termina l'ordine bisogna che la sessione dell'id_ordine scada
         //altrimenti si continua a comprare con lo stesso id_ordine e non va bene.
         $_SESSION['Id_ordine'] = $id_ordine;
