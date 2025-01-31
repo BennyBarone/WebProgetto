@@ -72,9 +72,9 @@ if (session_status() == PHP_SESSION_NONE) {
     ?>
 
 <?php if (isUserLoggedIn()): ?>
-    <div class="cart-icon" id="cart-icon">
+     <div class="cart-icon" id="cart-icon">
         <span id="cart-count">
-            <?php echo isset($_SESSION['cart_count']) ? $_SESSION['cart_count'] : 0; ?>
+             <?php echo isset($_SESSION['cart_count']) ? $_SESSION['cart_count'] : 0; ?>
         </span>
         <a href="carrello.php">
             <img src="img/okk.png" alt="Carrello">
