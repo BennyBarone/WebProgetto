@@ -85,7 +85,7 @@ class DatabaseHelper{
         $stmt = $this->db->prepare($query);
         $stmt->bind_param('s', $email);
         $stmt->execute();
-        $stmt->store_result(); // Memorizzo il risultato
+        $stmt->store_result(); 
         return $stmt->num_rows > 0; // Restituisco true se esiste almeno una riga
     }
 
@@ -146,7 +146,7 @@ class DatabaseHelper{
                         $idProdotto = $result1['Id_prodotto'];
                         $prezzoUnitario = $result1['Prezzo'];
     
-                        $query2 = "INSERT INTO prodotti_ordinati (Id_prodotto) VALUES (?)";
+                        $query2 = "INSERT INTO prodotti_ordinati(Id_prodotto) VALUES (?)";
                         $stmt2 = $this->db->prepare($query2);
                         $stmt2->bind_param('i', $idProdotto);
                         $isInserted2 = $stmt2->execute();
@@ -207,22 +207,56 @@ class DatabaseHelper{
         $result = $stmt->get_result();
         return $result->fetch_all(MYSQLI_ASSOC);
     }
-
-    public function rimuovi_prodotto($id_ordine, $tipologia, $grandezza, $gusti, $prezzo_unitario, $prezzo_totale){
-        $query="SELECT Id_prodotto_ordinato FROM prodotti_ordinati_estesi WHERE Id_ordine= ? AND Tipologia_prodotto = ? AND Grandezza= ? AND Gusti = ?";
+    
+    public function rimuovi_prodotto($id_ordine, $tipologia, $grandezza, $gusti){
+        $query="SELECT Id_prodotto_ordinato FROM prodotti_ordinati_estesi WHERE Id_ordine= ? AND Tipologia_prodotto = ? AND Grandezza= ? AND Gusto = ?";
         $stmt= $this->db->prepare($query);
         $stmt->bind_param('isss', $id_ordine, $tipologia, $grandezza, $gusti);
-        $stmt->execute;
-        $result= $stmt->get_result()->fetch_assoc();
-
-        if($result){
-            $id_prodotto_ordinato= $result['Id_prodotto_ordinato'];
-            //dovrebbe automaticamente togliersi anche da dettaglio_acquisti perchè collegato con delete on cascade
-            $query1="DELETE FROM prodotti_ordinati WHERE Id_prodotto_ordinato= ?";
-            $stmt=$this->db->prepare($query);
-            $stmt->bind_param('i', $id_prodotto_ordinato);
-            return $stmt->execute;
+        $stmt->execute();
+        $result = $stmt->get_result()->fetch_assoc();
+    
+        if ($result) {
+            $id_prodotto_ordinato = $result['Id_prodotto_ordinato'];
+    
+            // Query di eliminazione corretta
+            $query1 = "DELETE FROM prodotti_ordinati WHERE Id_prodotto_ordinato = ?";
+            $stmt1 = $this->db->prepare($query1);
+            $stmt1->bind_param('i', $id_prodotto_ordinato);
+            $success = $stmt1->execute();
+    
+            return $success;
         }
+        return false; // Se non trova il prodotto, restituisce false
     }
+
+    public function mostra_prezzo($id_ordine){
+        $query="SELECT SUM(PrezzoTotale) AS Totale FROM dettaglio_acquisti WHERE Id_ordine = ?";
+        $stmt=$this->db->prepare($query);
+        $stmt->bind_param('i', $id_ordine);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        // Prendo il primo (e unico) risultato e ritorna la somma
+        $row = $result->fetch_assoc();  // Recupero la prima riga (associativa)
+        return $row['Totale'];
+    }
+
+    public function mio_profilo($id_cliente) { 
+        $query = "SELECT Nome, Cognome, Numero_cell, E_mail, Punti_accumulati FROM clienti WHERE Id_cliente = ?"; 
+        $stmt = $this->db->prepare($query); 
+        $stmt->bind_param("i", $id_cliente); 
+        $stmt->execute(); 
+        $result = $stmt->get_result(); 
+    
+        return $result->fetch_all(MYSQLI_ASSOC); 
+    }
+    
+    public function nuova_password($password, $id_cliente) {
+        $query = "UPDATE clienti SET Password=? WHERE Id_cliente=?";
+        $stmt = $this->db->prepare($query); 
+        $stmt->bind_param('si', $password, $id_cliente); 
+        return $stmt->execute(); // Ritorna true se l'aggiornamento ha successo
+    }
+    
+
 }    
 ?>
