@@ -69,8 +69,7 @@
                         for ($i = 1; $i <= $numDropdown; $i++): ?>
                         <div class=" dropdown">
                                  <select name="gusto<?php echo $i; ?>" class="form-select form-select-sm scegliGusto">
-
-                                <option value="">Gusto <?php echo $i; ?></option>
+                                 <option value="">Gusto <?php echo $i; ?></option>
                                     <?php foreach ($templateParams["listaGusti"] as $listaGusti): ?>
                                 <option value="<?php echo htmlspecialchars($listaGusti["Nome_gusto"], ENT_QUOTES); ?>">
                              <?php echo htmlspecialchars($listaGusti["Nome_gusto"]); ?>
