@@ -71,10 +71,15 @@ if (session_status() == PHP_SESSION_NONE) {
         echo "<p>Errore: nessun contenuto da mostrare.</p>";
     }
     ?>
+
+<?php if (isUserLoggedIn()): ?>
     <div class="cart-icon" id="cart-icon">
-        <span id="cart-count">0</span>
+        <span id="cart-count">
+            <?php echo isset($_SESSION['cart_count']) ? $_SESSION['cart_count'] : 0; ?>
+        </span>
         <img src="img/okk.png" alt="Carrello">
-        </div>
+    </div>
+<?php endif; ?>
 
     </main>
     <footer>

@@ -373,12 +373,7 @@ article h3{
     height: auto; /* Permetti di adattarsi */
 }
 
-<<<<<<< HEAD
-
- .dropdown-menu{
-=======
 .dropdown-menu{
->>>>>>> aacc220a28d602add5501e9ff98b94838f6add3d
     background-color: rgb(255, 244, 229); /* Sfondo bianco */
     border: 2px solid #8B4513; /* Bordo marrone */
 }

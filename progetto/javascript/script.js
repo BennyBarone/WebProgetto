@@ -89,3 +89,25 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const forms = document.querySelectorAll("form");
+    forms.forEach(form => {
+        form.addEventListener("submit", function (event) {
+            const allDropdownsFilled = Array.from(form.querySelectorAll('select')).every(select => select.value.trim() !== "");
+
+            if (allDropdownsFilled) {
+                // Incrementa il numero del carrello lato client
+                const cartCountElement = document.getElementById("cart-count");
+                let currentCount = parseInt(cartCountElement.textContent, 10) || 0;
+                const quantityInput = form.querySelector('input[name="quantita"]');
+                const quantity = parseInt(quantityInput.value, 10) || 1;
+
+                cartCountElement.textContent = currentCount + quantity;
+            } else {
+                // Blocca l'invio se i campi non sono completi
+                event.preventDefault();
+            }
+        });
+    });
+});

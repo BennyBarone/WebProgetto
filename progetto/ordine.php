@@ -40,6 +40,11 @@ try {
     $result = $dbh->insert_dettaglio_ordine($id_ordine, $grandezza, $tipologia, $gusto1, 1, $gusto2, 2, $gusto3, 3, $quantita);
 
     if ($result) {
+        
+        if (!isset($_SESSION['cart_count'])) {
+            $_SESSION['cart_count'] = 0;
+        }
+        $_SESSION['cart_count'] += $quantita;
         // Reindirizza a una pagina di successo o mostra un messaggio
         header("Location: prodotti.php");
         exit;
