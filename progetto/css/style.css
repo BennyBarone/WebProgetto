@@ -315,9 +315,9 @@ section div img {
  
 
 .section-tessera{
-   /*background-color: #cbad8d;*/
-    background: url('img/foto_tessera.jpeg');
-   min-height: 33vh;
+   background-color: #cbad8d;
+     /*background: url('img/foto_tessera.jpeg') center center;*/
+    min-height: 33vh;
 }
  
 article h3{
