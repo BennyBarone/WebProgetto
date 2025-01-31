@@ -233,7 +233,10 @@ class DatabaseHelper{
         if($result){
             $id_prodotto_ordinato= $result['Id_prodotto_ordinato'];
             //dovrebbe automaticamente togliersi anche da dettaglio_acquisti perchè collegato con delete on cascade
-            $query1="DELETE FROM prodotti_ordinati WHERE Id_prodotto_ordinato= ? ";
+            $query1="DELETE FROM prodotti_ordinati WHERE Id_prodotto_ordinato= ?";
+            $stmt=$this->db->prepare($query);
+            $stmt->bind_param('i', $id_prodotto_ordinato);
+            return $stmt->execute;
         }
     }
 }    
