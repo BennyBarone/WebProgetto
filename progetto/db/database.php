@@ -200,7 +200,7 @@ class DatabaseHelper{
     }
 
     public function riepilogo_ordine($id_ordine){
-        $query="SELECT Tipologia_prodotto, Grandezza, Gusto, Quantita, PrezzoUnitario, PrezzoTotale FROM prodotti_ordinati_estesi WHERE Id_ordine = ?";
+        $query="SELECT Tipologia_prodotto, Grandezza, Gusto, Quantità, PrezzoUnitario, PrezzoTotale FROM prodotti_ordinati_estesi WHERE Id_ordine = ?";
         $stmt= $this->db->prepare($query);
         $stmt->bind_param('i', $id_ordine);
         $stmt->execute();
@@ -209,10 +209,10 @@ class DatabaseHelper{
     }
 
     public function mio_profilo($id_cliente) { 
-        $query = "SELECT Nome, Cognome FROM clienti WHERE Id_cliente = ?"; 
-        $stmt = $this->db->prepare($query);
+        $query = "SELECT Nome, Cognome, Numero_cell, E_mail FROM clienti WHERE Id_cliente = ?"; 
+        $stmt = $this->db->prepare($query); 
         $stmt->bind_param("i", $id_cliente); 
-        $stmt->execute(); // CORRETTO: esegui() -> execute()
+        $stmt->execute(); 
         $result = $stmt->get_result(); 
     
         return $result->fetch_all(MYSQLI_ASSOC); 

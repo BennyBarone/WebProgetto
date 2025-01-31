@@ -142,10 +142,7 @@ header img:hover {
 #logo:hover {
      transform: none !important;
 }
-section div img{
-     padding: 0.5%;   
-     width: 40vw;
-}
+
  
 section h2, article h2{
      padding:0 1.1%;
@@ -425,7 +422,6 @@ article h3{
     border-radius: 50%;
   }
   
-
 
 
  @media screen and (min-width: 1024px) {
