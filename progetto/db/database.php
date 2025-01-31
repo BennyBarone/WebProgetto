@@ -208,7 +208,6 @@ class DatabaseHelper{
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
-<<<<<<< HEAD
     public function mio_profilo($id_cliente) { 
         $query = "SELECT Nome, Cognome, Numero_cell, E_mail FROM clienti WHERE Id_cliente = ?"; 
         $stmt = $this->db->prepare($query); 
@@ -224,7 +223,6 @@ class DatabaseHelper{
 
 
 
-=======
     public function rimuovi_prodotto($id_ordine, $tipologia, $grandezza, $gusti, $prezzo_unitario, $prezzo_totale){
         $query="SELECT Id_prodotto_ordinato FROM prodotti_ordinati_estesi WHERE Id_ordine= ? AND Tipologia_prodotto = ? AND Grandezza= ? AND Gusti = ?";
         $stmt= $this->db->prepare($query);
@@ -238,6 +236,5 @@ class DatabaseHelper{
             $query1="DELETE FROM prodotti_ordinati WHERE Id_prodotto_ordinato= ? ";
         }
     }
->>>>>>> 85e08aa0eafc15437a4f3cdf29dd319c79d9faeb
 }    
 ?>
