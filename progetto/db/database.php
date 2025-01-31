@@ -207,5 +207,19 @@ class DatabaseHelper{
         $result = $stmt->get_result();
         return $result->fetch_all(MYSQLI_ASSOC);
     }
+
+    public function rimuovi_prodotto($id_ordine, $tipologia, $grandezza, $gusti, $prezzo_unitario, $prezzo_totale){
+        $query="SELECT Id_prodotto_ordinato FROM prodotti_ordinati_estesi WHERE Id_ordine= ? AND Tipologia_prodotto = ? AND Grandezza= ? AND Gusti = ?";
+        $stmt= $this->db->prepare($query);
+        $stmt->bind_param('isss', $id_ordine, $tipologia, $grandezza, $gusti);
+        $stmt->execute;
+        $result= $stmt->get_result()->fetch_assoc();
+
+        if($result){
+            $id_prodotto_ordinato= $result['Id_prodotto_ordinato'];
+            //dovrebbe automaticamente togliersi anche da dettaglio_acquisti perchè collegato con delete on cascade
+            $query1="DELETE FROM prodotti_ordinati WHERE Id_prodotto_ordinato= ? ";
+        }
+    }
 }    
 ?>
