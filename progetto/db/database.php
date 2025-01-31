@@ -85,7 +85,7 @@ class DatabaseHelper{
         $stmt = $this->db->prepare($query);
         $stmt->bind_param('s', $email);
         $stmt->execute();
-        $stmt->store_result(); // Memorizzo il risultato
+        $stmt->store_result(); 
         return $stmt->num_rows > 0; // Restituisco true se esiste almeno una riga
     }
 
@@ -200,19 +200,17 @@ class DatabaseHelper{
     }
 
     public function riepilogo_ordine($id_ordine){
-        $query="SELECT Tipologia_prodotto, Grandezza, Gusto, Quantita, PrezzoUnitario, PrezzoTotale FROM prodotti_ordinati_estesi WHERE Id_ordine = ?";
+        $query="SELECT Tipologia_prodotto, Grandezza, Gusto, Quantità, PrezzoUnitario, PrezzoTotale FROM prodotti_ordinati_estesi WHERE Id_ordine = ?";
         $stmt= $this->db->prepare($query);
         $stmt->bind_param('i', $id_ordine);
         $stmt->execute();
         $result = $stmt->get_result();
         return $result->fetch_all(MYSQLI_ASSOC);
     }
-
-    public function rimuovi_prodotto($id_ordine, $tipologia, $grandezza, $gusti) {
-        // Trova l'Id_prodotto_ordinato
-        $query = "SELECT Id_prodotto_ordinato FROM prodotti_ordinati_estesi 
-                  WHERE Id_ordine = ? AND Tipologia_prodotto = ? AND Grandezza = ? AND Gusto = ?";
-        $stmt = $this->db->prepare($query);
+    
+    public function rimuovi_prodotto($id_ordine, $tipologia, $grandezza, $gusti, $prezzo_unitario, $prezzo_totale){
+        $query="SELECT Id_prodotto_ordinato FROM prodotti_ordinati_estesi WHERE Id_ordine= ? AND Tipologia_prodotto = ? AND Grandezza= ? AND Gusti = ?";
+        $stmt= $this->db->prepare($query);
         $stmt->bind_param('isss', $id_ordine, $tipologia, $grandezza, $gusti);
         $stmt->execute();
         $result = $stmt->get_result()->fetch_assoc();
@@ -241,6 +239,24 @@ class DatabaseHelper{
         $row = $result->fetch_assoc();  // Recupero la prima riga (associativa)
         return $row['Totale'];
     }
+
+    public function mio_profilo($id_cliente) { 
+        $query = "SELECT Nome, Cognome, Numero_cell, E_mail, Punti_accumulati FROM clienti WHERE Id_cliente = ?"; 
+        $stmt = $this->db->prepare($query); 
+        $stmt->bind_param("i", $id_cliente); 
+        $stmt->execute(); 
+        $result = $stmt->get_result(); 
     
+        return $result->fetch_all(MYSQLI_ASSOC); 
+    }
+    
+    public function nuova_password($password, $id_cliente) {
+        $query = "UPDATE clienti SET Password=? WHERE Id_cliente=?";
+        $stmt = $this->db->prepare($query); 
+        $stmt->bind_param('si', $password, $id_cliente); 
+        return $stmt->execute(); // Ritorna true se l'aggiornamento ha successo
+    }
+    
+
 }    
 ?>

@@ -41,6 +41,7 @@ if (session_status() == PHP_SESSION_NONE) {
                 </ul>
             </div>
 
+
             <img src="img/menu.png" alt="immagine" class="clickable-image" id="menu">
         </div>
         <div class="overlay" id="overlay">
@@ -80,7 +81,7 @@ if (session_status() == PHP_SESSION_NONE) {
             <img src="img/okk.png" alt="Carrello">
         </a>
     </div>
-<?php endif; ?>
+    <?php endif; ?>
 
     </main>
     <footer>
