@@ -1,5 +1,5 @@
 body {
-    background-color:rgb(255, 244, 229) ;
+    background-color:rgba(255, 244, 229, 0.959) ;
     /*background-color: red;*/
 }
 
@@ -308,7 +308,7 @@ section div img {
      font-family: 'Garamond', serif;
  }
 
- section h3{
+section h3{
      font-family: 'Garamond',serif;
      margin-top: 2vw;
  }
@@ -439,8 +439,12 @@ article h3{
   .position_punti{
     margin-top: 12vw;
   }
-  
 
+  article h4{
+    margin-top: 3vw;
+    font-family: 'Garamond',serif;
+
+  }
 
  @media screen and (min-width: 1024px) {
      header img {
@@ -492,6 +496,7 @@ article h3{
          width: 15vw;
          height: 4.5vw;
     }
+    
  
     section h5{
          font-size:2vw;
@@ -599,10 +604,19 @@ article h3{
       }
      
   
-
-    .space{
-        margin-top: 0vw !important;
+    section h3{
+        padding-left: 1vw !important;
+        font-size: 2vw;
+        margin-bottom: 2vw;
+     
     }
+    .type-payment{
+        margin-left:  1vw !important;
+    }
+    .distribution{
+        margin-bottom: 3vw;
+    }
+    
 
     
  }
