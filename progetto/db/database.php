@@ -240,10 +240,20 @@ class DatabaseHelper{
         return $row['Totale'];
     }
 
+    public function controllo_punti($id_cliente){
+        $query="SELECT Punti_accumulati FROM clienti WHERE Id_cliente= ?";
+        $stmt=$this->db->prepare($query);
+        $stmt->bind_param('i', $id_cliente);
+        $stmt->execute();
+        $result=$stmt->get_result();
+        $row = $result->fetch_assoc(); // Recupero la prima riga (associativa)
+        return $row ? $row['Punti_accumulati'] : 0; // Se non ci sono punti, restituisci 0
+    }
+
     public function mio_profilo($id_cliente) { 
         $query = "SELECT Nome, Cognome, Numero_cell, E_mail, Punti_accumulati FROM clienti WHERE Id_cliente = ?"; 
         $stmt = $this->db->prepare($query); 
-        $stmt->bind_param("i", $id_cliente); 
+        $stmt->bind_param('i', $id_cliente); 
         $stmt->execute(); 
         $result = $stmt->get_result(); 
     
@@ -257,6 +267,5 @@ class DatabaseHelper{
         return $stmt->execute(); // Ritorna true se l'aggiornamento ha successo
     }
     
-
 }    
 ?>

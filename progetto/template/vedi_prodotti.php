@@ -83,6 +83,7 @@
         <label for="quantita_<?php echo $prodotti['Tipologia_prodotto'] . '_' . $prodotti['Grandezza']; ?>" class="me-2">Quantità:</label>
         <input type="number" name="quantita" id="quantita_<?php echo $prodotti['Tipologia_prodotto'] . '_' . $prodotti['Grandezza']; ?>" min="1" max="10" value="1" class="form-control w-auto">
     </div>
+
     <!-- Messaggio di avviso -->
     <div id="loginAlert" class="alert alert-warning" style="display: none;" role="alert">
         Per acquistare i nostri prodotti devi aver effettuato l'accesso.
@@ -91,7 +92,6 @@
     <div id="campoAlert" class="alert alert-warning" style="display: none;" role="alert">
         Seleziona tutti i gusti prima di aggiungere al carrello.
     </div>
-
 
     <button type="submit" class="btn btn-primary acquistaprod" 
         data-tipologia="<?php echo $prodotti['Tipologia_prodotto']; ?>" 

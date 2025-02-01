@@ -110,3 +110,72 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+//quando clicco carta scende il menu per carta altrimenti "scompare" se la scelta è contanti
+document.querySelectorAll('input[name="payment"]').forEach(radio => {
+    radio.addEventListener('change', function() {
+        let cardDetails = document.getElementById('card-details');
+        let cashDetails = document.getElementById('cash-details');
+
+        if (document.getElementById('radio-card').checked) {
+            cardDetails.classList.remove('d-none');
+            cashDetails.classList.add('d-none');
+        } else if (document.getElementById('radio-cash').checked) {
+            cardDetails.classList.add('d-none');
+            cashDetails.classList.remove('d-none');
+        }
+    });
+});
+
+//previene lìinvio dei dati per il pagamento se tutti i campi non sono compilati correttamente
+document.addEventListener("DOMContentLoaded", function () {
+    // Aggiunge l'evento click a tutti i pulsanti con classe "confermaPagamento"
+    document.querySelectorAll(".confermaPagamento").forEach(button => {
+        button.addEventListener("click", function (event) {
+           // Prendiamo i valori inseriti dall'utente
+
+            let numeroCarta = document.getElementById("carta-number").value.trim();
+            let scadenza = document.getElementById("expiry-date").value.trim();
+            let cvv = document.getElementById("cvv").value.trim();
+
+            let campoAlert = document.querySelector("#campoAlert");
+            let campoNumCarta = document.querySelector("#campoNumCarta");
+            let campoNumCvv = document.querySelector("#campoNumCvv");
+            let campoSuccess = document.querySelector("#campoSuccess");
+
+            let isValid=true;
+
+            // Controlliamo se tutti i campi sono compilati
+            if (!numeroCarta || !scadenza || !cvv) {
+                event.preventDefault(); // Blocca l'invio del form
+                campoAlert.style.display = "block"; // Mostra l'alert
+                isValid=false;
+            } else {
+                campoAlert.style.display = "none"; // Nasconde l'alert
+            }
+
+            // Controllo numero carta: deve essere esattamente di 16 cifre
+            if (numeroCarta.length !== 16 || isNaN(numeroCarta)) {
+               event.preventDefault(); // Blocca l'invio del form
+                campoNumCarta.style.display = "block"; // Mostra l'alert
+                isValid=false;
+            } else {
+                campoNumCarta.style.display = "none"; // Nasconde l'alert
+            }
+
+            // Controllo CVV: deve essere esattamente di 3 cifre
+            if (cvv.length !== 3 || isNaN(cvv)) {
+                event.preventDefault(); // Blocca l'invio del form
+                campoNumCvv.style.display = "block"; // Mostra l'alert
+                isValid=false;
+            } else {
+                campoNumCvv.style.display = "none"; // Nasconde l'alert
+            }
+            if(isValid){
+            campoSuccess.style.display="block";
+            }else{
+                campoSuccess.style.display="none";
+            }
+
+        });
+    });
+});
