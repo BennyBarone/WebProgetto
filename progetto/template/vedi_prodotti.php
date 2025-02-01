@@ -4,7 +4,7 @@
         <div class="row">
             <?php foreach($templateParams["gustiMigliori"] as $gustiMigliori): ?>
                 <div class="col-6 col-sm-3 mb-3 text-center">
-                    <div class="border border-4 p-3 border-brown border-background">
+                    <div class="border border-4 p-2  border-brown border-background">
                         <h5><?php echo $gustiMigliori["Nome_gusto"]; ?></h5>
                     </div>
                 </div>

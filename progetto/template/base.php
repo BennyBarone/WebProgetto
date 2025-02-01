@@ -25,7 +25,7 @@ if (session_status() == PHP_SESSION_NONE) {
             <h1 class="text-center flex-grow-1" ><a href="index.php">Nuvole di gelato</a></h1>
               <!-- Menu a discesa -->
               <div class="dropdown">
-                <img src="img/profilo.png" alt="account" id="profileDropdown" class="clickable-image dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="img/profilo2.png" alt="account" id="profileDropdown" class="clickable-image dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <ul class="dropdown-menu dropdown-menu-end text-center">
                  <?php if(isUserLoggedIn()): ?>
                     <li><a href="logout.php" class="dropdown-item" onclick="window.location.href='logout.php'">Logout</a></li> <!-- Link per il logout -->
