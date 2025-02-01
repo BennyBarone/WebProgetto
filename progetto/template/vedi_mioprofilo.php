@@ -35,7 +35,7 @@
                 </div>
             <div class="modal-body">
                 <!-- Form per la recensione -->
-                <form action="salva_recensione.php" method="POST">
+                <form action="mioprofilo.php" method="POST">
                     <div class="mb-3">
                         <label for="valutazione" class="form-label">Valutazione</label>
                         <input type="tenumberxt" class="form-control" name="voto" placeholder="Da 1 a 10" >

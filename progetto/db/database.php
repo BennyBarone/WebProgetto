@@ -266,6 +266,21 @@ class DatabaseHelper{
         $stmt->bind_param('si', $password, $id_cliente); 
         return $stmt->execute(); // Ritorna true se l'aggiornamento ha successo
     }
-    
-}    
+
+    public function insert_recensione($id_cliente, $voto, $commento){
+        $query="INSERT INTO recensioni(Voto, Suggerimenti) VALUES (?,?)";
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('is', $voto, $commento);
+        $isInserted = $stmt->execute();
+
+        if($isInserted){
+            $id_recensione = $this->db->insert_id;
+
+            $query1="INSERT INTO realizzazioni(Id_cliente, Id_recensione) VALUES (?,?)";
+            $stmt1 = $this->db->prepare($query1);
+            $stmt1->bind_param('ii', $id_cliente, $id_recensione);
+            return $stmt1->execute();
+        }
+    }
+}   
 ?>
