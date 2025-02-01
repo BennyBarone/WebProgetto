@@ -250,6 +250,20 @@ class DatabaseHelper{
         return $row ? $row['Punti_accumulati'] : 0; // Se non ci sono punti, restituisci 0
     }
 
+    public function fine_ordine($id_cliente, $id_ordine, $prezzo){
+        $query="UPDATE ordini SET Prezzo_finale = ? WHERE Id_ordine = ?";
+        $stmt=$this->db->prepare($query);
+        $stmt->bind_param('fi', $id_ordine, $id_ordine);
+        $succ = $stmt->execute();
+
+        if($succ){
+            $query1="UPDATE clienti SET Punti_accumulati= Punti_accumulati + 1 WHERE Id_cliente=?";
+            $stmt1 = $this->db->prepare($query1);
+            $stmt1->bind_param('i',$id_cliente);
+            return $stmt1->execute();
+        }
+    }
+
     public function mio_profilo($id_cliente) { 
         $query = "SELECT Nome, Cognome, Numero_cell, E_mail, Punti_accumulati FROM clienti WHERE Id_cliente = ?"; 
         $stmt = $this->db->prepare($query); 

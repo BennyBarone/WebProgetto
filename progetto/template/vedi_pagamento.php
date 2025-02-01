@@ -78,7 +78,7 @@
         </div>
 
     <div class="text-center">
-        <button class="btn btn-primary acquistaprod mb-2"> Paga </button>
+        <button type="submit" class="btn btn-primary acquistaprod mb-2"> Paga </button>
     </div>
 </div>
 </div>
