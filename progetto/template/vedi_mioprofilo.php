@@ -12,7 +12,7 @@
             <p class="mb-1"><strong>Email:</strong> <?php echo ($mio_profilo["E_mail"]); ?></p>
     </div>
     <div class="col-12 col-lg-4 position-relative mt-2">
-        <img id="foto_tessera" src="img/foto_tessera.jpg" class="img-fluid ms-0" alt="primafoto">
+        <img id="foto_tessera" src="img/foto_tessera.jpg" class="img-fluid ms-0 rounded" alt="primafoto">
         <p class="position-absolute top-0 start-0 position_punti translate-middle-y"> 
             <strong>Punti accumulati:</strong> <?php echo ($mio_profilo["Punti_accumulati"]); ?>
         </p>
@@ -37,15 +37,15 @@
                 <!-- Form per la recensione -->
                 <form action="mioprofilo.php" method="POST">
                     <div class="mb-3">
-                        <label for="valutazione" class="form-label">Valutazione</label>
+                        <p for="valutazione" class="form-label">Valutazione</p>
                         <input type="tenumberxt" class="form-control" name="voto" placeholder="Da 1 a 10" >
                         </select>
                     </div>
-                    <div class="mb-3">
-                        <label for="commento" class="form-label">Commento</label>
+                    <div class="mb-2">
+                        <p for="commento" class="form-label">Commento</p>
                         <textarea class="form-control" name="commento" rows="3" placeholder="Scrivi la tua recensione..."></textarea>
                     </div>
-                    <button type="submit" class="btn btn-success cambia_password ">Invia recensione</button>
+                    <button type="submit" class="btn btn-success send-feed ">Invia recensione</button>
                 </form>
             </div>
         </div>
