@@ -1,9 +1,10 @@
 <section>
     <!-- Radio Buttons -->
-     <h2>Pagamento</h2>
-     <h3>Seleziona il metodo di pagamento:</h3>
+     <h2 class="ms-2 mt-2">Pagamento</h2>
+     <h3 class="ms-3">Seleziona il metodo di pagamento:</h3>
 
-    <div class="container  border border-2 border-brown p-4 rounded">
+    <div class="container">
+    <div class=" border border-2 border-brown p-2 rounded">
     <div class="form-check border border-2 border-brown p-3">
         <input class="form-check-input" type="radio" name="payment" id="radio-card">
         <label class="form-check-label" for="radio-card">Carta di Credito</label>
@@ -52,14 +53,17 @@
             <button type="submit" class="btn btn-primary confermaPagamento">Conferma</button>
         </div>
     </div>
+</div>
   </div>
 
-  <div class="container  border border-2 border-brown mt-2 text-center">
+  <div class="container">
+    <div class=" border border-2 border-brown mt-2 text-center">
     <h3><strong>Consegna</strong></h3>
     <p>Il tuo ordine verrà consegnato presso:</p>
     <p> <strong>Via dell'Università 50 -Campus Cesena</strong>, direttamente nella tua Università</p>
     <p>Per portarti un pò di allegria nei tuoi giorni di studio</p>
   </div>
+</div>
   
   <div class="container mt-2 mb-2">
             <div class="border border-4 border-brown p-1">
@@ -71,7 +75,7 @@
     </div>
 
     <div class="text-center">
-        <button class="btn btn-primary acquistaprod"> Paga </button>
+        <button class="btn btn-primary acquistaprod mb-2"> Paga </button>
     </div>
 
 </section>
