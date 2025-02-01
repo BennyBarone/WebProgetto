@@ -7,6 +7,7 @@
         <button type="submit" class="btn btn-primary" id="tesserafed">Crea un account e sottoscrivi tessera fedelt&agrave</button>
     
 </section>
+
 <article>
     <h3 class="mt-4 ms-3" >Come funziona<h3>
     <div class="row">

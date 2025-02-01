@@ -15,10 +15,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password2=$_POST["conferma_nuova_password"];
     $errore = false;
 
+    if (empty($password1) || empty($password2)) {
+        $templateParams ["erroreRegister"] = "Completare tutti i campi";
+        $errore=true;
+    }
+    
     if($password1!==$password2){
         $errore=true;
-        $templateParams["erroreRegister"] = "Le password non coincidono";
-    }
+        $templateParams["erroreRegister"] = "Le password non coincidono";}
 
     if (!$errore) {
         $dbh->nuova_password($password1,$id_cliente);
