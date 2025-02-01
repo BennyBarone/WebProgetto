@@ -1,5 +1,4 @@
 <?php
-
 require_once 'bootstrap.php';
 
 if (session_status() == PHP_SESSION_NONE) {
@@ -9,11 +8,11 @@ if (session_status() == PHP_SESSION_NONE) {
 $templateParams["titolo"] = "Nuvole di gelato - Pagamento";
 $templateParams["nome"]="vedi_pagamento.php";
 
-$id_cliente=$_SESSION['Id_cliente'];
-$id_ordine=$_SESSION['Id_ordine'];
+$id_cliente = $_SESSION['Id_cliente'];
+$id_ordine = $_SESSION['Id_ordine'];
 
-$templateParams["mostra_prezzo"]=$dbh->mostra_prezzo($id_ordine);
-$templateParams["punti"]=$dbh->controllo_punti($id_cliente);
+$templateParams["mostra_prezzo"] = $dbh->mostra_prezzo($id_ordine);
+$templateParams["punti"] = $dbh->controllo_punti($id_cliente);
 
 $prezzoTotale = $templateParams["mostra_prezzo"];
 $puntiCliente = $templateParams["punti"];
@@ -28,6 +27,25 @@ if ($puntiCliente >= 15) {
 
 $templateParams["sconto"] = $sconto;
 $templateParams["prezzo_finale"] = $prezzoFinale;
+
+// Se il cliente ha premuto il bottone "Paga"
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (isset($_POST['payment'])) {
+        $metodo_pagamento = $_POST['payment']; // "Carta" o "Contanti"
+    } else {
+        $metodo_pagamento = "Non specificato";
+    }
+
+    $dbh->fine_ordine($id_cliente, $id_ordine, $prezzoFinale, $metodo_pagamento);
+
+    //Termino la sessione dell'ordine e svuoto il carrello
+    unset($_SESSION['Id_ordine']);
+    $_SESSION['cart_count'] = 0; // Svuota il carrello
+
+    //Reindirizzo alla pagina di conferma
+    header("Location: mioOrdine.php");
+    exit();
+}
 
 require 'template/base.php';
 ?>

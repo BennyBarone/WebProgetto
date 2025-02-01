@@ -250,10 +250,10 @@ class DatabaseHelper{
         return $row ? $row['Punti_accumulati'] : 0; // Se non ci sono punti, restituisci 0
     }
 
-    public function fine_ordine($id_cliente, $id_ordine, $prezzo){
-        $query="UPDATE ordini SET Prezzo_finale = ? WHERE Id_ordine = ?";
+    public function fine_ordine($id_cliente, $id_ordine, $prezzo, $metodo_pagamento){
+        $query="UPDATE ordini SET Prezzo_finale = ?, Metodo_pagamento = ? WHERE Id_ordine = ?";
         $stmt=$this->db->prepare($query);
-        $stmt->bind_param('fi', $id_ordine, $id_ordine);
+        $stmt->bind_param('dsi', $prezzo, $metodo_pagamento, $id_ordine);
         $succ = $stmt->execute();
 
         if($succ){
