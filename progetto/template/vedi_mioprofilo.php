@@ -59,29 +59,34 @@
 <article>  
 <p class="mt-4 ms-4">Vuoi cambiare la tua password?</p>
 
+<div class="container">
     <div class="text-center">
         <a href="#" data-bs-toggle="collapse" data-bs-target="#demo"  class="btn btn-primary mb-2 cambia_password">Cambia password</a>
     </div>
     <div id="demo" class="collapse mt-3">
         <form class="contact-form iscrizione-form custom-input " action="mioprofilo.php" method="POST">
             <div class="mb-1">
-                <label for="password" class="form-label ms-3 mb-0"> Nuova password</label>
-                <input type="password" class="form-control ms-3 mb-1" name="nuova_password" placeholder="Nuova password">
-                <label for="password" class="form-label ms-3 mb-0"> Conferma nuova password</label>
-                <input type="password" class="form-control ms-3" name="conferma_nuova_password" placeholder="Conferma">
+                <label for="password" class="form-label ms-1 mb-0"> Nuova password</label>
+                <input type="password" class="form-control ms-1 mb-1" name="nuova_password" placeholder="Nuova password">
+                <label for="password" class="form-label ms-1 mb-0"> Conferma nuova password</label>
+                <input type="password" class="form-control ms-1" name="conferma_nuova_password" placeholder="Conferma">
             </div>
-            <button type="submit" class="btn btn-primary mt-3 mb-3 ms-3 cambia_password">Conferma</button>
+
+            <div id="campoAlert" class="alert alert-warning mt-3" style="display: none;" role="alert">
+                Compila tutti i campi.
+            </div>
+
+            <div id="campoPassDiff" class="alert alert-warning mt-3" style="display: none;" role="alert">
+                Le due Password non coincidono.
+            </div>
+
+            <div id="campoSuccess" class="alert alert-success mt-3" style="display: none;" role="alert">
+                Password cambiata con successo.
+            </div>
+
+            <button type="submit" class="btn btn-primary mt-3 mb-3 ms-3 conferma_password">Conferma</button>
           </form>
-    
+
     </div>
-    <?php if(isset($templateParams["successo"])): ?>
-        <p  class="text-success ms-3"><?php echo $templateParams["successo"]; ?></p>
-    <?php endif; ?>
-    <?php if(isset($templateParams["Completa"])): ?>
-        <p  class="text-brown ms-3"><?php echo $templateParams["Completa"]; ?></p>
-    <?php endif; ?>
-    <?php if(isset($templateParams["erroreRegister"])): ?>
-        <p class="text-brown ms-3"><?php echo $templateParams["erroreRegister"]; ?></p>
-    <?php endif; ?>
-    
-    </article>
+</div>
+</article>

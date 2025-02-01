@@ -179,3 +179,46 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".conferma_password").forEach(button => {
+        button.addEventListener("click", function (event) {
+            let nuova_password = document.querySelector("input[name='nuova_password']").value.trim();
+            let conf_nuova_password = document.querySelector("input[name='conferma_nuova_password']").value.trim();
+
+            let campoAlert = document.getElementById("campoAlert");
+            let campoPassword = document.getElementById("campoPassDiff");
+            let campoSuccess = document.getElementById("campoSuccess");
+
+            let isValid = true;
+
+            if (!nuova_password || !conf_nuova_password) {
+                event.preventDefault();
+                campoAlert.style.display = "block";
+                isValid = false;
+            } else {
+                campoAlert.style.display = "none";
+            }
+
+            if (nuova_password !== conf_nuova_password) {
+                event.preventDefault();
+                campoPassword.style.display = "block";
+                isValid = false;
+            } else {
+                campoPassword.style.display = "none";
+            }
+
+            if (isValid) {
+                event.preventDefault(); // Blocca l'invio inizialmente
+                campoSuccess.style.display = "block";
+
+                // Aspetta 3 secondi e poi invia il form
+                setTimeout(() => {
+                    event.target.closest("form").submit();
+                }, 1000);
+            } else {
+                campoSuccess.style.display = "none";
+            }
+        });
+    });
+});

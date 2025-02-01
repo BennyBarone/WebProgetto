@@ -195,7 +195,7 @@ section div img {
      margin: 10px auto;
  }
  
- #scopri, #acquista, .acquistaprod, #invia, #tesserafed, #registrazione, #invia_login,#lascia_recensione, .cambia_password, .confermaPagamento{
+ #scopri, #acquista, .acquistaprod, #invia, #tesserafed, #registrazione, #invia_login,#lascia_recensione, .cambia_password, .confermaPagamento, .conferma_password{
      border:#783f04;
      background-color: #783f04;
      transition: all 0.3s ease;
@@ -218,7 +218,7 @@ section div img {
      font-size:24vw;
  }
  
- #scopri:hover,#acquista:hover, .acquistaprod:hover, #invia:hover, #tesserafed:hover, #lascia_recensione:hover, .confermaPagamento:hover{
+ #scopri:hover,#acquista:hover, .acquistaprod:hover, #invia:hover, #tesserafed:hover, #lascia_recensione:hover, .confermaPagamento:hover, .conferma_password:hover{
      background-color: rgba(165, 42, 42, 0.1);
      color: darkbrown;
  }
@@ -427,7 +427,7 @@ article h3{
     border-radius: 50%;
   }
   #foto_tessera{
-    width: 52vw;
+    width: 54vw;
   }
   .position_punti{
     margin-left: 9vw;
