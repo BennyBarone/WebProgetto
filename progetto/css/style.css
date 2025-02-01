@@ -426,6 +426,19 @@ article h3{
     padding: 3px 6px;
     border-radius: 50%;
   }
+  #foto_tessera{
+    width: 52vw;
+  }
+  .position_punti{
+    margin-left: 9vw;
+  }
+  .modal-content{
+    background-color: rgb(255, 244, 229); 
+    border:2px solid #8B4513;
+  }
+  .position_punti{
+    margin-top: 12vw;
+  }
   
 
 
@@ -451,7 +464,7 @@ article h3{
      }
  
      section p, section ul li{
-         font-size: 1.3vw;
+         font-size: 1.4vw;
      }
  
      .custom-image {
@@ -495,21 +508,18 @@ article h3{
          cursor: pointer;
          outline: none;
     }
- 
+
     footer h2{
          font-size: 2vw !important;
     }
     
-   
     article img{
         width: 7vw;
-        margin-left: 0.5vw;
-        
+        margin-left: 0.5vw;    
     }
-
-    article div p{
-        font-size: 1.3vw;
-        
+    
+    article p{
+        font-size: 1.4vw;
     }
  
     .box-img-top{
@@ -567,4 +577,32 @@ article h3{
         margin-bottom: 10%;
     }
 
+    .info_profilo{
+        padding-top: 3vw;
+        padding-left: 2vw;
+    }
+    .cambia_password{
+        margin-bottom: 10vw !important;
+    }
+    
+    #profilo{
+        margin: 0 !important;
+        width: 20vw;
+    }
+    #foto_tessera{
+        width: 23vw;
+        margin-top: 3vw;
+        margin-left: 4vw !important;
+    }
+    .position_punti{
+        margin-top: 9vw;
+      }
+     
+  
+
+    .space{
+        margin-top: 0vw !important;
+    }
+
+    
  }
