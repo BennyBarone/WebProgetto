@@ -4,7 +4,8 @@
         <p class="mb-0">Sottoscrivi la carta fedelt&agrave ed entra a far parte del Programma Loyalty</p>
         <p class="pb-3">esclusivi vantaggi riservati ti aspettano.</p>    
 
-        <button type="submit" class="btn btn-primary" id="tesserafed">Crea un account e sottoscrivi tessera fedelt&agrave</button>
+        <a href="iscrizione.php" class="btn btn-primary" id="tesserafed">Crea un account e sottoscrivi tessera fedelt&agrave</a>
+        <a href="login.php" class="btn btn-primary mt-3 mb-3" id="tesserafed"> Accedi e vai su "Mio profilo"</a>
     
 </section>
 

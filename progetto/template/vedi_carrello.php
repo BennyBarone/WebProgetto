@@ -36,8 +36,8 @@
         </div>
         <?php endforeach; ?> 
 
-        <div class="container">
-        <div class="text-center" style="margin-left: 50vw;">
+        <div class="container text-center">
+        <div class="text-center">
             <div class="border border-4 border-brown d-inline-block p-1">
                 <p><strong>Prezzo Totale: <?php echo number_format($templateParams["mostra_prezzo"], 2, ',', '.'); ?>€</strong></p>
             </div>
