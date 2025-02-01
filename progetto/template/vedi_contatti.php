@@ -27,9 +27,12 @@
             </div>
         </div>
 
-        <div class="row justify-content-center mt-5">
+</section>
+
+<article>
+<div class="row justify-content-center mt-5">
             <div class="col-md-8 text-center">
-                <h3>Dove Trovarci</h3>
+                <h4>Dove Trovarci</h4>
                 <p>Via Corso Giuseppe Garibaldi, 159, 61034 Fossombrone PU</p>
                 <p><strong>Telefono:</strong> +39 06 12345678</p>
                 <p><strong>Email:</strong> info@nuvoledigelato.it</p>
@@ -37,7 +40,4 @@
         </div>
     </div>
 
-
-
-
-</section>
+</article>
