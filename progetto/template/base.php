@@ -1,7 +1,13 @@
 <?php
+require_once 'bootstrap.php';
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
+    if(isUserLoggedIn()){
+    $id_cliente = $_SESSION['Id_cliente'];
+    $templateParams['numero_notifiche'] = $dbh->conteggio_notifiche($id_cliente);
+    //var_dump($templateParams['numero_notifiche']);
+    }
 ?>
 <!DOCTYPE html>
 <html lang="it">
@@ -13,7 +19,7 @@ if (session_status() == PHP_SESSION_NONE) {
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="./css/style.css?v=123">
+    <link rel="stylesheet" type="text/css" href="./css/style.css?v=124">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
@@ -32,7 +38,7 @@ if (session_status() == PHP_SESSION_NONE) {
                     <li><hr class="dropdown-divider"></li> <!-- Linea divisoria -->
                     <li><a href="mioprofilo.php" class="dropdown-item" onclick="window.location.href='mioprofilo.php'">Il mio profilo</a></li> <!-- Link alla pagina profilo -->
                     <li><a href="#" class="dropdown-item">I miei ordini</a></li> <!-- Link agli ordini -->
-                    <li><a href="notifiche.php" class="dropdown-item" onclick="window.location.href='notifiche.php'">Le mie notifiche</a></li> <!-- Link al saldo punti -->
+                    <li><a href="notifiche.php" class="dropdown-item" onclick="window.location.href='notifiche.php'">Le mie notifiche<span class="badge text-dark"><?php echo $templateParams['numero_notifiche']; ?></span></a></li> <!-- Link al saldo punti -->
                 <?php else: ?>
                     <li><a href="login.php" class="dropdown-item" onclick="window.location.href='login.php'">Accedi</a></li> <!-- Link alla pagina di login -->
                     <li><hr class="dropdown-divider"></li> 

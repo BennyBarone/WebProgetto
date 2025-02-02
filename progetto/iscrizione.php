@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if (count($login_result) > 0) {
                 registerLoggedUser($login_result[0]);
                 $id_cliente= $_SESSION['Id_cliente'];
-                $dbh->insert_notifica($id_cliente, "Benvenuta/o a Bordo", "Ciao $nome. Benvenuta/o in Nuvole di Gelato!
+                $dbh->insert_notifica($id_cliente, "Benvenuto", "Ciao $nome. Benvenuta/o in Nuvole di Gelato!
                 Siamo felici di averti qui. Questo è il posto perfetto per chi ama la freschezza e i sapori autentici. 
                 Lasciati tentare da NUOVE dolcezze!");
                 header("Location: index.php"); // Reindirizza alla homepage

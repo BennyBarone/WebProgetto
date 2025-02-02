@@ -307,7 +307,7 @@ class DatabaseHelper{
     }
 
     public function mostra_notifiche($id_cliente){
-        $query="SELECT Id_notifica, Titolo, Descrizione, Stato_notifica FROM notifiche WHERE Id_cliente = ?";
+        $query="SELECT Id_notifica, Titolo, Descrizione, Stato_notifica FROM notifiche WHERE Id_cliente = ? ORDER BY Stato_notifica DESC, Data_invio DESC";
         $stmt= $this->db->prepare($query);
         $stmt->bind_param('i', $id_cliente);
         $stmt->execute(); 
@@ -320,8 +320,26 @@ class DatabaseHelper{
         $query="UPDATE notifiche SET Stato_notifica = ? WHERE Id_notifica = ?";
         $stmt= $this->db->prepare($query);
         $stato_notifica = "letta";
-        $stmt->bind_param('si', $stato_notifica. $id_notifica);
+        $stmt->bind_param('si', $stato_notifica, $id_notifica);
         return $stmt->execute();
+    }
+
+    public function elimina_notifica($id_notifica){
+        $query="DELETE FROM notifiche WHERE Id_notifica=?";
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('i', $id_notifica);
+        return $stmt->execute();
+    }
+
+    public function conteggio_notifiche($id_cliente){
+        $query = "SELECT COUNT(*) AS numero_notifiche FROM notifiche WHERE Id_cliente = ? AND Stato_notifica = ?";
+        $stmt = $this->db->prepare($query);
+        $stato_notifica = "da leggere";
+        $stmt->bind_param('is', $id_cliente, $stato_notifica);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $row = $result->fetch_assoc();
+        return $row['numero_notifiche'];
     }
 }   
 ?>

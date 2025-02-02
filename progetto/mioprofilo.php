@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $valutazione = $_POST['voto'];
         $commento = $_POST['commento'];
         $dbh->insert_recensione($id_cliente, $valutazione, $commento);
-        $dbh->insert_notifica($id_cliente, "Recensione inviata!", "La tua recensione è stata inviata con successo. Il tuo feedback per noi è sempre molto importante perchè ci aiuta a migliorare. Grazie");
+        $dbh->insert_notifica($id_cliente, "Recensione inviata", "La tua recensione è stata inviata con successo. Il tuo feedback per noi è sempre molto importante perchè ci aiuta a migliorare. Grazie");
     }
 }
 

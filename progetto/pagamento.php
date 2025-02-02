@@ -37,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     $dbh->fine_ordine($id_cliente, $id_ordine, $prezzoFinale, $metodo_pagamento);
-    $dbh->insert_notifica($id_cliente, "Ordine inviato!", "Il tuo ordine (n. $id_ordine) è stato inviato con successo! Troverai tutti i dettagli che lo riguardano nella tua pagina personale 'I miei ordini'.
+    $dbh->insert_notifica($id_cliente, "Ordine inviato", "Il tuo ordine (n. $id_ordine) è stato inviato con successo! Troverai tutti i dettagli che lo riguardano nella tua pagina personale 'I miei ordini'.
     Riceverai nei prossimi giorni (speriamo entro 48h) un'ulteriore notifica riguardante il tuo gelato! Rimani sintonizzata/o!! ");
 
     //Termino la sessione dell'ordine e svuoto il carrello

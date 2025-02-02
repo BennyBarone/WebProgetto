@@ -235,3 +235,24 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const recensioneModal = document.getElementById("recensioneModal");
+    const modalTitle = recensioneModal.querySelector(".modal-title");
+    const modalBody = recensioneModal.querySelector("#descrizioneNotifica");
+    const hiddenInput = recensioneModal.querySelector("#id_notifica");
+
+    document.querySelectorAll("[data-bs-toggle='modal']").forEach(element => {
+        element.addEventListener("click", function () {
+            const titolo = this.getAttribute("data-titolo");
+            const descrizione = this.getAttribute("data-descrizione");
+            const idNotifica = this.getAttribute("data-id");
+
+            modalTitle.textContent = titolo; // Aggiorna il titolo della modale
+            modalBody.textContent = descrizione; // Aggiorna la descrizione nella modale
+            hiddenInput.value = idNotifica;
+        });
+    });
+});
+
