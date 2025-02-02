@@ -61,6 +61,19 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+//se non sei loggato non puoi lasciare una recensione quindi in vedi_recensioni il bottone mostra l'alert
+document.addEventListener("DOMContentLoaded", function () {
+    const recensioneButton = document.getElementById("lascia_recensione");
+    const alertBox = document.getElementById("campoAlert");
+
+    if (recensioneButton && alertBox) {
+        recensioneButton.addEventListener("click", function (event) {
+            event.preventDefault(); 
+            alertBox.style.display = "block"; 
+        });
+    }
+});
+
 
 //manda un messaggio di alert se tutti i campi di un prodotto non sono stati selezionati
 document.addEventListener("DOMContentLoaded", function () {

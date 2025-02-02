@@ -21,10 +21,20 @@
 </section>
 
 <article class="mt-4 ms-2">
+    
     <p class="fs-4 ms-2">Vuoi lasciarci anche tu una recensione?<p>
+    <?php if (isUserLoggedIn()): ?>
     <div class="text-center">
-      <a href="mioprofilo.php" class="btn btn-primary " id="lascia_recensione">Lascia una recensione</a>
+      <a href="mioprofilo.php" class="btn btn-primary lasciaRecensione" id="lascia_recensione">Lascia una recensione</a>
     </div>
-   
+<?php else: ?> 
+    <div class="text-center">
+      <button class="btn btn-primary lasciaRecensione" id="lascia_recensione">Lascia una recensione</button>
+    </div>
+    <div id="campoAlert" class="alert alert-warning mt-0" style="display:none" role="alert">
+        Per lasciare una recensione devi aver effettuato l'accesso.
+    </div>
+<?php endif; ?>  
+
 
 </article>

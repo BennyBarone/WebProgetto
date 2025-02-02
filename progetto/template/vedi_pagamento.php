@@ -75,7 +75,7 @@
                     <div class="border border-4 border-brown p-1">
                         <p class="mb-0">Prezzo totale: <strong><?php echo number_format($templateParams["mostra_prezzo"], 2, ',', '.'); ?>€</strong></p>
                         <p class="mb-0">Sconto: <strong><?php echo $templateParams["sconto"]; ?></strong></p>
-                        <p class="mb-0">Spedizione: <strong>Gratis</strong></p>
+                        <p class="mb-0 grid-layout">Spedizione: <strong>Gratis</strong></p>
                         <p class="mb-0">Prezzo Finale: <strong><?php echo number_format($templateParams["prezzo_finale"], 2, ',', '.'); ?>€</strong></p>
                     </div>
                 </div>

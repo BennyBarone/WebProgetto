@@ -296,5 +296,32 @@ class DatabaseHelper{
             return $stmt1->execute();
         }
     }
+
+    public function insert_notifica($id_cliente, $titolo, $descrizione){
+        $query="INSERT INTO notifiche(Id_cliente, Titolo, Descrizione, Data_invio, Stato_notifica) VALUES (?,?,?,?,?)";
+        $stmt = $this->db->prepare($query);
+        $data_invio = date('Y-m-d H:i:s');
+        $stato_notifica="da leggere";
+        $stmt->bind_param('issss', $id_cliente, $titolo, $descrizione, $data_invio, $stato_notifica);
+        return $stmt->execute();
+    }
+
+    public function mostra_notifiche($id_cliente){
+        $query="SELECT Id_notifica, Titolo, Descrizione, Stato_notifica FROM notifiche WHERE Id_cliente = ?";
+        $stmt= $this->db->prepare($query);
+        $stmt->bind_param('i', $id_cliente);
+        $stmt->execute(); 
+        $result = $stmt->get_result(); 
+    
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
+    public function modifica_Statonotifica($id_notifica){
+        $query="UPDATE notifiche SET Stato_notifica = ? WHERE Id_notifica = ?";
+        $stmt= $this->db->prepare($query);
+        $stato_notifica = "letta";
+        $stmt->bind_param('si', $stato_notifica. $id_notifica);
+        return $stmt->execute();
+    }
 }   
 ?>
