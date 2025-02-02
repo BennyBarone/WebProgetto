@@ -37,7 +37,7 @@ if (session_status() == PHP_SESSION_NONE) {
                     <li><a href="logout.php" class="dropdown-item" onclick="window.location.href='logout.php'">Logout</a></li> <!-- Link per il logout -->
                     <li><hr class="dropdown-divider"></li> <!-- Linea divisoria -->
                     <li><a href="mioprofilo.php" class="dropdown-item" onclick="window.location.href='mioprofilo.php'">Il mio profilo</a></li> <!-- Link alla pagina profilo -->
-                    <li><a href="#" class="dropdown-item">I miei ordini</a></li> <!-- Link agli ordini -->
+                    <li><a href="mioOrdine.php" class="dropdown-item" onclick="window.location.href='mioOrdine.php'">I miei ordini</a></li> <!-- Link agli ordini -->
                     <li><a href="notifiche.php" class="dropdown-item" onclick="window.location.href='notifiche.php'">Le mie notifiche<span class="badge text-dark"><?php echo $templateParams['numero_notifiche']; ?></span></a></li> <!-- Link al saldo punti -->
                 <?php else: ?>
                     <li><a href="login.php" class="dropdown-item" onclick="window.location.href='login.php'">Accedi</a></li> <!-- Link alla pagina di login -->
