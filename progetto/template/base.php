@@ -47,7 +47,6 @@ if (session_status() == PHP_SESSION_NONE) {
                 </ul>
             </div>
 
-
             <img src="img/menu.png" alt="immagine" class="clickable-image" id="menu">
         </div>
         <div class="overlay" id="overlay">
