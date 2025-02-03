@@ -67,11 +67,11 @@
                         <?php
                         $numDropdown = ($prodotti["Grandezza"] === "Piccolo" || $prodotti["Grandezza"] === "Piccola") ? 2 : 3;
                         for ($i = 1; $i <= $numDropdown; $i++): ?>
-                        <div class=" dropdown">
-                                 <select name="gusto<?php echo $i; ?>" class="form-select form-select-sm scegliGusto">
-                                 <option value="">Gusto <?php echo $i; ?></option>
+                        <div class=" dropdown ">
+                                 <select name="gusto<?php echo $i; ?>"  class="form-select scegliGusto "  >
+                                 <option value="" >Gusto <?php echo $i; ?></option>
                                     <?php foreach ($templateParams["listaGusti"] as $listaGusti): ?>
-                                <option value="<?php echo htmlspecialchars($listaGusti["Nome_gusto"], ENT_QUOTES); ?>">
+                                <option value="<?php echo htmlspecialchars($listaGusti["Nome_gusto"], ENT_QUOTES); ?>" >
                              <?php echo htmlspecialchars($listaGusti["Nome_gusto"]); ?>
                                 </option>
                             <?php endforeach; ?>

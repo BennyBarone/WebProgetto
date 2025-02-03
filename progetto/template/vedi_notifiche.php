@@ -1,21 +1,21 @@
 <section>
-    <h2>Le mie notifiche</h2>
+    <h2 class="mt-2 ms-2">Le mie notifiche</h2>
 
-  <div class="container">
+    <div class="container container-notifica">
     <div class="row">
         <!-- Notifiche da leggere -->
-        <h4 class="mt-4">Da leggere:</h4>
+        <h3 class="mb-2" >Da leggere:</h3>
         <?php $hasUnreadNotifications = false; // Flag per verificare notifiche da leggere ?>
         <?php foreach($templateParams["mostra_notifiche"] as $mostra_notifiche): ?>
             <?php if($mostra_notifiche["Stato_notifica"] == "da leggere"): ?>
                 <?php $hasUnreadNotifications = true; ?>
-                <div class="col-12 border border-3 p-2 border-brown mb-2 d-flex align-items-center justify-content-between rounded">
+                <div class="col-12  body-notifica border border-3 p-2 border-brown mb-2 d-flex align-items-center justify-content-between rounded">
                     <!-- Contenuto notifica -->
                     <div class="d-flex align-items-center">
                         <img src="img/<?php echo strtolower($mostra_notifiche['Titolo']); ?>.jpg" 
                              alt="Immagine notifica" 
-                             class="img-fluid me-3" style="max-width: 40px; height: auto;">
-                        <a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#notificheModal" 
+                             class="img-fluid me-3 img-notifica">
+                        <a href="#" class="text-notifica text-brown" data-bs-toggle="modal" data-bs-target="#notificheModal" 
                            data-titolo="<?php echo htmlspecialchars($mostra_notifiche['Titolo']); ?>" 
                            data-descrizione="<?php echo htmlspecialchars($mostra_notifiche['Descrizione']); ?>" 
                            data-id="<?php echo $mostra_notifiche['Id_notifica']; ?>">
@@ -26,7 +26,7 @@
             <?php endif; ?>
         <?php endforeach; ?>
         <?php if(!$hasUnreadNotifications): ?>
-            <p class="text-muted">Non hai nuove notifiche da leggere.</p>
+            <p class="text-muted ms-1">Non hai nuove notifiche da leggere.</p>
         <?php endif; ?>
     </div>
 
@@ -55,14 +55,14 @@
 
     <div class="row">
         <!-- Notifiche lette -->
-        <h4 class="mt-4">Lette:</h4>
+        <h3 class="mb-2">Lette:</h3>
         <?php foreach($templateParams["mostra_notifiche"] as $mostra_notifiche): ?>
             <?php if($mostra_notifiche["Stato_notifica"] == "letta"): ?>
-                <div class="col-12 border border-3 p-2 border-brown mb-2 d-flex align-items-center justify-content-between rounded">
+                <div class="col-12 body-notifica border border-3 p-2 border-brown mb-2 d-flex align-items-center justify-content-between rounded">
                     <!-- Contenuto notifica -->
                     <div class="d-flex align-items-center">
-                        <img src="img/<?php echo strtolower($mostra_notifiche['Titolo']); ?>.jpg" alt="Immagine notifica" class="img-fluid me-3" style="max-width: 40px; height: auto;">
-                        <a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#notificheModal" 
+                        <img src="img/<?php echo strtolower($mostra_notifiche['Titolo']); ?>.jpg" alt="Immagine notifica" class="img-fluid me-3 img-notifica">
+                        <a href="#" class="text-notifica text-brown" data-bs-toggle="modal" data-bs-target="#notificheModal" 
                            data-titolo="<?php echo htmlspecialchars($mostra_notifiche['Titolo']); ?>" 
                            data-descrizione="<?php echo htmlspecialchars($mostra_notifiche['Descrizione']); ?>">
                             <h5 class="mb-0"><?php echo htmlspecialchars($mostra_notifiche["Titolo"]); ?></h5>
@@ -73,7 +73,7 @@
                             <input type="hidden" name="id_notifica" value="<?php echo $mostra_notifiche['Id_notifica']; ?>">
                             <input type="hidden" name="azione" value="elimina">
                             <button type="submit" class="btn p-0 border-0 bg-transparent">
-                                <img src="img/cestino.jpg" alt="Elimina notifica" class="img-fluid" style="max-width: 10vw; height: auto;">
+                                <img src="img/cestino.png" alt="Elimina notifica" class="img-fluid img-cestino" >
                             </button>
                         </form>
                     </div>

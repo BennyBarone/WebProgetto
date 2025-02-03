@@ -1,6 +1,11 @@
 body {
+<<<<<<< HEAD
+    background-color:rgba(255, 244, 229) ;
+    /*background-color: red;*/
+=======
     background-color:rgba(255, 244, 229, 0.959) ;
     /*background-color: red;*/ 
+>>>>>>> 60eaa3be1b05fd2c29640534cf82487e5ad42477
 }
 
 html,body {
@@ -201,9 +206,7 @@ section div img {
      transition: all 0.3s ease;
  }
 
- .scegliGusto{
-    color:rgb(255, 244, 229);
- }
+
  
 
  #scopri,#lascia_recensione{
@@ -367,20 +370,24 @@ article h3{
 }
 
 .scegliGusto {
-    background-color: rgb(255, 244, 229); /* Sfondo */
+    background-color:  rgb(255, 244, 229); /* Sfondo */
     border: 2px solid #8B4513; /* Bordo */
     color: #8B4513; /* Testo */
     font-family: 'Garamond', serif;
     font-size: 4vw;  /* ⬅ Riduci il font */
-    height: auto; /* Permetti di adattarsi */
+    
 }
 
+
+
+
 .dropdown-menu{
-    background-color: rgb(255, 244, 229); /* Sfondo bianco */
-    border: 2px solid #8B4513; /* Bordo marrone */
+    background-color: rgb(255, 244, 229); 
+    border: 2px solid #8B4513; 
+    
 }
 .dropdown-item {
-    color: #8B4513; /* Colore marrone per gli elementi */
+    color: #8B4513; 
     font-family:  'Garamond', serif ;
     font-size: 4vw;
 }
@@ -452,6 +459,22 @@ article h3{
  .form-check-input:checked{
     background-color:  #8B4513 !important;
     border-color: #8B4513;
+ }
+
+ .text-notifica{
+    text-decoration: none;
+ }
+
+ .img-notifica{
+    width: 13vw;
+ }
+
+ .container-notifica{
+    margin: 0;
+ }
+
+ .img-cestino{
+    width: 10vw;
  }
 
 
@@ -631,5 +654,23 @@ article h3{
        
     }
 
+    .container-notifica{
+        margin-left: 1vw;
+        margin-bottom: 4vw;
+    }
+
+    .img-cestino{
+        width: 4vw;
+    }
+
+    .img-notifica{
+        width: 3vw;
+     }
+
+    .body-notifica{
+        margin-left: 1vw;
+    }
+
+    
     
  }
