@@ -5,6 +5,7 @@ if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 
+
 $templateParams["titolo"] = "Nuvole di gelato - Pagamento";
 $templateParams["nome"]="vedi_pagamento.php";
 
