@@ -238,10 +238,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    const recensioneModal = document.getElementById("recensioneModal");
-    const modalTitle = recensioneModal.querySelector(".modal-title");
-    const modalBody = recensioneModal.querySelector("#descrizioneNotifica");
-    const hiddenInput = recensioneModal.querySelector("#id_notifica");
+    const notificheModal = document.getElementById("notificheModal");
+    if (!notificheModal) return; // Evita errori se la modale non è presente
+
+    const modalTitle = notificheModal.querySelector(".modal-title");
+    const modalBody = notificheModal.querySelector("#descrizioneNotifica");
+    const hiddenInput = notificheModal.querySelector("#id_notifica");
 
     document.querySelectorAll("[data-bs-toggle='modal']").forEach(element => {
         element.addEventListener("click", function () {
@@ -249,10 +251,11 @@ document.addEventListener("DOMContentLoaded", function () {
             const descrizione = this.getAttribute("data-descrizione");
             const idNotifica = this.getAttribute("data-id");
 
-            modalTitle.textContent = titolo; // Aggiorna il titolo della modale
-            modalBody.textContent = descrizione; // Aggiorna la descrizione nella modale
-            hiddenInput.value = idNotifica;
+            modalTitle.textContent = titolo;
+            modalBody.textContent = descrizione;
+            if (hiddenInput) hiddenInput.value = idNotifica;
         });
     });
 });
+
 
