@@ -1,6 +1,11 @@
 body {
+<<<<<<< HEAD
     background-color:rgba(255, 244, 229) ;
     /*background-color: red;*/
+=======
+    background-color:rgba(255, 244, 229, 0.959) ;
+    /*background-color: red;*/ 
+>>>>>>> 60eaa3be1b05fd2c29640534cf82487e5ad42477
 }
 
 html,body {

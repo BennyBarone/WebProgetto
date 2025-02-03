@@ -63,7 +63,7 @@ class DatabaseHelper{
     }
 
     public function getListaGusti(){
-        $query="SELECT Nome_gusto FROM listino_gusti WHERE Scorte > 0";
+        $query="SELECT Nome_gusto FROM listino_gusti WHERE Scorte > 0 AND Stato_prodotto = 'Visibile' ";
         $stmt=$this->db->prepare($query);
         $stmt->execute();
         $result=$stmt->get_result();
