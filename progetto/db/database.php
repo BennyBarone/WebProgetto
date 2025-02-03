@@ -341,5 +341,30 @@ class DatabaseHelper{
         $row = $result->fetch_assoc();
         return $row['numero_notifiche'];
     }
+
+    public function mostra_ordine($id_cliente){
+        $query = "SELECT 
+                    ord.Id_ordine, 
+                    ord.Prezzo_finale, 
+                    ord.Data_effettuazione, 
+                    ord.Metodo_pagamento,
+                    ord.Stato_ordine,  
+                    prod.Quantita, 
+                    prod.PrezzoUnitario, 
+                    prod.Gusto, 
+                    prod.Tipologia_prodotto, 
+                    prod.Grandezza 
+                FROM ordini ord
+                JOIN prodotti_ordinati_estesi prod ON ord.Id_ordine = prod.Id_ordine
+                WHERE ord.Id_cliente = ? AND ord.Prezzo_finale>0";
+    
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('i', $id_cliente);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+    
+    
 }   
 ?>

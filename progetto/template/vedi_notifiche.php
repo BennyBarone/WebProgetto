@@ -1,7 +1,7 @@
 <section>
     <h2>Le mie notifiche</h2>
 
-    <div class="container">
+  <div class="container">
     <div class="row">
         <!-- Notifiche da leggere -->
         <h4 class="mt-4">Da leggere:</h4>
@@ -81,6 +81,6 @@
             <?php endif; ?>
         <?php endforeach; ?>
     </div>
-</div>
+ </div>
 
 </section>
